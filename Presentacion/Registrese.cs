@@ -15,33 +15,35 @@ namespace Presentacion
 {
     public partial class Registrese : Form
     {
-        
 
+       
 
         public Registrese()
         {
             InitializeComponent();
             cargarUsuarios();
             
+            
         }
-        public Usuario Usuario { get; set; }
 
+        //public Usuario usuario { get; set; }
+
+        Usuario usuario = new Usuario(); 
        
-
-        public int UsarHost()
+        public int UsarHost(int host)
         {
-            if (Usuario != null)
-            {
-               int host=Usuario.host;
-            }
-            return Usuario.host;
+           
+
+            usuario.host = host; ;
+            
+            return usuario.host ;
         }
 
 
 
 
         
-
+       
 
 
 
@@ -60,7 +62,7 @@ namespace Presentacion
             string nombreUsuario = tbUsuario.Text;
             string contraseña = tbContraseña.Text;
             DateTime fechaNacimiento = DateTime.Parse(TbFechaNac.Text);
-            int host = UsarHost();
+            int host = UsarHost(usuario.host);
 
            
 
@@ -71,7 +73,7 @@ namespace Presentacion
             gestorUsuario1.ValidarUsername(nombre, apellido, nombreUsuario);
 
 
-            if (((host == 2) || (host == 3)))
+            if (((host == 1) || (host == 2)))
                 {
                 if ((contraseña == "Temp1234"))
                 { 

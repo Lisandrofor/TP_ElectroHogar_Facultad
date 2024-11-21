@@ -13,6 +13,7 @@ namespace Modelo
         private string _nombreUsuario;
         private string _contraseña;
         private string _contraseñaNueva;
+        private int _host;
         private int _valor;
         private static Dictionary<string, int> _conteoIng = new Dictionary<string, int>();
 
@@ -22,6 +23,8 @@ namespace Modelo
         public string Contraseña { get => _contraseña; set => _contraseña = value; }
 
         public string ContraseñaNueva { get => _contraseñaNueva; set => _contraseñaNueva = value; }
+
+        public int Host { get => _host; set => _host = value; }
 
         public int valor { get => _valor; set => _valor = value; }
 
@@ -34,6 +37,9 @@ namespace Modelo
             this.NombreUsuario = nombreUsuario;
             this.Contraseña = contraseña;
             ContraseñaNueva = string.Empty;
+            
+
+
         }
 
         public Loginuser(string nombreUsuario, string contraseña, string contraseñanueva)
@@ -41,6 +47,8 @@ namespace Modelo
             this.NombreUsuario = nombreUsuario;
             this.Contraseña = contraseña;
             this.ContraseñaNueva = contraseñanueva;
+            
+            
         }
 
 
@@ -80,7 +88,9 @@ namespace Modelo
 
                 return true;
             }
-           
+
+
+         
 
 
 
@@ -94,7 +104,7 @@ namespace Modelo
 
 
 
-           
+
         }
 
 

@@ -8,20 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Modelo;
 
 namespace Presentacion
 {
     public partial class MenuVendedor : Form
     {
-        public MenuVendedor()
+        LoginNuevo Cambiar = new LoginNuevo();
+
+        public MenuVendedor(Usuario.EstadoUsuario estado)
         {
             InitializeComponent();
+            MenuVendedor_Load(estado);
         }
 
-       
+        
 
-        private void MenuAdministrador_Load(Object sender, EventArgs e)
+
+
+        private void MenuVendedor_Load(Usuario.EstadoUsuario estado)
         {
+            string mensaje = Cambiar.CambiarEstado(estado);
+            label1.Text = "VENDEDOR - " + mensaje;
 
         }
 

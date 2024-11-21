@@ -313,7 +313,7 @@
             this.button14.TabIndex = 0;
             this.button14.Text = "Alta Producto\r\n\r\n";
             this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.Click += new System.EventHandler(this.AltaProducto);
             // 
             // PanelContenedor
             // 

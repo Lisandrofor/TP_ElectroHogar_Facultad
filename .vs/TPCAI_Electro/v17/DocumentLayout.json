@@ -3,7 +3,39 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|c:\\users\\usuario\\source\\repos\\tpcai_electro\\modelo\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|c:\\users\\usuario\\source\\repos\\tpcai_electro\\presentacion\\menusupervisor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menusupervisor.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menusupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menusupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menusupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menusupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\logincambiopass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\logincambiopass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|c:\\users\\usuario\\source\\repos\\tpcai_electro\\presentacion\\loginnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\loginnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,48 +43,36 @@
       "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuadministrador.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuadministrador.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\logincambiopass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\logincambiopass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuadministrador.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuadministrador.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menuvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\logincambiopass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\logincambiopass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\loginnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\loginnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +82,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuSupervisor.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuSupervisor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuSupervisor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuSupervisor.cs",
+              "RelativeToolTip": "Presentacion\\MenuSupervisor.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAqwI0AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T00:47:15.705Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuSupervisor.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuSupervisor.Designer.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuSupervisor.Designer.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuSupervisor.Designer.cs",
+              "RelativeToolTip": "Presentacion\\MenuSupervisor.Designer.cs",
+              "ViewState": "AQIAACkBAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:38:53.652Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -78,31 +125,130 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioDatos.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\UsuarioDatos.cs",
-              "RelativeDocumentMoniker": "AccesoaDatos\\UsuarioDatos.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\UsuarioDatos.cs",
-              "RelativeToolTip": "AccesoaDatos\\UsuarioDatos.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "DocumentIndex": 14,
+              "Title": "MenuAdministrador.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.Designer.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuAdministrador.Designer.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.Designer.cs",
+              "RelativeToolTip": "Presentacion\\MenuAdministrador.Designer.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAWwIAAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T03:33:06.177Z"
+              "WhenOpened": "2024-10-28T03:50:47.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuAdministrador.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuAdministrador.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.cs",
+              "RelativeToolTip": "Presentacion\\MenuAdministrador.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAYwF8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T02:53:21.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginNuevo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginNuevo.cs",
+              "RelativeDocumentMoniker": "Presentacion\\LoginNuevo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginNuevo.cs",
+              "RelativeToolTip": "Presentacion\\LoginNuevo.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAGUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T19:46:55.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginCambioPass.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs",
+              "RelativeDocumentMoniker": "Presentacion\\LoginCambioPass.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs",
+              "RelativeToolTip": "Presentacion\\LoginCambioPass.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAiwDQAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T03:27:58.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MenuPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuPrincipal.cs",
+              "RelativeToolTip": "Presentacion\\MenuPrincipal.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAowGYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T04:14:23.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MenuVendedor.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuVendedor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuVendedor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuVendedor.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\MenuVendedor.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T13:14:21.849Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "MenuVendedor.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuVendedor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuVendedor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuVendedor.cs",
+              "RelativeToolTip": "Presentacion\\MenuVendedor.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAmwBAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T13:14:27.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Registrese.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Registrese.cs",
               "RelativeDocumentMoniker": "Presentacion\\Registrese.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Registrese.cs",
               "RelativeToolTip": "Presentacion\\Registrese.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAUwAUAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T03:24:28.435Z"
+              "WhenOpened": "2024-11-01T21:38:04.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "MenuSupervisor.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuSupervisor.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MenuSupervisor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuSupervisor.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\MenuSupervisor.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T00:47:10.815Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioDatos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\UsuarioDatos.cs",
+              "RelativeDocumentMoniker": "AccesoaDatos\\UsuarioDatos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\UsuarioDatos.cs",
+              "RelativeToolTip": "AccesoaDatos\\UsuarioDatos.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAowFQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:33:06.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "MenuPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "Presentacion\\MenuPrincipal.cs",
@@ -113,120 +259,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MenuAdministrador.resx",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.resx",
-              "RelativeDocumentMoniker": "Presentacion\\MenuAdministrador.resx",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.resx",
-              "RelativeToolTip": "Presentacion\\MenuAdministrador.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-10-22T01:57:32.999Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "MenuAdministrador.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.cs",
               "RelativeDocumentMoniker": "Presentacion\\MenuAdministrador.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.cs [Dise\u00F1o]",
               "RelativeToolTip": "Presentacion\\MenuAdministrador.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T18:06:59.485Z"
+              "WhenOpened": "2024-10-18T18:06:59.485Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Usuario.cs",
               "RelativeDocumentMoniker": "Modelo\\Usuario.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Usuario.cs",
               "RelativeToolTip": "Modelo\\Usuario.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAA0wE8AAAATAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAowCEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T03:06:22.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T03:06:22.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MenuAdministrador.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.cs",
-              "RelativeDocumentMoniker": "Presentacion\\MenuAdministrador.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuAdministrador.cs",
-              "RelativeToolTip": "Presentacion\\MenuAdministrador.cs",
-              "ViewState": "AQIAAOUAAAAAAAAAAAAAwO8AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T02:53:21.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "GestordeUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeUsuarios.cs",
               "RelativeDocumentMoniker": "Negocio\\GestordeUsuarios.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeUsuarios.cs",
               "RelativeToolTip": "Negocio\\GestordeUsuarios.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAADwv4UAAAAAAAAA",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAswJIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T02:49:50.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginCambioPass.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs",
-              "RelativeDocumentMoniker": "Presentacion\\LoginCambioPass.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs",
-              "RelativeToolTip": "Presentacion\\LoginCambioPass.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAiwDQAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T03:27:58.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "LoginCambioPass.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs",
               "RelativeDocumentMoniker": "Presentacion\\LoginCambioPass.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs [Dise\u00F1o]",
               "RelativeToolTip": "Presentacion\\LoginCambioPass.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T03:27:39.694Z"
+              "WhenOpened": "2024-10-13T03:27:39.694Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Loginuser.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Loginuser.cs",
               "RelativeDocumentMoniker": "Modelo\\Loginuser.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Loginuser.cs",
               "RelativeToolTip": "Modelo\\Loginuser.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAIwGUAAAAIAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvzgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-15T21:55:37.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Registrese.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Registrese.cs",
-              "RelativeDocumentMoniker": "Presentacion\\Registrese.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Registrese.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Presentacion\\Registrese.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T18:20:26.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginNuevo.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginNuevo.cs",
-              "RelativeDocumentMoniker": "Presentacion\\LoginNuevo.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginNuevo.cs",
-              "RelativeToolTip": "Presentacion\\LoginNuevo.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAAEEAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T19:46:55.233Z"
             }
           ]
         }

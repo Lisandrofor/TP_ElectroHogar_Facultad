@@ -54,7 +54,7 @@ namespace Negocio
         Usuario Usuario = new Usuario();
         UsuarioDatos UsuarioService = new UsuarioDatos();
         
-        readonly string idAdministrador = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+        readonly string idAdministrador ="70b37dc1-8fde-4840-be47-9ababd0ee7e5";
         
 
 
@@ -112,6 +112,10 @@ namespace Negocio
 
            
         }
+
+        
+        
+
 
         public event Action<Usuario.EstadoUsuario> CambiarEstadoactual;
 

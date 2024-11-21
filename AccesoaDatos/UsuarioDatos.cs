@@ -20,7 +20,7 @@ namespace AccesoaDatos
         private string idUsuario ="70b37dc1-8fde-4840-be47-9ababd0ee7e5";
         public List<Usuario> getUsuarios()
         {
-            string path = "/api/Usuario/TraerUsuariosActivos?id="+idUsuario;
+            string path ="/api/Usuario/TraerUsuariosActivos?id="+idUsuario;
             List<Usuario> Usuarios = new List<Usuario>();
             try
             {

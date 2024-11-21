@@ -18,43 +18,30 @@ namespace Presentacion
     public partial class MenuAdministrador : Form
     {
 
-        Usuario Usuario = new Usuario();
+        Usuario usuario = new Usuario();
         GestorDeUsuarios GestorDeUsuarios = new GestorDeUsuarios();
-
+        LoginNuevo Cambiar = new LoginNuevo();
 
        
 
-        public MenuAdministrador(Usuario.EstadoUsuario estadoUsuario)
+        public MenuAdministrador(Usuario.EstadoUsuario estado)
         {
             
             
             InitializeComponent();
             disenosubmenu();
+            MenuAdministrador_Load(estado);
             
-            
-            CambiarEstado(estadoUsuario);
+
+
 
 
         }
 
-        public void CambiarEstado(Usuario.EstadoUsuario estadoUsuario)
-        {
 
-            if (estadoUsuario == Usuario.EstadoUsuario.Inactivo)
-            {
-                label1.Text = "ADMINISTRADOR - Inactivo";
+        
 
 
-            }
-            else
-            {
-                label1.Text = "ADMINISTRADOR - Activo";
-
-            }
-
-
-
-        }
 
 
 
@@ -103,9 +90,10 @@ namespace Presentacion
 
         }
 
-        private void MenuAdministrador_Load(Object sender, EventArgs e )
+        private void MenuAdministrador_Load(Usuario.EstadoUsuario estado)
         {
-
+            string mensaje=Cambiar.CambiarEstado(estado);
+            label1.Text = "ADMINISTRADOR - " + mensaje;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -129,14 +117,17 @@ namespace Presentacion
             //AbrirFormEnPanel(new Registrese());
             //ocultarsubmenu();
 
-            Usuario usuario = new Usuario { host = 2 }; // Establece el valor de host
+           
             Registrese formRegistrese = new Registrese();
-            formRegistrese.Usuario = usuario; // Asigna la instancia de Usuario
+
+            formRegistrese.UsarHost(2);
             AbrirFormEnPanel(formRegistrese);
             ocultarsubmenu();
 
 
         }
+
+
 
         private void disenosubmenu()
         {
@@ -211,6 +202,13 @@ namespace Presentacion
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+           
+            Registrese formRegistrese = new Registrese();
+            formRegistrese.UsarHost(3); // Asigna la instancia de Usuario
+            AbrirFormEnPanel(formRegistrese);
+
+
             ocultarsubmenu();
         }
 

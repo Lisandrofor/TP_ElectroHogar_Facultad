@@ -13,30 +13,44 @@ using Modelo;
 namespace Presentacion
 {
     
+
     public partial class LoginNuevo : Form
     {
-        
+
         MenuPrincipal menu = new MenuPrincipal();
        
+        
         public LoginNuevo()
         {
             InitializeComponent();
             menu.Close();
-            
+
+
         }
 
+
+
+
+
+
+
+
+
+
+
         
-       
+
+
 
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
 
-
+           
             GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
             string nombreUsuario = txtNombreUsuario.Text;
             string contraseña = txtPassword.Text;
-            
+
 
 
             if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
@@ -51,122 +65,258 @@ namespace Presentacion
             string idUsuario = gestorUsuarios.Login(login);
             
 
-           
-            bool ingresos= login.IngresosUsuario(idUsuario,nombreUsuario,contraseña);
-            MenuAdministrador adm = new MenuAdministrador(Usuario.EstadoUsuario.Inactivo);
+
+            bool ingresos = login.IngresosUsuario(idUsuario, nombreUsuario, contraseña);
 
 
-            if (contraseña != "Temp1234")
+
+
+
+
+
+
+
+            Usuario usuarioencontrado = ObtenerUsuarioPorId(idUsuario);
+
+
+
+            //List<Usuario> listadoUsuarios = gestorUsuarios.listarUsuarios();
+
+            //Usuario usuarioencontrado = listadoUsuarios.FirstOrDefault(user =>user.id.ToString()==idUsuario);
+
+            if (usuarioencontrado != null)
             {
-
-                if (!string.IsNullOrEmpty(idUsuario))
+                if (contraseña != "Temp1234")
                 {
-
-                    MessageBox.Show("¡Inicio de sesión exitoso!");
-                    Form Formulario = new MenuAdministrador(Usuario.EstadoUsuario.Activo);
-                    Formulario.Show();
-                    Hide();
-                }
-                else
-                {
-
-                    MessageBox.Show("Error en el inicio de sesión. Verifique sus credenciales.");
-                }
-
-            }
-            else if (contraseña == "Temp1234")
-
-            {   if (ingresos== true)
-                {   
-                    
-                    LoginCambioPass cambioPass = new LoginCambioPass();
-
-                    if (cambioPass.ShowDialog() == DialogResult.OK) // Si el cambio de contraseña se realiza correctamente
+                    if (!string.IsNullOrEmpty(idUsuario))
                     {
-                        string contraseñaNueva = login.ContraseñaNueva;// Suponiendo que tienes esta propiedad en LoginCambioPass
-                        gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+                        MessageBox.Show("¡Inicio de sesión exitoso!");
+
+                        
+                        
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Activo);
+
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+                            Hide();
+                            
+                           
+                            
+                        }
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error en el inicio de sesión. Verifique sus credenciales.");
+                    }
+                    
+                }
+                else if (contraseña == "Temp1234")
+                {
 
 
-                        LoginCambioPass cambiopass = new LoginCambioPass();
-                        login1.Close();
-                        cambiopass.ShowDialog();
-                        gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
+
+
+
+                    if (ingresos == true)
+                    {
+                        LoginCambioPass cambioPass = new LoginCambioPass();
+
+                        if (cambioPass.ShowDialog() == DialogResult.OK)
+                        {
+                            string contraseñaNueva = login.ContraseñaNueva;
+                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+
+                            login1.Close();
+                            cambioPass.ShowDialog();
+                            gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
+                            this.Close();
+                        }
+
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
+
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+                            
+                        }
+                        
+                        
                         Hide();
                     }
+                    else if (ingresos == false)
+                    {
+                        MessageBox.Show("¡Inicio de sesión exitoso!");
 
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Inactivo);
+                        
 
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+                            
+                            
+                            Hide();
+                        }
+
+                        
+                    }
                     
+                }
 
-                }else if (ingresos==false)
+                else
                 {
-                    
+                    MessageBox.Show("El usuario no fue encontrado. Verifique el ID.");
+                }
 
-                    MessageBox.Show("¡Inicio de sesión exitoso!");
-
-                    Form Formulario = new MenuAdministrador(Usuario.EstadoUsuario.Inactivo);
-                    Formulario.Show();
-                    
-                    adm.CambiarEstado(Usuario.EstadoUsuario.Inactivo);
-                    
+                
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+            }
+
+            
+            
+        }
+        
+
+
+        public Usuario ObtenerUsuarioPorId(string idBuscado)
+        {
+            GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
+            Usuario usuarioEncontrado = new Usuario();
+            do
+            {
+
+                List<Usuario> listadoUsuarios = gestorUsuarios.listarUsuarios();
+            } while (usuarioEncontrado.id.ToString()==idBuscado);
+
+            if (usuarioEncontrado != null)
+            {
+                Console.WriteLine($"Usuario encontrado: {usuarioEncontrado.nombre}");
+            }
+            else
+            {
+                Console.WriteLine("Usuario no encontrado.");
+            }
+
+            return usuarioEncontrado;
+        }
+
+
+        
+
+
+
+
+
+
+        public Form IniciaForm(string nombreUsuario, int host, Usuario.EstadoUsuario estado)
+        {
+            GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
+            List<Usuario> listadoUsuarios = gestorUsuarios.listarUsuarios();
+           
+
+
+
+            foreach (var usr in listadoUsuarios)
+            {
+               
+                if (nombreUsuario == usr.nombreUsuario)
+                {
+                    Form formulario = null;
+
+                    switch (usr.host)
+                    {    
+                        case 3:
+                            formulario = new MenuAdministrador(estado);
+                            break;
+                        case 2:
+                            formulario = new MenuSupervisor(estado);
+                            break;
+                        case 1:
+                            formulario = new MenuVendedor(estado);
+                            break;
+                        default:
+                            // Manejo de caso si el host no es 1, 2 o 3
+                            MessageBox.Show("Tipo de usuario no reconocido.");
+                            // Salir si no se encuentra un caso válido
+                            return null;
+
+                    }
+
+                    return formulario;
                     Hide();
+                    break; // Salir del foreach si se encontró el usuario
 
                 }
+
+               
+
+            }
+            return null;
+        }
+        
+
+        
+        
+
+        
+
+        
+
+
+       
+
+        public string CambiarEstado(Usuario.EstadoUsuario estadoUsuario)
+        {
+
+            if (estadoUsuario == Usuario.EstadoUsuario.Inactivo)
+            {
+                return label1.Text = "Inactivo";
+
+
+            }
+            else
+            {
+                return label1.Text = "Activo";
 
             }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
-
-
-
-        private void Ingresar_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
+ 
+       
+        
+        
     }
+    
+    
 }
+
+
+
+ 
+
+
+
+
+
+
+
+    

@@ -27,6 +27,7 @@ namespace Modelo
         string _nombreUsuario;
         int _host;
         string _contraseña;
+        EstadoUsuario _estado;
 
 
         public Usuario()
@@ -35,7 +36,7 @@ namespace Modelo
 
         
 
-        public Usuario(Guid id,string nombre, string apellido, int dni, string nombreUsuario,int host)
+        public Usuario(Guid id,string nombre, string apellido, int dni, string nombreUsuario,int host,EstadoUsuario Estado)
         {
             _id = id;
             _nombre = nombre;
@@ -43,6 +44,8 @@ namespace Modelo
             _dni = dni;
             _nombreUsuario = nombreUsuario;
             _host = host;
+            _estado = Estado;
+            
         }
 
         public Guid id { get => _id; set => _id = value; }

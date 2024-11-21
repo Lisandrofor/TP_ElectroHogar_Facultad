@@ -48,9 +48,10 @@ namespace Presentacion
         public void btnRegistrese_Click(object sender, EventArgs e)
         {
 
-            Usuario usuario = new Usuario { host = 1 }; // Establece el valor de host
+           
+
             Registrese formRegistrese = new Registrese();
-            formRegistrese.Usuario = usuario; // Asigna la instancia de Usuario
+            formRegistrese.UsarHost(3);
             AbrirFormEnPanel(formRegistrese);
 
 
@@ -59,6 +60,8 @@ namespace Presentacion
 
             
         }
+
+
 
         private void MenuAdministrador_Load(Object sender, EventArgs e)
         {

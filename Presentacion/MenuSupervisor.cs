@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,18 +15,23 @@ namespace Presentacion
 {
     public partial class MenuSupervisor : Form
     {
-        public MenuSupervisor()
+
+        LoginNuevo Cambiar = new LoginNuevo();
+        public MenuSupervisor(Usuario.EstadoUsuario estado)
         {
             InitializeComponent();
+            MenuSupervisor_Load(estado);
         }
 
-        
+       
 
-        
 
-        private void MenuAdministrador_Load(Object sender, EventArgs e)
+
+
+        private void MenuSupervisor_Load(Usuario.EstadoUsuario estado)
         {
-
+            string mensaje = Cambiar.CambiarEstado(estado);
+            label1.Text = "SUPERVISOR - " + mensaje;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -133,7 +139,7 @@ namespace Presentacion
 
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void AltaProducto(object sender, EventArgs e)
         {
 
         }
