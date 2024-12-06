@@ -49,7 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestordeClientes.cs" />
+    <Compile Include="GestordeProductos.cs" />
+    <Compile Include="GestordeProveedores.cs" />
     <Compile Include="GestordeUsuarios.cs" />
+    <Compile Include="GestordeVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

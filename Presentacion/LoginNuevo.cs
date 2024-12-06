@@ -19,12 +19,13 @@ namespace Presentacion
 
         MenuPrincipal menu = new MenuPrincipal();
        
+       
         
         public LoginNuevo()
         {
             InitializeComponent();
             menu.Close();
-
+            
 
         }
 
@@ -91,7 +92,7 @@ namespace Presentacion
                     if (!string.IsNullOrEmpty(idUsuario))
                     {
                         MessageBox.Show("¡Inicio de sesión exitoso!");
-
+                        
                         
                         
                         Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Activo);
@@ -99,10 +100,13 @@ namespace Presentacion
                         if (formulario != null)
                         {
                             formulario.Show();
-                            Hide();
+                            login1.Close();
                             
-                           
-                            
+
+
+
+
+
                         }
                         
                     }
@@ -131,7 +135,7 @@ namespace Presentacion
                             login1.Close();
                             cambioPass.ShowDialog();
                             gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
-                            this.Close();
+                            
                         }
 
                         Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
@@ -143,7 +147,7 @@ namespace Presentacion
                         }
                         
                         
-                        Hide();
+                        
                     }
                     else if (ingresos == false)
                     {
@@ -157,7 +161,7 @@ namespace Presentacion
                             formulario.Show();
                             
                             
-                            Hide();
+                            
                         }
 
                         
@@ -170,7 +174,6 @@ namespace Presentacion
                     MessageBox.Show("El usuario no fue encontrado. Verifique el ID.");
                 }
 
-                
 
 
 
@@ -179,6 +182,7 @@ namespace Presentacion
 
 
 
+               
 
 
 
@@ -191,6 +195,7 @@ namespace Presentacion
             
             
         }
+       
         
 
 

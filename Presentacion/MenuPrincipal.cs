@@ -99,7 +99,7 @@ namespace Presentacion
 
         }
 
-        private void BtnCerrar_Click_1(object sender, EventArgs e)
+        public void BtnCerrar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }

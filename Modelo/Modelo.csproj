@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaCliente.cs" />
+    <Compile Include="AltaProveedor.cs" />
+    <Compile Include="AltaVentacs.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Loginuser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="AltaUsuario.cs" />
+    <Compile Include="Venta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

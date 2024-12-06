@@ -22,7 +22,20 @@ namespace Presentacion
             MenuVendedor_Load(estado);
         }
 
-        
+        public void AbrirFormEnPanel(object formhija)
+        {
+            if (this.PanelContenedor.Controls.Count > 0)
+                this.PanelContenedor.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(fh);
+            this.PanelContenedor.Tag = fh;
+            fh.Show();
+
+        }
+
+
 
 
 
@@ -70,6 +83,13 @@ namespace Presentacion
         private void BtnCerrar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            RegistroClientes registroClientes = new RegistroClientes();
+
+            AbrirFormEnPanel(registroClientes);
         }
     }
 }

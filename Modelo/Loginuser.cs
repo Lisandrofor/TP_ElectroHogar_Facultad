@@ -16,6 +16,7 @@ namespace Modelo
         private int _host;
         private int _valor;
         private static Dictionary<string, int> _conteoIng = new Dictionary<string, int>();
+        private static Dictionary<string, DateTime> _expira = new Dictionary<string, DateTime>();
 
 
 
@@ -29,6 +30,8 @@ namespace Modelo
         public int valor { get => _valor; set => _valor = value; }
 
         public Dictionary<string,int> conteoIng { get => _conteoIng; set => _conteoIng = value; }
+
+        public Dictionary<string, DateTime> expira { get => _expira; set => _expira = value; }
 
 
         public Loginuser(string nombreUsuario, string contraseña)
@@ -60,7 +63,7 @@ namespace Modelo
 
             if (!conteoIng.ContainsKey(idUsuario))
             {
-                valor = 1;
+                valor = 0;
                 conteoIng.Add(idUsuario,valor); // El primer intento cuenta como 1, no 0
                 return false; // Primer ingreso, no ha alcanzado el conteo límite
             }
@@ -68,7 +71,7 @@ namespace Modelo
             {
                 if (conteoIng.TryGetValue(claveBuscada, out valor))
                 {
-                    if (valor > 1)
+                    if (valor >= 1)
                     {
 
                         return true;
@@ -90,7 +93,27 @@ namespace Modelo
             }
 
 
-         
+            //public bool ContraseñaExpira(string contrasña, DateTime FechaAlta )
+            //{
+            //    string contraseñabuscada = contraseña;
+            //    TimeSpan dias;
+                
+
+            //    if (!expira.ContainsKey(contraseñabuscada))
+            //    {
+            //        FechaAlta = DateTime.Now;
+            //        expira.Add(contraseña, FechaAlta);
+            //    }else
+            //    {
+            //        if (expira[FechaAlta])<= )
+
+            //    }
+
+
+
+
+            //}
+
 
 
 

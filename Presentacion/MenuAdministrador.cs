@@ -232,6 +232,16 @@ namespace Presentacion
 
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            RegistroProvee formRegistroProvee = new RegistroProvee();
+
+            
+            AbrirFormEnPanel(formRegistroProvee);
+            ocultarsubmenu();
+
+        }
+
 
         //private void MiFormulario_Load(object sender, EventArgs e)
         //{

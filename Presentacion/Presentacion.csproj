@@ -58,14 +58,6 @@
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionProveedores.cs" />
-    <Compile Include="GestionProveedores.Designer.cs">
-      <DependentUpon>GestionProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestionUsuarios.cs" />
-    <Compile Include="GestionUsuarios.Designer.cs">
-      <DependentUpon>GestionUsuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
@@ -138,6 +130,12 @@
     <Compile Include="Registrese.Designer.cs">
       <DependentUpon>Registrese.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroProvee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,12 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionProveedores.resx">
-      <DependentUpon>GestionProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionUsuarios.resx">
-      <DependentUpon>GestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -213,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registrese.resx">
       <DependentUpon>Registrese.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroProvee.resx">
       <DependentUpon>RegistroProvee.cs</DependentUpon>
