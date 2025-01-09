@@ -205,7 +205,7 @@ namespace Presentacion
 
            
             Registrese formRegistrese = new Registrese();
-            formRegistrese.UsarHost(3); // Asigna la instancia de Usuario
+            formRegistrese.UsarHost(1); // Asigna la instancia de Usuario
             AbrirFormEnPanel(formRegistrese);
 
 
@@ -241,6 +241,54 @@ namespace Presentacion
             ocultarsubmenu();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegistroCateg formRegisCateg = new RegistroCateg();
+            
+            AbrirFormEnPanel(formRegisCateg);
+
+
+            ocultarsubmenu();
+
+
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            RegistraProd formRegisPro = new RegistraProd();
+
+            AbrirFormEnPanel(formRegisPro);
+
+
+            ocultarsubmenu();
+
+
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            RegistroProdporCat formRegisProCat = new RegistroProdporCat();
+
+            AbrirFormEnPanel(formRegisProCat);
+
+
+            ocultarsubmenu();
+
+
+        }
+
+       
+
+
+
+
 
 
         //private void MiFormulario_Load(object sender, EventArgs e)

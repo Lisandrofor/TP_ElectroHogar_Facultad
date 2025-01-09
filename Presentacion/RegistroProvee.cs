@@ -18,7 +18,10 @@ namespace Presentacion
         public RegistroProvee()
         {
             InitializeComponent();
+            MostrarCategorias();
         }
+
+        GestordeProductos gestorCategoria = new GestordeProductos();
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -31,7 +34,7 @@ namespace Presentacion
             string direccion = textBox4.Text;
             string email = textBox6.Text;
             string telefono = textBox11.Text;
-            string categoria = comboBox1.Text;
+            string categoria = comboBox1.DisplayMember;
             
            
 
@@ -63,5 +66,15 @@ namespace Presentacion
 
 
         }
+
+        public void MostrarCategorias()
+        {
+            List<Producto> lista = gestorCategoria.ObtenerCategorias();
+            comboBox1.DataSource = lista;
+            comboBox1.DisplayMember = "nomCategoria" + "idCategoria";
+
+        }
+
+        
     }
 }

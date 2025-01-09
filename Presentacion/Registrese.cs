@@ -73,7 +73,7 @@ namespace Presentacion
             gestorUsuario1.ValidarUsername(nombre, apellido, nombreUsuario);
 
 
-            if (((host == 2) || (host == 3)))
+            if (((host == 2) || (host == 1)))
                 {
                 if ((contraseña == "Temp1234"))
                 { 
@@ -104,7 +104,7 @@ namespace Presentacion
 
                 MessageBox.Show("Por favor Ingrese contraseña temporal:Temp1234");
                 }
-                if (host == 1)
+                if (host == 3)
                 {
                     try
                     {

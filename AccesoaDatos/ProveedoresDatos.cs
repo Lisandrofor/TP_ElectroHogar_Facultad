@@ -16,7 +16,7 @@ namespace AccesoaDatos
         
         public List<Proveedor> getProveedores()
         {
-            string path = "/api/Proveedor/TraerProveedores";
+            string path ="/api/Proveedor/TraerProveedores";
             List<Proveedor> Proveedores = new List<Proveedor>();
             try
             {

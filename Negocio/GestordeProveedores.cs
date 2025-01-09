@@ -48,7 +48,7 @@ namespace Negocio
         Usuario Usuario = new Usuario();
         ProveedoresDatos ProveedoresDa = new ProveedoresDatos();
 
-        readonly string idUsuario ="70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+        readonly string idUsuario = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
 
 
 

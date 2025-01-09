@@ -70,7 +70,7 @@
             this.barraTitulo.Name = "barraTitulo";
             this.barraTitulo.Size = new System.Drawing.Size(1080, 38);
             this.barraTitulo.TabIndex = 1;
-            this.barraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.barraTitulo_Paint);
+            
             // 
             // label1
             // 

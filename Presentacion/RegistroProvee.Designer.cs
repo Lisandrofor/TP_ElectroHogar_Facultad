@@ -74,6 +74,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 450);
             this.panel2.TabIndex = 7;
+            
             // 
             // panel3
             // 

@@ -130,11 +130,23 @@
     <Compile Include="Registrese.Designer.cs">
       <DependentUpon>Registrese.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroCateg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroCateg.Designer.cs">
+      <DependentUpon>RegistroCateg.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistroClientes.Designer.cs">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroProdporCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroProdporCat.Designer.cs">
+      <DependentUpon>RegistroProdporCat.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroProvee.cs">
       <SubType>Form</SubType>
@@ -206,8 +218,14 @@
     <EmbeddedResource Include="Registrese.resx">
       <DependentUpon>Registrese.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroCateg.resx">
+      <DependentUpon>RegistroCateg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroProdporCat.resx">
+      <DependentUpon>RegistroProdporCat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroProvee.resx">
       <DependentUpon>RegistroProvee.cs</DependentUpon>

@@ -39,15 +39,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.comboBox1);
@@ -58,7 +59,6 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -104,9 +104,9 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(249, 198);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 18);
+            this.label8.Size = new System.Drawing.Size(174, 18);
             this.label8.TabIndex = 19;
-            this.label8.Text = "Id de Proveedor";
+            this.label8.Text = "Nombre de Proveedor";
             // 
             // label7
             // 
@@ -165,6 +165,7 @@
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // textBox10
             // 
@@ -172,13 +173,6 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(125, 20);
             this.textBox10.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(251, 223);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 20);
-            this.textBox5.TabIndex = 3;
             // 
             // textBox3
             // 
@@ -193,6 +187,14 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(125, 20);
             this.textBox2.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(251, 222);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(157, 21);
+            this.comboBox2.TabIndex = 25;
             // 
             // RegistraProd
             // 
@@ -222,8 +224,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

@@ -37,3 +37,5 @@ C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.LoginCambioPass.resources
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.RegistroClientes.resources
+C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.RegistroCateg.resources
+C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.RegistroProdporCat.resources
