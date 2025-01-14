@@ -27,6 +27,9 @@ namespace Negocio
             }
         }
 
+
+
+
         
 
 
@@ -77,7 +80,7 @@ namespace Negocio
 
         public List<Cliente> listarClientes()
         {
-            return ClientesDa.getCliente();
+            return ClientesDa.getClientes();
         }
 
         public void BorrarCliente(Guid idUsuario)

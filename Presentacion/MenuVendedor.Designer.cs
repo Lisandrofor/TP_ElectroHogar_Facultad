@@ -273,6 +273,7 @@
             this.button20.TabIndex = 0;
             this.button20.Text = "Agregar Venta\n";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // PanelContenedor
             // 

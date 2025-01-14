@@ -24,39 +24,43 @@ namespace Presentacion
             InitializeComponent();
             MostrarCategorias();
             
+
         }
 
+        
 
-        private void RegistroProdporCat_Load(object sender, EventArgs e)
-        {
-            // Cargar los productos al inicio si hay una categoría seleccionada al inicio
-            CargarProductos();
-        }
 
         GestordeProductos gestorCategoria = new GestordeProductos();
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
 
 
+           
+
+
+
+
+
+
+
 
 
            
-            
-
-
-
-
-
-
-            //gestorCliente1.ValidarNombre(nombre);
-            //gestorCliente1.ValidarApellido(apellido);
 
 
 
 
             try
             {
-               
+                // Cargar productos según la categoría seleccionada al cargar el formulario
+                if (comboBox1.SelectedItem != null)
+                {
+                    CargarProductos();
+                }
+
+                // Asignar evento al cambio de selección del ComboBox
+                comboBox1.SelectedIndexChanged += (s, ev) => CargarProductos();
+
 
 
             }
@@ -92,6 +96,9 @@ namespace Presentacion
 
         }
 
+        
+
+
         public void MostrarCategorias()
         {
             List<Producto> lista = gestorCategoria.ObtenerCategorias();
@@ -106,10 +113,12 @@ namespace Presentacion
 
 
         }
-        public List<Producto> ListaProductosporCat(Producto producto)
+        public List<Producto> ListaProductosporCat()
         {
-            List<Producto> prod = gestorCategoria.ObtenerProdporCategorias(producto.idCategoria);
             Producto produ = (Producto)comboBox1.SelectedItem;
+
+            List<Producto> prod = gestorCategoria.ObtenerProdporCategorias(produ.idCategoria);
+            
             if (produ != null)
             {
                 var productosfiltrados=prod.Where(p=>p.idCategoria==produ.idCategoria).ToList();
@@ -120,10 +129,10 @@ namespace Presentacion
         }
 
 
-        private void CargarProductos(Producto producto)
+        private void CargarProductos()
         {
 
-            List<Producto> productos = ListaProductosporCat(producto);
+            List<Producto> productos = ListaProductosporCat();
             
 
             var bindingList = new BindingList<Producto>(productos);

@@ -91,5 +91,11 @@ namespace Presentacion
 
             AbrirFormEnPanel(registroClientes);
         }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Venta registroventa = new Venta();
+            AbrirFormEnPanel(registroventa);
+        }
     }
 }

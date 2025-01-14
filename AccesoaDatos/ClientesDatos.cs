@@ -41,6 +41,35 @@ namespace AccesoaDatos
 
         }
 
+
+        public List<Cliente> getClientes()
+        {
+            string path = "/api/Cliente/GetClientes";
+            List<Cliente> Clientes = new List<Cliente>();
+            try
+            {
+                HttpResponseMessage response = WebHelper.Get(path);
+                if (response.IsSuccessStatusCode)
+                {
+                    var contentStream = response.Content.ReadAsStringAsync().Result;
+                    List<Cliente> listadoClientes = JsonConvert.DeserializeObject<List<Cliente>>(contentStream);
+                    return listadoClientes;
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            return Clientes;
+
+        }
+
+
+
         public void ModificarCliente(Guid idUsuario, string direccion, string telefono, string email)
         {
             string path = "/api/Cliente/ReactivarCliente?id="+idUsuario;

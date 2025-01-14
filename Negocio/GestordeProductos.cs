@@ -32,6 +32,11 @@ namespace Negocio
         
         }
 
+        public List<Producto> listarProductos()
+        {
+            return ProductosDa.getProductos();
+        }
+
         public List<Producto> ObtenerCategorias()
         {
             string rutaArchivo = "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\TextFile1.json";

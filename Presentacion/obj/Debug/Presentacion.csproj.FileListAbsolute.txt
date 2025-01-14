@@ -1,6 +1,5 @@
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.BajaProducto.resources
-C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.Cliente.resources
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.Login.resources
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.LoginNuevo.resources
 C:\Users\Usuario\source\repos\TPCAI_Electro\Presentacion\obj\Debug\Presentacion.MenuAdministrador.resources

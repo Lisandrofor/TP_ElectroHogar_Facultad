@@ -16,7 +16,7 @@ namespace AccesoaDatos
        
         public List<Producto> getProductos()
         {
-            string path = "/api/Producto/AgregarProducto";
+            string path = "/api/Producto/TraerProductos";
             List<Producto> Productos = new List<Producto>();
             try
             {

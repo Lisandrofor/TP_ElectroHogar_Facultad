@@ -52,12 +52,6 @@
     <Compile Include="BajaProducto.Designer.cs">
       <DependentUpon>BajaProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
@@ -169,9 +163,6 @@
     </Compile>
     <EmbeddedResource Include="BajaProducto.resx">
       <DependentUpon>BajaProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
