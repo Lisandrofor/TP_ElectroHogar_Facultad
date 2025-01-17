@@ -74,7 +74,7 @@ namespace Modelo
 
         public override string ToString()
         {
-            return $"{idCategoria}  {nomCategoria} {nombre}";
+            return $"{idCategoria}  {nomCategoria}";
         }
 
 

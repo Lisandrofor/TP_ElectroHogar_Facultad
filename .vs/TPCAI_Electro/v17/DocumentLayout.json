@@ -7,36 +7,100 @@
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\productosdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\productosdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registroprodporcat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registroprodporcat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\ventasdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\ventasdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\productosdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\productosdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altaventacs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altaventacs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altaproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altaproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -55,28 +119,12 @@
       "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\clientesdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registroprodporcat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registroprodporcat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\proveedoresdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\proveedoresdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\usuariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -91,14 +139,6 @@
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registroclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\loginnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\loginnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -111,10 +151,6 @@
       "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registroprovee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registroprovee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -123,28 +159,8 @@
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\menusupervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altaproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altaproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\registrocateg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrocateg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -165,18 +181,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\presentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\modelo\\altaventacs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{277DD7AF-70D0-40BD-A508-2289995244BE}|Modelo\\Modelo.csproj|solutionrelative:modelo\\altaventacs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\negocio\\gestordeventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C254B3A0-AF2B-46B6-967D-5E896FBAFFAC}|Negocio\\Negocio.csproj|solutionrelative:negocio\\gestordeventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\accesoadatos\\ventasdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70F54231-32B0-4408-867C-F30479E9C094}|AccesoaDatos\\AccesoaDatos.csproj|solutionrelative:accesoadatos\\ventasdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -194,16 +198,28 @@
               "Title": "Venta.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Venta.cs",
               "RelativeDocumentMoniker": "Presentacion\\Venta.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Venta.cs",
-              "RelativeToolTip": "Presentacion\\Venta.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAqwCAAAAAIAAAA",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Venta.cs*",
+              "RelativeToolTip": "Presentacion\\Venta.cs*",
+              "ViewState": "AQIAACEAAAAAAAAAAAA6wCgAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:04:16.56Z",
+              "WhenOpened": "2025-01-16T15:15:04.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Venta.cs",
+              "RelativeDocumentMoniker": "Modelo\\Venta.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Venta.cs",
+              "RelativeToolTip": "Modelo\\Venta.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAiwBMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T00:48:40.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Venta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Venta.cs",
               "RelativeDocumentMoniker": "Presentacion\\Venta.cs",
@@ -214,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 26,
               "Title": "MenuVendedor.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuVendedor.cs",
               "RelativeDocumentMoniker": "Presentacion\\MenuVendedor.cs",
@@ -225,19 +241,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "GestordeClientes.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeClientes.cs",
               "RelativeDocumentMoniker": "Negocio\\GestordeClientes.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeClientes.cs",
               "RelativeToolTip": "Negocio\\GestordeClientes.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAiwFMAAAAJAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAywDQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T19:19:50.437Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 35,
               "Title": "LoginNuevo.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginNuevo.cs",
               "RelativeDocumentMoniker": "Presentacion\\LoginNuevo.cs",
@@ -248,19 +264,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 2,
               "Title": "Registrese.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Registrese.cs",
               "RelativeDocumentMoniker": "Presentacion\\Registrese.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Registrese.cs",
               "RelativeToolTip": "Presentacion\\Registrese.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAwwMkAAAAAAAAA",
+              "ViewState": "AQIAANYAAAAAAAAAAAAAAOAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T02:44:55.114Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 24,
               "Title": "RegistraProd.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistraProd.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistraProd.cs",
@@ -268,8 +284,7 @@
               "RelativeToolTip": "Presentacion\\RegistraProd.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAmwCQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T14:42:11.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T14:42:11.155Z"
             },
             {
               "$type": "Document",
@@ -279,25 +294,25 @@
               "RelativeDocumentMoniker": "Presentacion\\RegistroCateg.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroCateg.cs",
               "RelativeToolTip": "Presentacion\\RegistroCateg.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAAqwDYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T12:02:13.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "RegistroProdporCat.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroProdporCat.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistroProdporCat.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroProdporCat.cs",
               "RelativeToolTip": "Presentacion\\RegistroProdporCat.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAuwGkAAABEAAAA",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAUwIAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T11:53:24.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 29,
               "Title": "RegistroProdporCat.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroProdporCat.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistroProdporCat.cs",
@@ -308,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 31,
               "Title": "RegistroCateg.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroCateg.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistroCateg.cs",
@@ -319,20 +334,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "GestordeProductos.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeProductos.cs",
               "RelativeDocumentMoniker": "Negocio\\GestordeProductos.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeProductos.cs",
               "RelativeToolTip": "Negocio\\GestordeProductos.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAhwCQAAAAMAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAIAwwEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T02:57:04.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T02:57:04.417Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "RegistroCateg.resx",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroCateg.resx",
               "RelativeDocumentMoniker": "Presentacion\\RegistroCateg.resx",
@@ -343,32 +357,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 22,
               "Title": "AltaProducto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaProducto.cs",
               "RelativeDocumentMoniker": "Modelo\\AltaProducto.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaProducto.cs",
               "RelativeToolTip": "Modelo\\AltaProducto.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBsAAAAbAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAYwBsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T02:37:18.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 20,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Producto.cs",
               "RelativeDocumentMoniker": "Modelo\\Producto.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Producto.cs",
               "RelativeToolTip": "Modelo\\Producto.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAswEwAAAAzAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwEwAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T02:36:40.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T02:36:40.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "RegistroClientes.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroClientes.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistroClientes.cs",
@@ -380,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "RegistroClientes.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroClientes.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistroClientes.cs",
@@ -391,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "RegistraAdm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistraAdm.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistraAdm.cs",
@@ -402,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Login.cs",
               "RelativeDocumentMoniker": "Presentacion\\Login.cs",
@@ -414,31 +427,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 17,
               "Title": "AltaVentacs.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaVentacs.cs",
               "RelativeDocumentMoniker": "Modelo\\AltaVentacs.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaVentacs.cs",
               "RelativeToolTip": "Modelo\\AltaVentacs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAuwCcAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:43:15.218Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 8,
               "Title": "GestordeVentas.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeVentas.cs",
               "RelativeDocumentMoniker": "Negocio\\GestordeVentas.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeVentas.cs",
               "RelativeToolTip": "Negocio\\GestordeVentas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:42:39.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 36,
               "Title": "Loginuser.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Loginuser.cs",
               "RelativeDocumentMoniker": "Modelo\\Loginuser.cs",
@@ -450,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 3,
               "Title": "Registrese.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\Registrese.cs",
               "RelativeDocumentMoniker": "Presentacion\\Registrese.cs",
@@ -461,91 +474,90 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Cliente.cs",
               "RelativeDocumentMoniker": "Modelo\\Cliente.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Cliente.cs",
               "RelativeToolTip": "Modelo\\Cliente.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAASwBsAAAAIAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAASwBsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:40:07.883Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 15,
               "Title": "AltaCliente.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaCliente.cs",
               "RelativeDocumentMoniker": "Modelo\\AltaCliente.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaCliente.cs",
               "RelativeToolTip": "Modelo\\AltaCliente.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAACsAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBcAAACsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:39:37.806Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 19,
               "Title": "Proveedor.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Proveedor.cs",
               "RelativeDocumentMoniker": "Modelo\\Proveedor.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Proveedor.cs",
               "RelativeToolTip": "Modelo\\Proveedor.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAAEcAAAAIAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwv0cAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:38:55.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 18,
               "Title": "AltaProveedor.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaProveedor.cs",
               "RelativeDocumentMoniker": "Modelo\\AltaProveedor.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaProveedor.cs",
               "RelativeToolTip": "Modelo\\AltaProveedor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:37:19.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 25,
               "Title": "RegistraProd.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistraProd.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistraProd.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistraProd.cs [Dise\u00F1o]",
               "RelativeToolTip": "Presentacion\\RegistraProd.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T02:28:21.098Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-22T02:28:21.098Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 23,
               "Title": "AltaUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaUsuario.cs",
               "RelativeDocumentMoniker": "Modelo\\AltaUsuario.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\AltaUsuario.cs",
               "RelativeToolTip": "Modelo\\AltaUsuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwAcAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:35:07.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 10,
               "Title": "VentasDatos.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\VentasDatos.cs",
               "RelativeDocumentMoniker": "AccesoaDatos\\VentasDatos.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\VentasDatos.cs",
               "RelativeToolTip": "AccesoaDatos\\VentasDatos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwHMAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:34:28.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 28,
               "Title": "ClientesDatos.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\ClientesDatos.cs",
               "RelativeDocumentMoniker": "AccesoaDatos\\ClientesDatos.cs",
@@ -557,7 +569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "ProveedoresDatos.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\ProveedoresDatos.cs",
               "RelativeDocumentMoniker": "AccesoaDatos\\ProveedoresDatos.cs",
@@ -569,20 +581,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "ProductosDatos.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\ProductosDatos.cs",
               "RelativeDocumentMoniker": "AccesoaDatos\\ProductosDatos.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\ProductosDatos.cs",
               "RelativeToolTip": "AccesoaDatos\\ProductosDatos.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAApwBIAAAA3AAAA",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAAAKMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T02:32:13.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T02:32:13.105Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "RegistroProvee.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\RegistroProvee.cs",
               "RelativeDocumentMoniker": "Presentacion\\RegistroProvee.cs",
@@ -593,19 +604,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 12,
               "Title": "GestordeProveedores.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeProveedores.cs",
               "RelativeDocumentMoniker": "Negocio\\GestordeProveedores.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeProveedores.cs",
               "RelativeToolTip": "Negocio\\GestordeProveedores.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAkwE0AAAAJAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAADIAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T02:21:47.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 34,
               "Title": "LoginNuevo.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginNuevo.cs",
               "RelativeDocumentMoniker": "Presentacion\\LoginNuevo.cs",
@@ -617,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "LoginCambioPass.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs",
               "RelativeDocumentMoniker": "Presentacion\\LoginCambioPass.cs",
@@ -629,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "MenuPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "Presentacion\\MenuPrincipal.cs",
@@ -641,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 27,
               "Title": "MenuVendedor.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuVendedor.cs",
               "RelativeDocumentMoniker": "Presentacion\\MenuVendedor.cs",
@@ -653,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 38,
               "Title": "MenuSupervisor.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\MenuSupervisor.cs",
               "RelativeDocumentMoniker": "Presentacion\\MenuSupervisor.cs",
@@ -664,43 +675,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 9,
               "Title": "UsuarioDatos.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\UsuarioDatos.cs",
               "RelativeDocumentMoniker": "AccesoaDatos\\UsuarioDatos.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\UsuarioDatos.cs",
               "RelativeToolTip": "AccesoaDatos\\UsuarioDatos.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwLgAAAAJAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAhwFQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T03:33:06.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Usuario.cs",
               "RelativeDocumentMoniker": "Modelo\\Usuario.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Modelo\\Usuario.cs",
               "RelativeToolTip": "Modelo\\Usuario.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAgwC4AAAAdAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAADIAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T03:06:22.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "GestordeUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeUsuarios.cs",
               "RelativeDocumentMoniker": "Negocio\\GestordeUsuarios.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Negocio\\GestordeUsuarios.cs",
               "RelativeToolTip": "Negocio\\GestordeUsuarios.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAuwDgAAABQAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAI4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T02:49:50.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "LoginCambioPass.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\Presentacion\\LoginCambioPass.cs",
               "RelativeDocumentMoniker": "Presentacion\\LoginCambioPass.cs",

@@ -20,12 +20,14 @@ namespace Presentacion
         {
             InitializeComponent();
             MostrarProductos();
+            
         }
 
 
         Cliente cliente=new Cliente();
         GestordeClientes clie = new GestordeClientes();
         GestordeProductos produ = new GestordeProductos();
+        GestordeVentas venta=new GestordeVentas();
 
 
 
@@ -35,14 +37,23 @@ namespace Presentacion
             comboBox1.DataSource = listaproductos;
             comboBox1.DisplayMember ="nombre";
         }
-        
-        
-        
+
+        private List<Producto> productos = new List<Producto>();
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-           
+
 
             Producto productoSeleccionado = (Producto)comboBox1.SelectedItem;
+
+            productos.Add(productoSeleccionado);
+
+            var productosConNombre = productos.
+
+
+            var bindingList = new BindingList<Producto>(productosConNombre);
+            var source = new BindingSource(bindingList, null);
+            dataGridView2.DataSource = source;
 
 
 
@@ -81,6 +92,11 @@ namespace Presentacion
                 textBox2.Text = "No se encontró la persona con ese dni.";
             }
         }
+
+
+        
+
+       
 
     }
 }
