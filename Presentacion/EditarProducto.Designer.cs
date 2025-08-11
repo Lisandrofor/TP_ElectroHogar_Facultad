@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class ReactivarProducto
+    partial class EditarProducto
     {
         /// <summary>
         /// Required designer variable.

@@ -253,7 +253,7 @@ namespace Presentacion
                             formulario = new MenuSupervisor(estado);
                             break;
                         case 1:
-                            formulario = new MenuVendedor(estado);
+                            formulario = new MenuVendedor(estado,usr.apellido,(usr.id).ToString());
                             break;
                         default:
                             // Manejo de caso si el host no es 1, 2 o 3

@@ -15,11 +15,14 @@ namespace Presentacion
     public partial class MenuVendedor : Form
     {
         LoginNuevo Cambiar = new LoginNuevo();
+        string _apellido;
+        string _idUsuario;
 
-        public MenuVendedor(Usuario.EstadoUsuario estado)
+        public MenuVendedor(Usuario.EstadoUsuario estado, string apellido, string idUsuario)
         {
             InitializeComponent();
-            MenuVendedor_Load(estado);
+            MenuVendedor_Load(estado, apellido);
+            _idUsuario = idUsuario;
         }
 
         public void AbrirFormEnPanel(object formhija)
@@ -39,11 +42,11 @@ namespace Presentacion
 
 
 
-        private void MenuVendedor_Load(Usuario.EstadoUsuario estado)
+        private void MenuVendedor_Load(Usuario.EstadoUsuario estado,string _apellido)
         {
             string mensaje = Cambiar.CambiarEstado(estado);
-            label1.Text = "VENDEDOR - " + mensaje;
-
+            label1.Text = "VENDEDOR - "+"  "+_apellido+"  "+mensaje;
+            
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -94,7 +97,7 @@ namespace Presentacion
 
         private void button20_Click(object sender, EventArgs e)
         {
-            Venta registroventa = new Venta();
+            Ventas registroventa = new Ventas(_idUsuario);
             AbrirFormEnPanel(registroventa);
         }
     }

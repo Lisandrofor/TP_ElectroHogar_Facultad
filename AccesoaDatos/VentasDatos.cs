@@ -85,7 +85,7 @@ namespace AccesoaDatos
 
 
 
-        public void AgregarVenta(AltaVentacs altaVenta)
+        public void AgregarVenta(Venta altaVenta)
         {
             string path = "/api/Venta/AgregarVenta";
 
@@ -113,17 +113,20 @@ namespace AccesoaDatos
             }
         }
 
-        public void GetVenta()
+        public List<Venta> GetVenta(string idVenta)
         {
-            string path = "/api/Venta/GetVenta";
+            string path = "/api/Venta/GetVenta?id="+idVenta;
 
+            List<Venta> ListaVentas = new List<Venta>();
             try
             {
-                HttpResponseMessage response = WebHelper.DeleteConBody(path);
+                HttpResponseMessage response = WebHelper.Get(path);
                 if (response.IsSuccessStatusCode)
                 {
-                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
-                    string respuesta = reader.ReadToEnd();
+                    var contentStream = response.Content.ReadAsStringAsync().Result;
+                    List<Venta> listadoVentas = JsonConvert.DeserializeObject<List<Venta>>(contentStream);
+                    return listadoVentas;
+
                 }
                 else
                 {
@@ -134,6 +137,7 @@ namespace AccesoaDatos
             {
                 Console.WriteLine($"Exception: {ex.Message}");
             }
+            return ListaVentas;
         }
 
 

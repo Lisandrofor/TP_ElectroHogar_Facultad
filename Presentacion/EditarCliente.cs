@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class ModificarCliente : Form
+    public partial class EditarCliente : Form
     {
-        public ModificarCliente()
+        public EditarCliente()
         {
             InitializeComponent();
         }

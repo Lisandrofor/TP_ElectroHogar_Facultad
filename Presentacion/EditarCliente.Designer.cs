@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class ModificarCliente
+    partial class EditarCliente
     {
         /// <summary>
         /// Required designer variable.

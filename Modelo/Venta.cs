@@ -14,14 +14,14 @@ namespace Modelo
         string _idProducto;
         int _cantidad;
         DateTime _fechaAlta;
-        int _estado;
+        EstadoVenta _estado;
 
 
         public Venta()
         {
 
         }
-        public Venta(Guid id, string idUsuario, string idCliente, string idProducto, int cantidad, DateTime fechaAlta, int estado)
+        public Venta(Guid id, string idUsuario, string idCliente, string idProducto, int cantidad, DateTime fechaAlta, EstadoVenta estado)
         {
             _id=id;
             _idUsuario=idUsuario;
@@ -34,6 +34,12 @@ namespace Modelo
 
         }
 
+        public  enum EstadoVenta
+        {
+            EnProceso,
+            Finalizada
+        }
+
         public Guid id { get=>_id; set=>_id=value; }
         public string idUsuario { get=>_idUsuario; set=>_idUsuario=value; }
         public string idCliente { get=>_idCliente; set=>_idCliente=value; }    
@@ -41,7 +47,9 @@ namespace Modelo
         public int cantidad { get=>_cantidad; set=>_cantidad=value; }
         
         public DateTime fechaAlta { get=>_fechaAlta; set=>_fechaAlta=value; }
-        public int estado { get=>_estado; set=>_estado=value; }
+        
+
+        public EstadoVenta estado { get => _estado; set => _estado = value; }
 
 
 

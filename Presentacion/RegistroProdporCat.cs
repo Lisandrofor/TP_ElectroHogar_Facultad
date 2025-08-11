@@ -103,7 +103,7 @@ namespace Presentacion
         {
             List<Producto> lista = gestorCategoria.ObtenerCategorias();
             comboBox1.DataSource = lista;
-            comboBox1.DisplayMember = "idCategoria"+ "nomCategoria";
+            comboBox1.DisplayMember = "CategoriaDisplay";
         }
 
         private void BorrarCampos()
@@ -115,18 +115,12 @@ namespace Presentacion
         }
         public List<Producto> ListaProductosporCat()
         {
-            Producto produ = (Producto)comboBox1.SelectedItem;
+            var produ = (Producto)comboBox1.SelectedItem;
+            if (produ == null) return new List<Producto>();
 
-            List<Producto> prod = gestorCategoria.ObtenerProdporCategorias(produ.idCategoria);
-            
-            if (produ != null)
-            {
-                var productosfiltrados=prod.Where(p=>p.idCategoria==produ.idCategoria).ToList();
-                return productosfiltrados;
-
-            }
-            return prod;
+            return gestorCategoria.ObtenerProdporCategorias(produ.idCategoria);
         }
+
 
 
         private void CargarProductos()

@@ -92,19 +92,19 @@
     <Compile Include="MenuVendedor.Designer.cs">
       <DependentUpon>MenuVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModificarCliente.cs">
+    <Compile Include="EditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModificarCliente.Designer.cs">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    <Compile Include="EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReactivarProducto.cs">
+    <Compile Include="EditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReactivarProducto.Designer.cs">
-      <DependentUpon>ReactivarProducto.cs</DependentUpon>
+    <Compile Include="EditarProducto.Designer.cs">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistraAdm.cs">
       <SubType>Form</SubType>
@@ -149,11 +149,11 @@
       <DependentUpon>RegistroProvee.cs</DependentUpon>
     </Compile>
     <Compile Include="ValidadorUtils.cs" />
-    <Compile Include="Venta.cs">
+    <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Venta.Designer.cs">
-      <DependentUpon>Venta.cs</DependentUpon>
+    <Compile Include="Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="VentasporFechas.cs">
       <SubType>Form</SubType>
@@ -185,8 +185,8 @@
     <EmbeddedResource Include="MenuVendedor.resx">
       <DependentUpon>MenuVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModificarCliente.resx">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -197,8 +197,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReactivarProducto.resx">
-      <DependentUpon>ReactivarProducto.cs</DependentUpon>
+    <EmbeddedResource Include="EditarProducto.resx">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistraAdm.resx">
       <DependentUpon>RegistraAdm.cs</DependentUpon>
@@ -221,8 +221,8 @@
     <EmbeddedResource Include="RegistroProvee.resx">
       <DependentUpon>RegistroProvee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Venta.resx">
-      <DependentUpon>Venta.cs</DependentUpon>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentasporFechas.resx">
       <DependentUpon>VentasporFechas.cs</DependentUpon>

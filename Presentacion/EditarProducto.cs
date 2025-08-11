@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class ReactivarProducto : Form
+    public partial class EditarProducto : Form
     {
-        public ReactivarProducto()
+        public EditarProducto()
         {
             InitializeComponent();
         }

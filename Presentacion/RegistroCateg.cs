@@ -91,7 +91,8 @@ namespace Presentacion
         {
             List<Producto> lista = gestorCategoria.ObtenerCategorias();
             comboBox1.DataSource = lista;
-            comboBox1.DisplayMember = "nomCategoria"+"idCategoria";
+            comboBox1.DisplayMember = "nomCategoria";
+            comboBox1.ValueMember = "idCategoria";
 
         }
 
