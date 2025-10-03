@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|c:\\users\\vlisa\\source\\repos\\tp_electrohogar_facultad\\presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrocateg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -35,7 +35,7 @@
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registrocateg.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|c:\\users\\vlisa\\source\\repos\\tp_electrohogar_facultad\\presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7839C5D7-7C2C-43F4-97D5-B1EFE65CB994}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\registraprod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -202,7 +202,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -219,6 +219,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Categorias.json",
+              "DocumentMoniker": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Categorias.json",
+              "RelativeDocumentMoniker": "AccesoaDatos\\Categorias.json",
+              "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Categorias.json",
+              "RelativeToolTip": "AccesoaDatos\\Categorias.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-18T17:00:13.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegistroCateg.cs",
+              "DocumentMoniker": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroCateg.cs",
+              "RelativeDocumentMoniker": "Presentacion\\RegistroCateg.cs",
+              "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroCateg.cs",
+              "RelativeToolTip": "Presentacion\\RegistroCateg.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAvwB4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T12:02:13.128Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -253,8 +279,7 @@
               "RelativeToolTip": "Presentacion\\RegistroProdporCat.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAQwEEAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T17:56:04.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T17:56:04.914Z"
             },
             {
               "$type": "Document",
@@ -278,8 +303,7 @@
               "RelativeToolTip": "Modelo\\Categorias.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAqwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T17:33:39.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T17:33:39.004Z"
             },
             {
               "$type": "Document",
@@ -291,20 +315,7 @@
               "RelativeToolTip": "Modelo\\Producto.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAkwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T17:15:03.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Categorias.json",
-              "DocumentMoniker": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Categorias.json",
-              "RelativeDocumentMoniker": "AccesoaDatos\\Categorias.json",
-              "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Categorias.json",
-              "RelativeToolTip": "AccesoaDatos\\Categorias.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-18T17:00:13.242Z"
+              "WhenOpened": "2025-08-18T17:15:03.239Z"
             },
             {
               "$type": "Document",
@@ -327,8 +338,7 @@
               "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroProdporCat.cs [Dise\u00F1o]",
               "RelativeToolTip": "Presentacion\\RegistroProdporCat.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T11:04:42.976Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-01-03T11:04:42.976Z"
             },
             {
               "$type": "Document",
@@ -362,8 +372,7 @@
               "RelativeToolTip": "Negocio\\GestordeProductos.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAqwCgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T02:57:04.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T02:57:04.417Z"
             },
             {
               "$type": "Document",
@@ -398,8 +407,7 @@
               "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistraProd.cs [Dise\u00F1o]",
               "RelativeToolTip": "Presentacion\\RegistraProd.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T02:28:21.098Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-22T02:28:21.098Z"
             },
             {
               "$type": "Document",
@@ -449,19 +457,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegistroCateg.cs",
-              "DocumentMoniker": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroCateg.cs",
-              "RelativeDocumentMoniker": "Presentacion\\RegistroCateg.cs",
-              "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroCateg.cs",
-              "RelativeToolTip": "Presentacion\\RegistroCateg.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAvwB4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T12:02:13.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
               "Title": "RegistroCateg.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroCateg.cs",
@@ -469,8 +464,7 @@
               "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroCateg.cs [Dise\u00F1o]",
               "RelativeToolTip": "Presentacion\\RegistroCateg.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T20:20:19.702Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-29T20:20:19.702Z"
             },
             {
               "$type": "Document",
@@ -481,8 +475,7 @@
               "ToolTip": "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\Presentacion\\RegistroCateg.resx",
               "RelativeToolTip": "Presentacion\\RegistroCateg.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-12-11T01:24:53.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T01:24:53.961Z"
             },
             {
               "$type": "Document",
