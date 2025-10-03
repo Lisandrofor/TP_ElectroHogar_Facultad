@@ -18,3 +18,13 @@ C:\Users\Usuario\source\repos\TP_ElectroHogar_Facultad2\Modelo\obj\Debug\Modelo.
 C:\Users\Usuario\source\repos\TP_ElectroHogar_Facultad2\Modelo\obj\Debug\Modelo.csproj.Up2Date
 C:\Users\Usuario\source\repos\TP_ElectroHogar_Facultad2\Modelo\obj\Debug\Modelo.dll
 C:\Users\Usuario\source\repos\TP_ElectroHogar_Facultad2\Modelo\obj\Debug\Modelo.pdb
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\bin\Debug\Modelo.dll
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\bin\Debug\Modelo.pdb
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\obj\Debug\Modelo.dll
+C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Modelo\obj\Debug\Modelo.pdb

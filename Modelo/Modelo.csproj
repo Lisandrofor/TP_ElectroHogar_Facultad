@@ -53,6 +53,7 @@
     <Compile Include="AltaProducto.cs" />
     <Compile Include="AltaProveedor.cs" />
     <Compile Include="AltaVentacs.cs" />
+    <Compile Include="Categorias.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Loginuser.cs" />
     <Compile Include="Producto.cs" />

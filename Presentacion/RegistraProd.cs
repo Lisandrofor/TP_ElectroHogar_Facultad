@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,12 +28,12 @@ namespace Presentacion
         GestordeProveedores gestorProve = new GestordeProveedores();
         Proveedor lista = new Proveedor();
 
-        
+
         public void MostrarCategoriasProd()
         {
-            List<Producto> lista = gestorCategoria.ObtenerCategorias();
+            List<Categorias> lista = gestorCategoria.ObtenerCategorias();
             comboBox1.DataSource = lista;
-            comboBox1.DisplayMember = "nomCategoria" + "idCategoria";
+            comboBox1.DisplayMember = "Mostrar";
 
         }
         public void MostrarCategorias()
@@ -62,12 +63,16 @@ namespace Presentacion
             int categoria = NumCategoria();
 
 
+            List<Producto> lista=gestorProd.listarProductos();
+            
+
+
 
 
             try
             {
                 // Llamada al método AgregarUsuario con los parámetros adecuados
-                gestorProd.AgregarProd(categoria,idproveedor,nombre,precio,stock);
+                gestorProd.AgregarProd(categoria, idproveedor, nombre, precio, stock);
                 // Si llegamos aquí, la operación fue exitosa
                 Console.WriteLine("Usuario agregado correctamente.");
             }
@@ -83,7 +88,7 @@ namespace Presentacion
 
 
         }
-       
+
 
         public Guid IdProveedor()
         {
@@ -114,31 +119,26 @@ namespace Presentacion
 
         public int NumCategoria()
         {
-            List<Producto> lista = gestorCategoria.ObtenerCategorias();
-            Producto productoSeleccionado = (Producto)comboBox1.SelectedItem;
-
-            if (productoSeleccionado!=null)
+            List<Categorias> lista = gestorCategoria.ObtenerCategorias();
+            Categorias categoriaSeleccionada = (Categorias)comboBox1.SelectedItem;
+            if (categoriaSeleccionada != null)
             {
-                Producto productoEncontrado= lista.FirstOrDefault(prod=>prod.idCategoria==productoSeleccionado.idCategoria);
+                // Buscar la categoría en la lista
+                Categorias categoriaEncontrada = lista.FirstOrDefault(c => c.IdCategoria == categoriaSeleccionada.IdCategoria);
+                if (categoriaEncontrada != null)
+                {
+                    return categoriaEncontrada.IdCategoria;
+                }
+                else
+                {
+                    MessageBox.Show("Categoría no encontrada.");
+                }
 
-                    if (productoEncontrado!=null)
-                    {
-                    return productoEncontrado.idCategoria;
-                    }
-                    else
-                    {
-
-                    }
             }
-
-            return productoSeleccionado.idCategoria = 0;
-            
-
-
-
+            return categoriaSeleccionada.IdCategoria = 0;
         }
 
-
+       
     }
 
 
@@ -151,9 +151,6 @@ namespace Presentacion
 
 
 
-    
 
 
-                
 
-            

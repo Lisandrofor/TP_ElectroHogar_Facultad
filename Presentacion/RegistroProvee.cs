@@ -69,7 +69,7 @@ namespace Presentacion
 
         public void MostrarCategorias()
         {
-            List<Producto> lista = gestorCategoria.ObtenerCategorias();
+            List<Categorias> lista = gestorCategoria.ObtenerCategorias();
             comboBox1.DataSource = lista;
             comboBox1.DisplayMember = "nomCategoria" + "idCategoria";
 

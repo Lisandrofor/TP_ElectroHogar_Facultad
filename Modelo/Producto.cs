@@ -26,7 +26,7 @@ namespace Modelo
 
 
 
-        [JsonConstructor]
+
 
 
 

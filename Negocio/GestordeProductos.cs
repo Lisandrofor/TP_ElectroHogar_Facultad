@@ -15,13 +15,13 @@ namespace Negocio
     {
         
         
-        private List<Producto> listaCategorias = new List<Producto>();
+        private List<Categorias> listaCategorias = new List<Categorias>();
         ProductosDatos ProductosDa = new ProductosDatos();
         
         public void AgregarCategoria(int idcategoria, string nomCategoria)
         {
 
-            Producto lista = new Producto(idcategoria, nomCategoria);
+            Categorias lista = new Categorias(idcategoria, nomCategoria);
             listaCategorias.Add(lista);
         }
 
@@ -37,30 +37,30 @@ namespace Negocio
             return ProductosDa.getProductos();
         }
 
-        public List<Producto> ObtenerCategorias()
+        public List<Categorias> ObtenerCategorias()
         {
-            string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Categorias.json");
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Categorias.json";
 
             try
             {
                 if (!File.Exists(rutaArchivo))
                 {
                     // Si no existe, devuelvo lista vacía
-                    return new List<Producto>();
+                    return new List<Categorias>();
                 }
 
                 string jsonLeer = File.ReadAllText(rutaArchivo);
 
                 if (string.IsNullOrWhiteSpace(jsonLeer))
                 {
-                    return new List<Producto>();
+                    return new List<Categorias>();
                 }
 
-                List<Producto> listaCategorias = JsonConvert.DeserializeObject<List<Producto>>(jsonLeer);
+                List<Categorias> listaCategorias = JsonConvert.DeserializeObject<List<Categorias>>(jsonLeer);
 
                 if (listaCategorias == null)
                 {
-                    return new List<Producto>();
+                    return new List<Categorias>();
                 }
 
                 return listaCategorias;
@@ -68,13 +68,13 @@ namespace Negocio
             catch (JsonException ex)
             {
                 Console.WriteLine($"Error al deserializar el archivo JSON: {ex.Message}");
-                return new List<Producto>();
+                return new List<Categorias>();
             }
             catch (IOException ex)
             {
                 Console.WriteLine($"Error al leer el archivo: {ex.Message}");
-                return new List<Producto>();
-            }
+                return new List<Categorias>();
+            }   
         }
 
 
@@ -111,11 +111,11 @@ namespace Negocio
         public void GuardarCategorias(int idcategoria, string nomCategoria)
         {
             // Nueva categoría
-            Producto nuevaCategoria = new Producto(idcategoria, nomCategoria);
-            List<Producto> categorias;
+            Categorias nuevaCategoria = new Categorias(idcategoria, nomCategoria);
+            List<Categorias> categorias;
 
             // Ruta flexible: guarda el JSON junto al ejecutable
-            string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Categorias.json");
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Categorias.json";
 
             // Si existe el archivo, leerlo
             if (File.Exists(rutaArchivo))
@@ -125,27 +125,27 @@ namespace Negocio
                 // Si está vacío, crear lista vacía
                 if (string.IsNullOrWhiteSpace(jsonArchivo))
                 {
-                    categorias = new List<Producto>();
+                    categorias = new List<Categorias>();
                 }
                 else if (jsonArchivo.Trim().StartsWith("["))
                 {
-                    categorias = JsonConvert.DeserializeObject<List<Producto>>(jsonArchivo);
+                    categorias = JsonConvert.DeserializeObject<List<Categorias>>(jsonArchivo);
                 }
                 else
                 {
                     // Caso raro: archivo con una sola categoría guardada como objeto
-                    Producto cat = JsonConvert.DeserializeObject<Producto>(jsonArchivo);
-                    categorias = new List<Producto> { cat };
+                    Categorias cat = JsonConvert.DeserializeObject<Categorias>(jsonArchivo);
+                    categorias = new List<Categorias> { cat };
                 }
             }
             else
             {
                 // Si no existe, lista vacía
-                categorias = new List<Producto>();
+                categorias = new List<Categorias>();
             }
 
             // Evitar duplicados: comprobar si ya existe una categoría con el mismo ID
-            bool existe = categorias.Any(c => c.idCategoria == idcategoria);
+            bool existe = categorias.Any(c => c.IdCategoria == idcategoria);
 
             if (existe)
             {

@@ -20,38 +20,24 @@ namespace Presentacion
         public RegistroCateg()
         {
             InitializeComponent();
-            MostrarCategorias();    
+            MostrarCategorias();
         }
 
+        private GestordeProductos gestorCategoria = new GestordeProductos();
 
-        GestordeProductos gestorCategoria = new GestordeProductos();
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
-            
-
-
             string nomCategoria = textBox2.Text;
             int idCategoria = int.Parse(textBox3.Text);
-            
-
-
-
-
 
             //gestorCliente1.ValidarNombre(nombre);
             //gestorCliente1.ValidarApellido(apellido);
-
-
-
 
             try
             {
                 // Llamada al método AgregarUsuario con los parámetros adecuados
                 gestorCategoria.AgregarCategoria(idCategoria, nomCategoria);
                 gestorCategoria.GuardarCategorias(idCategoria, nomCategoria);
-
-                
             }
             catch (ArgumentNullException ex)
             {
@@ -60,55 +46,22 @@ namespace Presentacion
                 Console.WriteLine(ex.Message);
             }
 
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             BorrarCampos();
             MessageBox.Show($"Categoria Agregada Exitosamente");
-
         }
 
         public void MostrarCategorias()
         {
-            List<Producto> lista = gestorCategoria.ObtenerCategorias();
+            List<Categorias> lista = gestorCategoria.ObtenerCategorias();
             comboBox1.DataSource = lista;
-            comboBox1.DisplayMember = "nomCategoria";
-            comboBox1.ValueMember = "idCategoria";
-
+            comboBox1.DisplayMember = "Mostrar";
+            comboBox1.ValueMember = "IdCategoria";
         }
 
         private void BorrarCampos()
         {
             textBox2.Clear();
             textBox3.Clear();
-            
-
         }
-
-
-
     }
-
-
 }
-
-

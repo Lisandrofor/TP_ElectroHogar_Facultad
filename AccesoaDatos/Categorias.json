@@ -1,3 +1,17 @@
 [
-  
+  {
+    "IdCategoria": 15,
+    "NomCategoria": "Electro",
+    "Mostrar": "15 - Electro"
+  },
+  {
+    "IdCategoria": 4,
+    "NomCategoria": "Bazar",
+    "Mostrar": "4 - Bazar"
+  },
+  {
+    "IdCategoria": 1,
+    "NomCategoria": "Informatica",
+    "Mostrar": "1 - Informatica"
+  }
 ]
