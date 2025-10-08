@@ -42,13 +42,14 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel2.Controls.Add(this.comboBox3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.panel3);
@@ -62,7 +63,6 @@
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.textBox10);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -122,6 +122,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(199, 28);
             this.comboBox1.TabIndex = 22;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label8
             // 
@@ -215,13 +216,13 @@
             this.textBox3.Size = new System.Drawing.Size(186, 26);
             this.textBox3.TabIndex = 1;
             // 
-            // textBox2
+            // comboBox3
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 198);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 26);
-            this.textBox2.TabIndex = 0;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(97, 198);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(238, 28);
+            this.comboBox3.TabIndex = 28;
             // 
             // RegistraProd
             // 
@@ -253,8 +254,8 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
