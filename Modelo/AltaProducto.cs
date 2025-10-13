@@ -11,7 +11,7 @@ namespace Modelo
     public class AltaProducto
     {
 
-        int _categoria;
+        int _idCategoria;
         string _idUsuario;
         string _idProveedor;
         string _nombre;
@@ -20,7 +20,7 @@ namespace Modelo
     
     public AltaProducto(int categoria, string idUsuario, string idProveedor, string nombre, float precio, int stock )
         {
-            _categoria = categoria;
+            _idCategoria = categoria;
             _idUsuario = idUsuario;
             _idProveedor = idProveedor;
             _nombre = nombre;
@@ -28,7 +28,7 @@ namespace Modelo
             _stock = stock;
         }
 
-        public int categoria { get => _categoria; set => _categoria = value; }
+        public int idCategoria { get => _idCategoria; set => _idCategoria = value; }
         public string idUsuario { get => _idUsuario; set => _idUsuario = value; }
 
         public string idProveedor { get=>_idProveedor; set=> _idProveedor=value; }

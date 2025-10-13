@@ -24,13 +24,14 @@ namespace Presentacion
 
        
 
-        public MenuAdministrador(Usuario.EstadoUsuario estado)
+        public MenuAdministrador(Usuario.EstadoUsuario estado,Guid id,string apellido)
         {
             
-            
+            usuario.id = id;
+            usuario.apellido = apellido;
             InitializeComponent();
             disenosubmenu();
-            MenuAdministrador_Load(estado);
+            MenuAdministrador_Load(estado,id,apellido);
             
 
 
@@ -90,10 +91,12 @@ namespace Presentacion
 
         }
 
-        private void MenuAdministrador_Load(Usuario.EstadoUsuario estado)
+        private void MenuAdministrador_Load(Usuario.EstadoUsuario estado,Guid id,string apellido)
         {
             string mensaje=Cambiar.CambiarEstado(estado);
-            label1.Text = "ADMINISTRADOR - " + mensaje;
+            
+            
+            label1.Text = "ADMINISTRADOR - "+apellido+ mensaje;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -257,7 +260,7 @@ namespace Presentacion
 
         private void button10_Click(object sender, EventArgs e)
         {
-            RegistraProd formRegisPro = new RegistraProd();
+            RegistraProd formRegisPro = new RegistraProd(usuario.id);
 
             AbrirFormEnPanel(formRegisPro);
 

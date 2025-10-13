@@ -17,9 +17,11 @@ namespace Presentacion
 {
     public partial class RegistraProd : Form
     {
-        
-        public RegistraProd()
+        private Guid idUsuario;
+
+        public RegistraProd(Guid id)
         {
+            idUsuario = id;
             InitializeComponent();
             MostrarCategoriasProd();
             MostrarProveedrores();
@@ -59,27 +61,69 @@ namespace Presentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            float precio = float.Parse(textBox3.Text);
-            int stock = int.Parse(textBox10.Text);
+            // --- Validaciones básicas ---
+            if (string.IsNullOrWhiteSpace(comboBox3.Text))
+            {
+                MessageBox.Show("Debe ingresar o seleccionar un nombre de producto.");
+                return;
+            }
+
+            if (!float.TryParse(textBox3.Text, out float precio))
+            {
+                MessageBox.Show("Precio inválido.");
+                return;
+            }
+
+            if (!int.TryParse(textBox10.Text, out int stock))
+            {
+                MessageBox.Show("Stock inválido.");
+                return;
+            }
+
             string idproveedor = IdProveedor().ToString();
             int categoria = NumCategoria();
-
-            Producto productoSeleccionado = (Producto)comboBox3.SelectedItem;
-            string nombre = productoSeleccionado != null ? productoSeleccionado.nombre : "";
+            string nombre = comboBox3.Text.Trim();
 
             try
             {
-                gestorProd.AgregarProd(categoria, idproveedor, nombre, precio, stock);
-                MessageBox.Show("Producto agregado correctamente.");
+                Producto productoSeleccionado = comboBox3.SelectedItem as Producto;
+
+                // Si el usuario seleccionó un producto existente
+                if (productoSeleccionado != null && !string.IsNullOrEmpty(productoSeleccionado.nombre))
+                {
+                    stock= stock + productoSeleccionado.stock;
+                    // Actualiza stock/precio o lo que necesites
+                    gestorProd.AgregarProd(categoria, idproveedor, productoSeleccionado.nombre, precio, stock);
+                    gestorProd.ModificarProducto(productoSeleccionado.id,idUsuario, precio, stock);
+                    MessageBox.Show("Producto existente actualizado correctamente.");
+                }
+                else
+                {
+                    // --- Usuario escribió un nombre nuevo ---
+                    // 🔹 Guardar el nuevo producto directamente en la base
+                    gestorProd.AgregarProd(categoria, idproveedor, nombre, precio, stock);
+
+                    // 🔹 Crear el objeto nuevo (solo para mostrarlo en la lista visualmente)
+                    Producto nuevoProducto = new Producto
+                    {
+                        nombre = nombre,
+                        precio = precio,
+                        stock = stock
+                        // Si AgregarProd devuelve el ID, podrías asignarlo aquí
+                    };
+
+                    // 🔹 Agregarlo al ComboBox
+                    listaProdBinding.Add(nuevoProducto);
+                    comboBox3.SelectedItem = nuevoProducto;
+
+
+                    MessageBox.Show("Producto nuevo agregado correctamente a la base de datos.");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
-
-
-
         }
 
 
@@ -97,7 +141,7 @@ namespace Presentacion
                 // Buscar el producto en la lista
                 Proveedor proveedorEncontrado = listaProve.FirstOrDefault(p => p.id == proveedorSeleccionado.id);
 
-                if (proveedorEncontrado.id != null)
+                if (proveedorEncontrado!= null)
                 {
                     return proveedorEncontrado.id;
                 }
@@ -163,13 +207,25 @@ namespace Presentacion
 
         }
 
-        
+        private BindingList<Producto> listaProdBinding;
 
         public void MostrarProductos(int categoria)
         {
-            List<Producto> listaProd = DevuelveListaProductos(categoria).ToList();
-            comboBox3.DataSource = listaProd;
+
+            var listaProd = DevuelveListaProductos(categoria).ToList();
+
+            listaProd.Insert(0, new Producto { nombre = "" });
+            listaProdBinding = new BindingList<Producto>(listaProd);
+            comboBox3.DataSource = null;
+            // Configura el ComboBox con enlace de datos
+            comboBox3.DataSource = listaProdBinding;
             comboBox3.DisplayMember = "nombre";
+            comboBox3.ValueMember = "id";  // ← tu propiedad Guid
+
+            dataGridView1.DataSource = null;              // Limpio el origen anterior
+            dataGridView1.AutoGenerateColumns = true;     // Genera las columnas automáticamente
+            dataGridView1.DataSource = listaProdBinding;
+
 
         }
 

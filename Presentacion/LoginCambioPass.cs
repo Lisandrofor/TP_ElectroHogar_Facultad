@@ -50,7 +50,7 @@ namespace Presentacion
             {
 
                 MessageBox.Show("¡Inicio de sesión exitoso!");
-                Form Formulario = new MenuAdministrador(Usuario.EstadoUsuario.Activo);
+                Form Formulario = new MenuAdministrador(Usuario.EstadoUsuario.Activo,usuario.id,usuario.apellido);
                 Formulario.Show();
                 Hide();
             }

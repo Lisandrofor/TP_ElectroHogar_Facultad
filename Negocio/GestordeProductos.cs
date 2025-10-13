@@ -215,7 +215,7 @@ namespace Negocio
             //string idUsuario = Guid.NewGuid().ToString();
             string idUsuario = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
 
-            AltaProducto altaProd = new AltaProducto(categoria,idproveedor,idUsuario, nombre,precio,stock);
+            AltaProducto altaProd = new AltaProducto(categoria,idUsuario,idproveedor, nombre,precio,stock);
 
             try
             {

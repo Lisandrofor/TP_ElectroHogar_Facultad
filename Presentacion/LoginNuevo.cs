@@ -247,7 +247,7 @@ namespace Presentacion
                     switch (usr.host)
                     {    
                         case 3:
-                            formulario = new MenuAdministrador(estado);
+                            formulario = new MenuAdministrador(estado,usr.id,usr.apellido);
                             break;
                         case 2:
                             formulario = new MenuSupervisor(estado);
