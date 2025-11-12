@@ -16,7 +16,7 @@ namespace Modelo
         string _nombre;
         DateTime _fechaAlta;
         DateTime? _fechaBaja;
-        float _precio;
+        Double _precio;
         int _stock;
         string _nomCategoria;
         int _cantidad;
@@ -82,7 +82,7 @@ namespace Modelo
         public string nombre { get => _nombre; set => _nombre = value; }
         public DateTime fechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public DateTime? fechaBaja { get => _fechaBaja; set => _fechaBaja = value; }
-        public float precio { get => _precio; set => _precio = value; }
+        public Double precio { get => _precio; set => _precio = value; }
         public int stock { get => _stock; set => _stock = value; }
 
 
@@ -90,16 +90,18 @@ namespace Modelo
 
 
 
-        public float SubTotal => precio * cantidad;
+        public Double SubTotal => precio * cantidad;
 
         public float descuento { get => _descuento; set => _descuento = value; }
 
         public float impuesto { get => _impuesto; set => _impuesto = value; }
 
         [Browsable(false)]
-        public string nomCategoria { get => _nomCategoria; set => nomCategoria = value; }
+       
 
-        
+        public string nomCategoria { get => _nomCategoria; set => _nomCategoria = value; }
+
+
 
         public override string ToString()
         {

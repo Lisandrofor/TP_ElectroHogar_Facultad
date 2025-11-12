@@ -14,7 +14,7 @@ namespace Negocio
     public class GestordeProductos
     {
         
-        
+        private ProductosDatos ProductosDatos = new ProductosDatos();
         private List<Categorias> listaCategorias = new List<Categorias>();
         ProductosDatos ProductosDa = new ProductosDatos();
         
@@ -164,6 +164,109 @@ namespace Negocio
 
 
 
+        public void GuardarProductosEliminados(Producto producto,string iduser)
+        {
+
+            Producto prodEliminado = new Producto
+            {
+                id = producto.id,
+                nombre = producto.nombre,
+
+            };
+            List<Producto> productos;
+
+            // Ruta flexible: guarda el JSON junto al ejecutable
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\ProductosEliminados.json";
+
+            // Si existe el archivo, leerlo
+            if (File.Exists(rutaArchivo))
+            {
+                string jsonArchivo = File.ReadAllText(rutaArchivo);
+
+                // Si está vacío, crear lista vacía
+                if (string.IsNullOrWhiteSpace(jsonArchivo))
+                {
+                    productos = new List<Producto>();
+                }
+                else if (jsonArchivo.Trim().StartsWith("["))
+                {
+                    productos = JsonConvert.DeserializeObject<List<Producto>>(jsonArchivo);
+                }
+                else
+                {
+                    // Caso raro: archivo con una sola categoría guardada como objeto
+                    Producto prod = JsonConvert.DeserializeObject<Producto>(jsonArchivo);
+                    productos = new List<Producto> { prod };
+                }
+            }
+            else
+            {
+                // Si no existe, lista vacía
+                productos = new List<Producto>();
+            }
+
+            // Evitar duplicados: comprobar si ya existe una categoría con el mismo ID
+            bool existe = productos.Any(c => c.id == producto.id);
+
+            if (existe)
+            {
+                Console.WriteLine($"El producto ya fue eliminado con ID {producto.id}.");
+            }
+            else
+            {
+                productos.Add(prodEliminado);
+
+                string nuevoJson = JsonConvert.SerializeObject(productos, Formatting.Indented);
+                File.WriteAllText(rutaArchivo, nuevoJson);
+
+                Console.WriteLine("Productos eliminados correctamente.");
+            }
+        }
+
+
+        public List<Producto> ObtenerProductosEliminados()
+        {
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\ProductosEliminados.json";
+
+            try
+            {
+                if (!File.Exists(rutaArchivo))
+                {
+                    // Si no existe, devuelvo lista vacía
+                    return new List<Producto>();
+                }
+
+                string jsonLeer = File.ReadAllText(rutaArchivo);
+
+                if (string.IsNullOrWhiteSpace(jsonLeer))
+                {
+                    return new List<Producto>();
+                }
+
+                List<Producto> listaProductos = JsonConvert.DeserializeObject<List<Producto>>(jsonLeer);
+
+                if (listaProductos == null)
+                {
+                    return new List<Producto>();
+                }
+
+                return listaProductos;
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Error al deserializar el archivo JSON: {ex.Message}");
+                return new List<Producto>();
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error al leer el archivo: {ex.Message}");
+                return new List<Producto>();
+            }
+        }
+
+
+
+
 
 
 
@@ -194,7 +297,7 @@ namespace Negocio
         //            categorias = new List<Producto> { categoria };
         //        }
 
-               
+
         //    }
         //    else
         //    {
@@ -231,9 +334,22 @@ namespace Negocio
 
         }
 
-        public void ModificarProducto(Guid id, Guid idUsuario, float precio, int stock)
+        public void ModificarProducto(Guid id, Guid idUsuario, Double precio, int stock)
         {
             ProductosDa.ModificarProducto(id, idUsuario, precio, stock);
+
+        }
+        public void BorrarProductos(Producto producto,String idUsuario)
+        {
+            string id=producto.id.ToString();
+            
+            ProductosDatos.BorrarProducto(id,idUsuario);
+        }
+
+
+        public void ReactivarProducto(Guid id, string idUsuario)
+        {
+            ProductosDa.ReactivarProducto(id, idUsuario);
 
         }
 

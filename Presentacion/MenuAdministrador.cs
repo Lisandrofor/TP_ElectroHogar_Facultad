@@ -17,7 +17,7 @@ namespace Presentacion
 {
     public partial class MenuAdministrador : Form
     {
-
+        public static MenuAdministrador InstanciaAbierta { get; private set; }
         Usuario usuario = new Usuario();
         GestorDeUsuarios GestorDeUsuarios = new GestorDeUsuarios();
         LoginNuevo Cambiar = new LoginNuevo();
@@ -26,22 +26,28 @@ namespace Presentacion
 
         public MenuAdministrador(Usuario.EstadoUsuario estado,Guid id,string apellido)
         {
-            
+
+            if (InstanciaAbierta != null && !InstanciaAbierta.IsDisposed)
+            {
+                InstanciaAbierta.Close();
+            }
+
+            InstanciaAbierta = this;
+
             usuario.id = id;
             usuario.apellido = apellido;
             InitializeComponent();
             disenosubmenu();
-            MenuAdministrador_Load(estado,id,apellido);
-            
-
-
-
-
+            MenuAdministrador_Load(estado, id, apellido);
         }
 
 
-        
 
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
+            InstanciaAbierta = null;
+        }
 
 
 
@@ -96,7 +102,7 @@ namespace Presentacion
             string mensaje=Cambiar.CambiarEstado(estado);
             
             
-            label1.Text = "ADMINISTRADOR - "+apellido+ mensaje;
+            label1.Text = "ADMINISTRADOR - "+" "+apellido+" "+ mensaje;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -156,6 +162,7 @@ namespace Presentacion
             if (panelProducto.Visible== true)
             {
                 panelProducto.Visible = false;
+                
             }    
         }
 
@@ -260,20 +267,19 @@ namespace Presentacion
 
         private void button10_Click(object sender, EventArgs e)
         {
-            RegistraProd formRegisPro = new RegistraProd(usuario.id);
+            RegistraProd formRegisPro = new RegistraProd(this.usuario);
+            
 
             AbrirFormEnPanel(formRegisPro);
 
 
             ocultarsubmenu();
+            
 
 
         }
 
-        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -287,7 +293,19 @@ namespace Presentacion
 
         }
 
-       
+        private void button12_Click(object sender, EventArgs e)
+        {
+            EditarProducto EditarProd = new EditarProducto(this.usuario);
+
+            AbrirFormEnPanel(EditarProd);
+
+
+            ocultarsubmenu();
+        }
+
+
+
+
 
 
 

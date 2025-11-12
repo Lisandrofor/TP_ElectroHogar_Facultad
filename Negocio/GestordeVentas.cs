@@ -24,10 +24,12 @@ namespace Negocio
 
 
             Venta altaVenta = new Venta(idVenta,idCliente,idUsuario,idProducto,cantidad,fechaAlta,estado);
+            
 
             try
             {
                 VentasDa.AgregarVenta(altaVenta);
+                GuardarVentas(altaVenta);
 
 
 
@@ -41,27 +43,34 @@ namespace Negocio
 
         }
 
-        
+        public List<Venta> ObtenerVentasporCliente(string idCliente)
+        {
+            return VentasDa.getVentasporCliente(idCliente);
+
+
+        }
+
+
 
         public List<Venta> TraerVenta(string idVenta)
         {
             return VentasDa.GetVenta(idVenta);
         }
 
-        public List<Venta> ObtenerVentas()
+        public List<Venta> ObtenerVentasPorCliente(Guid idVenta)
         {
-            string rutaArchivo = "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\TextFile1.json";
+            string rutaArchivo = "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\Ventas.json";
             try
             {
                 string jsonLeer = File.ReadAllText(rutaArchivo);
-                List<Venta> listaCategorias = JsonConvert.DeserializeObject<List<Venta>>(jsonLeer);
+                List<Venta> listaVentas = JsonConvert.DeserializeObject<List<Venta>>(jsonLeer);
 
-                if (listaCategorias == null)
+                if (listaVentas == null)
                 {
-                    listaCategorias = new List<Venta>(); // Retorna una lista vacía si el archivo estaba vacío o no se pudo deserializar
+                    listaVentas = new List<Venta>(); // Retorna una lista vacía si el archivo estaba vacío o no se pudo deserializar
                 }
 
-                return listaCategorias;
+                return listaVentas;
             }
             catch (JsonException ex)
             {
@@ -76,12 +85,12 @@ namespace Negocio
         }
 
 
-        public void GuardarVentas(int idcategoria, string nomCategoria)
+        public void GuardarVentas(Venta altaventa)
         {
             //Venta categoria = new Venta(idcategoria, nomCategoria);
             List<Venta> categorias;
 
-            string rutaArchivo = "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\TextFile1.json";
+            string rutaArchivo = "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\Ventas.json";
 
             if (File.Exists(rutaArchivo))
             {

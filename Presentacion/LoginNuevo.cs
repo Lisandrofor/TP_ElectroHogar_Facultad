@@ -305,10 +305,21 @@ namespace Presentacion
 
         }
 
- 
-       
-        
-        
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+         
+            // Si el CheckBox está tildado, mostramos la contraseña
+            if (checkBox1.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Si no está tildado, la ocultamos
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+    
     }
     
     

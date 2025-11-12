@@ -38,12 +38,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.PanelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.PanelContenedor.Controls.Add(this.checkBox1);
             this.PanelContenedor.Controls.Add(this.label3);
             this.PanelContenedor.Controls.Add(this.panel1);
             this.PanelContenedor.Controls.Add(this.button1);
@@ -53,9 +55,9 @@
             this.PanelContenedor.Controls.Add(this.label1);
             this.PanelContenedor.Controls.Add(this.txtPassword);
             this.PanelContenedor.Controls.Add(this.txtNombreUsuario);
-            this.PanelContenedor.Location = new System.Drawing.Point(0, 38);
+            this.PanelContenedor.Location = new System.Drawing.Point(0, -2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(864, 612);
+            this.PanelContenedor.Size = new System.Drawing.Size(864, 652);
             this.PanelContenedor.TabIndex = 5;
             // 
             // label3
@@ -142,17 +144,32 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(139, 204);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(150, 20);
+            this.txtPassword.Size = new System.Drawing.Size(150, 26);
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtNombreUsuario
             // 
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreUsuario.Location = new System.Drawing.Point(139, 117);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(150, 20);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(150, 26);
             this.txtNombreUsuario.TabIndex = 5;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkBox1.Location = new System.Drawing.Point(139, 242);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(117, 17);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Mostrar contraseña";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // LoginNuevo
             // 
@@ -180,5 +197,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

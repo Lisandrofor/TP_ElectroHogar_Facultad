@@ -70,7 +70,7 @@ namespace AccesoaDatos
 
 
 
-        public void ModificarProducto(Guid id,Guid idUsuario,float precio,int stock)
+        public void ModificarProducto(Guid id,Guid idUsuario,Double precio,int stock)
         {
             string path = "/api/Producto/ModificarProducto";
             Dictionary<string, string> map = new Dictionary<string, string>();
@@ -100,11 +100,41 @@ namespace AccesoaDatos
             }
         }
 
-        
+
+        public void ReactivarProducto(Guid id, string idUsuario)
+        {
+            string path = "/api/Producto/ReactivarProducto";
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            map.Add("id", id.ToString());
+            map.Add("idUsuario", idUsuario);
+            
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Patch(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
 
 
 
-       
+
+
+
 
 
 
@@ -140,13 +170,16 @@ namespace AccesoaDatos
             }
         }
 
-        public void BorrarProducto()
+        public void BorrarProducto(string id, string idUsuario)
         {
+            
+            var body=new {id,idUsuario};
+            
             string path = "/api/Producto/BajaProducto";
-
+            var jsonRequest = JsonConvert.SerializeObject(body);
             try
             {
-                HttpResponseMessage response = WebHelper.DeleteConBody(path);
+                HttpResponseMessage response = WebHelper.DeleteConBody(path,jsonRequest);
                 if (response.IsSuccessStatusCode)
                 {
                     var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);

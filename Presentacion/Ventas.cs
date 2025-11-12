@@ -119,12 +119,14 @@ namespace Presentacion
 
         private void Actualizardatagridview()
         {
-            dataGridView2.DataSource = null;
-            dataGridView2.DataSource = productos;
+            var bindingList = new BindingList<Producto>(productos);
+            var source = new BindingSource(bindingList, null);
+            dataGridView2.DataSource = source;
+
         }
 
 
-        public float CalcularTotal()
+        public Double CalcularTotal()
         {
             return productos.Sum(p => p.SubTotal);
         }
@@ -167,7 +169,7 @@ namespace Presentacion
 
 
 
-            textBox4.Text = CalcularTotal().ToString();
+            textBox7.Text = CalcularTotal().ToString();
             textBox5.Text = CalcularImp().ToString();
 
 
@@ -224,7 +226,10 @@ namespace Presentacion
         {
             // Obtener la cantidad que se ingresa
             int cantidadProd = int.Parse(textBox10.Text);
-            EstadoVenta estadoSeleccionado = (EstadoVenta)comboBox2.SelectedItem;
+            comboBox2.DataSource = Enum.GetNames(typeof(EstadoVenta));
+
+            EstadoVenta estadoSeleccionado = (EstadoVenta)Enum.Parse(typeof(EstadoVenta), comboBox2.SelectedItem.ToString());
+
 
 
 
@@ -241,7 +246,7 @@ namespace Presentacion
             {
                 // Si el producto ya está en la lista, actualizamos el stock sumando o restando la cantidad ingresada
 
-                productoSeleccionado.cantidad = productoSeleccionado.cantidad + cantidadProd;
+                //productoSeleccionado.cantidad = productoSeleccionado.cantidad + cantidadProd;
                 SeleccionCantidad(productoSeleccionado.cantidad);
                 // También actualizamos la cantidad vendida
                 productoSeleccionado.stock = productoSeleccionado.stock - cantidadProd;
@@ -253,7 +258,18 @@ namespace Presentacion
             {
                 // Si el producto no está en la lista, lo agregamos
                 productoSeleccionado.stock -= cantidadProd; // Resta la cantidad ingresada al stock inicial
+                int stockActual = productoSeleccionado.stock;
                 productoSeleccionado.cantidad = cantidadProd; // Establecemos la cantidad vendida
+
+                if (stockActual < stockActual * 0.25)
+                {
+                    MessageBox.Show("El stock está por debajo del 25%");
+                }
+                else
+                {
+                    MessageBox.Show("Puede seguir vendiendo");
+                }
+
 
 
                 // Llamar a la API para persistir el cambio en el stock
@@ -266,35 +282,22 @@ namespace Presentacion
             }
 
 
-
+            
             // Comprobar si el stock es menor al 25% y mostrar el mensaje adecuado
-            if (productoSeleccionado.stock < productoSeleccionado.stock * 0.25)
-            {
-                MessageBox.Show("El stock está por debajo del 25%");
-            }
-            else
-            {
-                MessageBox.Show("Puede seguir vendiendo");
-            }
+            
 
             // Limpiar los campos de entrada
             comboBox1.SelectedIndex = -1;
             textBox10.Clear();
 
-            // Actualizar el DataGridView con la lista de productos
-            var bindingList = new BindingList<Producto>(productos);
-            var source = new BindingSource(bindingList, null);
-            dataGridView2.DataSource = source;
+            dataGridView2.AutoGenerateColumns = true;
+            dataGridView2.DataSource = null;
+            dataGridView2.DataSource = productos;
 
-            // Configuración de columnas visibles en el DataGridView
-            dataGridView2.Columns["nombre"].Visible = true;
             dataGridView2.Columns["id"].Visible = false;
-            dataGridView2.Columns["stock"].Visible = true;
             dataGridView2.Columns["fechaAlta"].Visible = false;
             dataGridView2.Columns["fechaBaja"].Visible = false;
             dataGridView2.Columns["idCategoria"].Visible = false;
-            dataGridView2.Columns["cantidad"].Visible = true;
-            dataGridView2.AutoGenerateColumns = true;
 
 
 
@@ -309,10 +312,10 @@ namespace Presentacion
                 estado=estadoSeleccionado
 
             };
-            venta.AgregarVenta(ventaActual.idUsuario, ventaActual.idCliente, ventaActual.idProducto, ventaActual.cantidad, DateTime.Now,ventaActual.estado);
+
+
+            venta.AgregarVenta(ventaActual.idUsuario, ventaActual.idCliente, ventaActual.idProducto, ventaActual.cantidad, DateTime.Now, ventaActual.estado);
             MessageBox.Show("Ítem registrado en venta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
 
         }
 

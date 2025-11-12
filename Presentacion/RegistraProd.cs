@@ -18,10 +18,12 @@ namespace Presentacion
     public partial class RegistraProd : Form
     {
         private Guid idUsuario;
+        Usuario user = new Usuario();
+        private Usuario usuar;
 
-        public RegistraProd(Guid id)
+        public RegistraProd(Usuario usuario)
         {
-            idUsuario = id;
+            usuar = usuario;
             InitializeComponent();
             MostrarCategoriasProd();
             MostrarProveedrores();
@@ -242,6 +244,17 @@ namespace Presentacion
                 comboBox3.DataSource = null;
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuAdministrador menu = new MenuAdministrador(usuar.Estado,usuar.id,usuar.apellido);
+
+            // Mostrarlo
+            menu.Show();
+
+            // (Opcional) Cerrar el formulario actual
+            this.Close();
         }
     }
 

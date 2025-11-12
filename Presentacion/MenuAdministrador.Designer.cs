@@ -41,7 +41,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.RegCategorias = new System.Windows.Forms.Button();
             this.panelVendedor = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -86,6 +85,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.AltaSupervisor = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.RegCategorias = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMInimizar)).BeginInit();
@@ -107,6 +107,7 @@
             this.panelSupervisor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.PanelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -117,10 +118,9 @@
             this.barraTitulo.Controls.Add(this.BtnMInimizar);
             this.barraTitulo.Controls.Add(this.BtnMaximizar);
             this.barraTitulo.Controls.Add(this.BtnCerrar);
-            this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(1080, 38);
+            this.barraTitulo.Size = new System.Drawing.Size(866, 38);
             this.barraTitulo.TabIndex = 2;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
@@ -141,7 +141,7 @@
             this.BtnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRestaurar.Image")));
-            this.BtnRestaurar.Location = new System.Drawing.Point(1021, 7);
+            this.BtnRestaurar.Location = new System.Drawing.Point(808, 7);
             this.BtnRestaurar.Name = "BtnRestaurar";
             this.BtnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.BtnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +155,7 @@
             this.BtnMInimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMInimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMInimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMInimizar.Image")));
-            this.BtnMInimizar.Location = new System.Drawing.Point(990, 7);
+            this.BtnMInimizar.Location = new System.Drawing.Point(776, 7);
             this.BtnMInimizar.Name = "BtnMInimizar";
             this.BtnMInimizar.Size = new System.Drawing.Size(25, 25);
             this.BtnMInimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,7 +168,7 @@
             this.BtnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMaximizar.Image")));
-            this.BtnMaximizar.Location = new System.Drawing.Point(1021, 7);
+            this.BtnMaximizar.Location = new System.Drawing.Point(808, 7);
             this.BtnMaximizar.Name = "BtnMaximizar";
             this.BtnMaximizar.Size = new System.Drawing.Size(25, 25);
             this.BtnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,7 +181,7 @@
             this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1052, 7);
+            this.BtnCerrar.Location = new System.Drawing.Point(838, 7);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(25, 25);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,20 +193,18 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.MenuVertical.Controls.Add(this.panel25);
-            this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.panel15);
-            this.MenuVertical.Controls.Add(this.RegCategorias);
             this.MenuVertical.Controls.Add(this.panelVendedor);
             this.MenuVertical.Controls.Add(this.Producto);
             this.MenuVertical.Controls.Add(this.PROVEEDOR);
-            this.MenuVertical.Controls.Add(this.panelProducto);
             this.MenuVertical.Controls.Add(this.PanelProveedor);
             this.MenuVertical.Controls.Add(this.Vendedor);
             this.MenuVertical.Controls.Add(this.Supervisor);
             this.MenuVertical.Controls.Add(this.panelSupervisor);
-            this.MenuVertical.Location = new System.Drawing.Point(0, 38);
+            this.MenuVertical.Controls.Add(this.panelProducto);
+            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(220, 700);
+            this.MenuVertical.Size = new System.Drawing.Size(229, 709);
             this.MenuVertical.TabIndex = 1;
             // 
             // panel25
@@ -235,7 +233,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(7, 627);
+            this.button1.Location = new System.Drawing.Point(9, 152);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 35);
             this.button1.TabIndex = 29;
@@ -259,23 +257,6 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(8, 35);
             this.panel16.TabIndex = 30;
-            // 
-            // RegCategorias
-            // 
-            this.RegCategorias.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.RegCategorias.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.RegCategorias.FlatAppearance.BorderSize = 0;
-            this.RegCategorias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(210)))));
-            this.RegCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.RegCategorias.ForeColor = System.Drawing.Color.White;
-            this.RegCategorias.Location = new System.Drawing.Point(8, 591);
-            this.RegCategorias.Name = "RegCategorias";
-            this.RegCategorias.Size = new System.Drawing.Size(211, 35);
-            this.RegCategorias.TabIndex = 28;
-            this.RegCategorias.Text = "Registro de Categorias";
-            this.RegCategorias.UseVisualStyleBackColor = false;
-            this.RegCategorias.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelVendedor
             // 
@@ -431,9 +412,9 @@
             // Producto
             // 
             this.Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Producto.Location = new System.Drawing.Point(6, 431);
+            this.Producto.Location = new System.Drawing.Point(8, 432);
             this.Producto.Name = "Producto";
-            this.Producto.Size = new System.Drawing.Size(211, 35);
+            this.Producto.Size = new System.Drawing.Size(218, 35);
             this.Producto.TabIndex = 27;
             this.Producto.Text = "PRODUCTO";
             this.Producto.UseVisualStyleBackColor = true;
@@ -453,6 +434,8 @@
             // panelProducto
             // 
             this.panelProducto.Controls.Add(this.panel12);
+            this.panelProducto.Controls.Add(this.button1);
+            this.panelProducto.Controls.Add(this.RegCategorias);
             this.panelProducto.Controls.Add(this.panel13);
             this.panelProducto.Controls.Add(this.panel10);
             this.panelProducto.Controls.Add(this.panel11);
@@ -460,9 +443,9 @@
             this.panelProducto.Controls.Add(this.button10);
             this.panelProducto.Controls.Add(this.button11);
             this.panelProducto.Controls.Add(this.button13);
-            this.panelProducto.Location = new System.Drawing.Point(6, 463);
+            this.panelProducto.Location = new System.Drawing.Point(7, 473);
             this.panelProducto.Name = "panelProducto";
-            this.panelProducto.Size = new System.Drawing.Size(210, 125);
+            this.panelProducto.Size = new System.Drawing.Size(210, 190);
             this.panelProducto.TabIndex = 23;
             // 
             // panel12
@@ -510,8 +493,9 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(211, 35);
             this.button12.TabIndex = 21;
-            this.button12.Text = "Baja Producto";
+            this.button12.Text = "Editar Producto";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button10
             // 
@@ -770,7 +754,7 @@
             this.AltaSupervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AltaSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.AltaSupervisor.ForeColor = System.Drawing.Color.White;
-            this.AltaSupervisor.Location = new System.Drawing.Point(0, 3);
+            this.AltaSupervisor.Location = new System.Drawing.Point(9, 6);
             this.AltaSupervisor.Name = "AltaSupervisor";
             this.AltaSupervisor.Size = new System.Drawing.Size(211, 38);
             this.AltaSupervisor.TabIndex = 0;
@@ -781,18 +765,34 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.PanelContenedor.Location = new System.Drawing.Point(220, 38);
+            this.PanelContenedor.Controls.Add(this.MenuVertical);
+            this.PanelContenedor.Location = new System.Drawing.Point(0, 38);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(860, 700);
+            this.PanelContenedor.Size = new System.Drawing.Size(865, 653);
             this.PanelContenedor.TabIndex = 4;
-            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
+            // 
+            // RegCategorias
+            // 
+            this.RegCategorias.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.RegCategorias.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.RegCategorias.FlatAppearance.BorderSize = 0;
+            this.RegCategorias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(210)))));
+            this.RegCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.RegCategorias.ForeColor = System.Drawing.Color.White;
+            this.RegCategorias.Location = new System.Drawing.Point(9, 121);
+            this.RegCategorias.Name = "RegCategorias";
+            this.RegCategorias.Size = new System.Drawing.Size(211, 35);
+            this.RegCategorias.TabIndex = 28;
+            this.RegCategorias.Text = "Registro de Categorias";
+            this.RegCategorias.UseVisualStyleBackColor = false;
+            this.RegCategorias.Click += new System.EventHandler(this.button1_Click);
             // 
             // MenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 700);
-            this.Controls.Add(this.MenuVertical);
+            this.ClientSize = new System.Drawing.Size(865, 691);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.PanelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -820,6 +820,7 @@
             this.panelSupervisor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.PanelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -877,11 +878,11 @@
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Button RegCategorias;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Button RegCategorias;
     }
 }

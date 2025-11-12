@@ -1,0 +1,30 @@
+[
+  {
+    "id": "93f2ff67-9298-4c77-83e0-0c82c8ba9339",
+    "idCategoria": 0,
+    "nombre": "ProductoNuevo2",
+    "fechaAlta": "0001-01-01T00:00:00",
+    "fechaBaja": null,
+    "precio": 0.0,
+    "stock": 0,
+    "cantidad": 0,
+    "SubTotal": 0.0,
+    "descuento": 0.0,
+    "impuesto": 0.0,
+    "nomCategoria": null
+  },
+  {
+    "id": "bec06576-0a66-4031-9954-448893ebe996",
+    "idCategoria": 0,
+    "nombre": "Lavarropas",
+    "fechaAlta": "0001-01-01T00:00:00",
+    "fechaBaja": null,
+    "precio": 0.0,
+    "stock": 0,
+    "cantidad": 0,
+    "SubTotal": 0.0,
+    "descuento": 0.0,
+    "impuesto": 0.0,
+    "nomCategoria": null
+  }
+]
