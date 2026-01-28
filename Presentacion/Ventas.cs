@@ -240,9 +240,9 @@ namespace Presentacion
 
         private void ActualizarStock(Producto producto, int cantidad)
         {
-            Guid idUsuario= Guid.Parse(_idUsuario);
+            
             producto.stock -= cantidad;
-            produ.ModificarProducto(producto.id,idUsuario, producto.precio, producto.stock);
+            
 
             if (cantidad > producto.stock * 0.25)
                 MessageBox.Show("El stock está por debajo del 25%");
@@ -279,6 +279,7 @@ namespace Presentacion
 
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
+            PersistirStock(producto);
             ActualizarGrilla();
 
 

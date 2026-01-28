@@ -72,7 +72,7 @@ namespace AccesoaDatos
 
         public void ModificarProducto(Guid id,Guid idUsuario,decimal precio,int stock)
         {
-            idUsuario = Guid.Parse("70b37dc1-8fde-4840-be47-9ababd0ee7e5");
+            
             string path = "/api/Producto/ModificarProducto";
             Dictionary<string, string> map = new Dictionary<string, string>();
             map.Add("id", id.ToString());
