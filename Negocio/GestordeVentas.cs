@@ -43,6 +43,12 @@ namespace Negocio
 
         }
 
+        public bool ExisteVentaCliente(string idCliente)
+        {
+            return listaVentas.Any(v => v.idCliente == idCliente);
+        }
+
+
         public List<Venta> ObtenerVentasporCliente(string idCliente)
         {
             return VentasDa.getVentasporCliente(idCliente);

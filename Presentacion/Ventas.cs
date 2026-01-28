@@ -126,14 +126,14 @@ namespace Presentacion
         }
 
 
-        public Double CalcularTotal()
+        public decimal CalcularSubTotal()
         {
             return productos.Sum(p => p.SubTotal);
         }
 
-        public Double CalcularImp()
+        public decimal CalcularImp()
         {
-            return productos.Sum(i => i.impuesto);
+            return productos.Sum(i => i.ImporteImpuesto);
         }
 
         public void seleccionidCliente(string idCliente)
@@ -162,35 +162,7 @@ namespace Presentacion
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-            textBox7.Text = CalcularTotal().ToString();
-            textBox5.Text = CalcularImp().ToString();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
+       
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -222,102 +194,177 @@ namespace Presentacion
         }
 
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        
+
+
+        private bool DatosValidos()
         {
-            // Obtener la cantidad que se ingresa
-            int cantidadProd = int.Parse(textBox10.Text);
-            comboBox2.DataSource = Enum.GetNames(typeof(EstadoVenta));
-
-            EstadoVenta estadoSeleccionado = (EstadoVenta)Enum.Parse(typeof(EstadoVenta), comboBox2.SelectedItem.ToString());
-
-
-
-
-
-            // Obtener el producto seleccionado desde el comboBox
-            Producto productoSeleccionado = (Producto)comboBox1.SelectedItem;
-            string idProducto = productoSeleccionado.id.ToString();
-            SeleccionidProducto(idProducto);
-
-            // Buscar si el producto ya está en la lista de productos
-            var productoEnLista = productos.FirstOrDefault(p => p.id == productoSeleccionado.id);
-
-            if (productoEnLista != null)
+            if (comboBox1.SelectedItem == null || string.IsNullOrWhiteSpace(textBox10.Text))
             {
-                // Si el producto ya está en la lista, actualizamos el stock sumando o restando la cantidad ingresada
+                MessageBox.Show("Seleccione producto y cantidad.");
+                return false;
+            }
+            return true;
+        }
 
-                //productoSeleccionado.cantidad = productoSeleccionado.cantidad + cantidadProd;
-                SeleccionCantidad(productoSeleccionado.cantidad);
-                // También actualizamos la cantidad vendida
-                productoSeleccionado.stock = productoSeleccionado.stock - cantidadProd;
-                string idUser = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
-                Guid idUsuario = Guid.Parse(idUser);
-                produ.ModificarProducto(productoSeleccionado.id, idUsuario, productoSeleccionado.precio, productoSeleccionado.stock);
+        private int ObtenerCantidad() => int.Parse(textBox10.Text);
+
+        private Producto ObtenerProductoSeleccionado()
+        {
+            return (Producto)comboBox1.SelectedItem;
+        }
+
+
+        private EstadoVenta ObtenerEstadoVenta()
+        {
+            comboBox2.DataSource = Enum.GetNames(typeof(EstadoVenta));
+            return (EstadoVenta)Enum.Parse(typeof(EstadoVenta), comboBox2.SelectedItem.ToString());
+        }
+
+
+        private void ActualizarProductoEnLista(Producto producto, int cantidad)
+        {
+            var existente = productos.FirstOrDefault(p => p.id == producto.id);
+
+            if (existente != null)
+            {
+                existente.cantidad += cantidad;
             }
             else
             {
-                // Si el producto no está en la lista, lo agregamos
-                productoSeleccionado.stock -= cantidadProd; // Resta la cantidad ingresada al stock inicial
-                int stockActual = productoSeleccionado.stock;
-                productoSeleccionado.cantidad = cantidadProd; // Establecemos la cantidad vendida
-
-                if (stockActual < stockActual * 0.25)
-                {
-                    MessageBox.Show("El stock está por debajo del 25%");
-                }
-                else
-                {
-                    MessageBox.Show("Puede seguir vendiendo");
-                }
-
-
-
-                // Llamar a la API para persistir el cambio en el stock
-                string idUser = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
-                Guid idUsuario = Guid.Parse(idUser);
-                produ.ModificarProducto(productoSeleccionado.id, idUsuario, productoSeleccionado.precio, productoSeleccionado.stock);
-
-                // Agregar el producto a la lista
-                productos.Add(productoSeleccionado);
+                producto.cantidad = cantidad;
+                productos.Add(producto);
             }
+        }
 
 
-            
-            // Comprobar si el stock es menor al 25% y mostrar el mensaje adecuado
-            
+        private void ActualizarStock(Producto producto, int cantidad)
+        {
+            Guid idUsuario= Guid.Parse(_idUsuario);
+            producto.stock -= cantidad;
+            produ.ModificarProducto(producto.id,idUsuario, producto.precio, producto.stock);
 
-            // Limpiar los campos de entrada
-            comboBox1.SelectedIndex = -1;
-            textBox10.Clear();
+            if (cantidad > producto.stock * 0.25)
+                MessageBox.Show("El stock está por debajo del 25%");
 
-            dataGridView2.AutoGenerateColumns = true;
+        }
+
+        private void PersistirStock(Producto producto)
+        {
+            Guid idUsuario = Guid.Parse("70b37dc1-8fde-4840-be47-9ababd0ee7e5");
+            produ.ModificarProducto(producto.id, idUsuario, producto.precio, producto.stock);
+        }
+
+
+        private void ActualizarGrilla()
+        {
             dataGridView2.DataSource = null;
+            dataGridView2.AutoGenerateColumns = true;
             dataGridView2.DataSource = productos;
 
             dataGridView2.Columns["id"].Visible = false;
             dataGridView2.Columns["fechaAlta"].Visible = false;
             dataGridView2.Columns["fechaBaja"].Visible = false;
             dataGridView2.Columns["idCategoria"].Visible = false;
+        }
 
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (!DatosValidos()) return;
 
-            // Registrar cada ítem en ventaActual
-            Venta ventaActual = new Modelo.Venta
-            {
-                
-                idCliente=_idCliente,             
-                idUsuario = _idUsuario,
-                idProducto = idProducto,
-                cantidad = cantidadProd,
-                estado=estadoSeleccionado
+            int cantidad = ObtenerCantidad();
+            Producto producto = ObtenerProductoSeleccionado();
+            EstadoVenta estado = ObtenerEstadoVenta();
 
-            };
+            ActualizarProductoEnLista(producto, cantidad);
+            ActualizarStock(producto, cantidad);
+            ActualizarGrilla();
 
 
-            venta.AgregarVenta(ventaActual.idUsuario, ventaActual.idCliente, ventaActual.idProducto, ventaActual.cantidad, DateTime.Now, ventaActual.estado);
-            MessageBox.Show("Ítem registrado en venta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+
+
+
+
+
+        private decimal CalculaDescuento()
+        {
+            decimal total = productos.Sum(p => p.SubTotal);
+            bool primeraCompra = !venta.ExisteVentaCliente(_idCliente);
+
+            if (total > 100000 || primeraCompra)
+                total *= 0.90m; // 10% descuento
+
+            return 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+
+            textBox4.Text=CalcularSubTotal().ToString();
+            textBox5.Text = CalcularImp().ToString();
+            textBox6.Text = CalculaDescuento().ToString();
+            
+            decimal totalFinal = CalcularSubTotal() + CalcularImp() - CalculaDescuento();
+            textBox7.Text =totalFinal.ToString();
+
+
+
+
+
+            MostrarResumenVenta(totalFinal);
+            LimpiarFormulario();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+        private void RegistrarVenta(string idProducto, int cantidad, EstadoVenta estado)
+        {
+            venta.AgregarVenta(
+                _idUsuario,
+                _idCliente,
+                idProducto,
+                cantidad,
+                DateTime.Now,
+                estado
+            );
+        }
+
+       
+
+
+        private void MostrarResumenVenta(decimal total)
+        {
+            MessageBox.Show($"Total final: {total:C}", "Venta registrada");
+        }
+
+        private void LimpiarFormulario()
+        {
+            comboBox1.SelectedIndex = -1;
+            textBox10.Clear();
+        }
+
+
+
 
 
 

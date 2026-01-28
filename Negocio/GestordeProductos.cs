@@ -313,7 +313,7 @@ namespace Negocio
         //    File.WriteAllText(rutaArchivo, nuevojson);
         //}
 
-        public void AgregarProd(int categoria, string idproveedor,string nombre, float precio, int stock)
+        public void AgregarProd(int categoria, string idproveedor,string nombre, decimal precio, int stock)
         {
             //string idUsuario = Guid.NewGuid().ToString();
             string idUsuario = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
@@ -334,7 +334,7 @@ namespace Negocio
 
         }
 
-        public void ModificarProducto(Guid id, Guid idUsuario, Double precio, int stock)
+        public void ModificarProducto(Guid id, Guid idUsuario, decimal precio, int stock)
         {
             ProductosDa.ModificarProducto(id, idUsuario, precio, stock);
 

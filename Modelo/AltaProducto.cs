@@ -15,10 +15,10 @@ namespace Modelo
         string _idUsuario;
         string _idProveedor;
         string _nombre;
-        float _precio;
+        decimal _precio;
         int _stock;
     
-    public AltaProducto(int categoria, string idUsuario, string idProveedor, string nombre, float precio, int stock )
+    public AltaProducto(int categoria, string idUsuario, string idProveedor, string nombre, decimal precio, int stock )
         {
             _idCategoria = categoria;
             _idUsuario = idUsuario;
@@ -34,7 +34,7 @@ namespace Modelo
         public string idProveedor { get=>_idProveedor; set=> _idProveedor=value; }
         public string  nombre { get=>_nombre; set=>_nombre=value; }
 
-        public float precio { get=>_precio; set=>_precio=value; }
+        public decimal precio { get=>_precio; set=>_precio=value; }
 
         public int stock { get => _stock; set => _stock=value; }
     }

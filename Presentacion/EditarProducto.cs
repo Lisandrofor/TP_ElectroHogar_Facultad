@@ -131,7 +131,7 @@ namespace Presentacion
 
                 Producto prod = new Producto();
                 prod.nombre = row.Cells["Nombre"].Value.ToString();
-                prod.precio = Convert.ToDouble(row.Cells["Precio"].Value);
+                prod.precio = Convert.ToDecimal(row.Cells["Precio"].Value);
                 prod.stock = Convert.ToInt32(row.Cells["Stock"].Value);
 
                 Guid idusuario = new Guid(iduser);

@@ -16,12 +16,12 @@ namespace Modelo
         string _nombre;
         DateTime _fechaAlta;
         DateTime? _fechaBaja;
-        Double _precio;
+        decimal _precio;
         int _stock;
         string _nomCategoria;
         int _cantidad;
         float _descuento;
-        float _impuesto;
+        decimal _impuesto;
 
 
 
@@ -53,7 +53,7 @@ namespace Modelo
 
 
 
-        public Producto(Guid id, int idcategoria, string nombre, DateTime fechaAlta, DateTime fechaBaja, float precio, int stock)
+        public Producto(Guid id, int idcategoria, string nombre, DateTime fechaAlta, DateTime fechaBaja, decimal precio, int stock)
         {
             _id = id;
             _idcategoria = idcategoria;
@@ -82,7 +82,7 @@ namespace Modelo
         public string nombre { get => _nombre; set => _nombre = value; }
         public DateTime fechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public DateTime? fechaBaja { get => _fechaBaja; set => _fechaBaja = value; }
-        public Double precio { get => _precio; set => _precio = value; }
+        public decimal precio { get => _precio; set => _precio = value; }
         public int stock { get => _stock; set => _stock = value; }
 
 
@@ -90,11 +90,12 @@ namespace Modelo
 
 
 
-        public Double SubTotal => precio * cantidad;
+        public decimal SubTotal => precio * cantidad;
 
         public float descuento { get => _descuento; set => _descuento = value; }
 
-        public float impuesto { get => _impuesto; set => _impuesto = value; }
+        public const decimal impuesto= 0.21m;
+        public decimal ImporteImpuesto => SubTotal * impuesto;
 
         [Browsable(false)]
        

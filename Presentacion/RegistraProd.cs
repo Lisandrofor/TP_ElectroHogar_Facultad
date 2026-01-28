@@ -70,7 +70,7 @@ namespace Presentacion
                 return;
             }
 
-            if (!float.TryParse(textBox3.Text, out float precio))
+            if (!decimal.TryParse(textBox3.Text, out decimal precio))
             {
                 MessageBox.Show("Precio inválido.");
                 return;
