@@ -55,6 +55,7 @@
     <Compile Include="AltaVentacs.cs" />
     <Compile Include="Categorias.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Impuesto.cs" />
     <Compile Include="Loginuser.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

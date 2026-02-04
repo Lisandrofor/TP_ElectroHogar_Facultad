@@ -27,13 +27,27 @@ namespace Presentacion
             InitializeComponent();
             MostrarCategoriasProd();
             MostrarProveedrores();
-            
+            MostrarPorcentajeImp();
+
+
 
         }
         
         GestordeProductos gestorCategoria = new GestordeProductos();
         GestordeProveedores gestorProve = new GestordeProveedores();
         Proveedor lista = new Proveedor();
+        GestordeImpuestos gestordeImpuesto = new GestordeImpuestos();
+
+        public void MostrarPorcentajeImp()
+        {
+            GestordeImpuestos impuestoService = new GestordeImpuestos();
+            List<Impuesto> impuestos = impuestoService.ObtenerImpuestos();
+
+            comboBox4.DataSource = impuestos;
+            comboBox4.DisplayMember = "Nombre"; // lo que se ve
+            comboBox4.ValueMember = "Id";       // valor interno
+
+        }
 
 
         public void MostrarCategoriasProd()
@@ -85,7 +99,7 @@ namespace Presentacion
             string idproveedor = IdProveedor().ToString();
             int categoria = NumCategoria();
             string nombre = comboBox3.Text.Trim();
-
+            int idImpuesto = IdImpuesto();
             try
             {
                 Producto productoSeleccionado = comboBox3.SelectedItem as Producto;
@@ -96,6 +110,7 @@ namespace Presentacion
                     stock= stock + productoSeleccionado.stock;
                     // Actualiza stock/precio o lo que necesites
                     gestorProd.AgregarProd(categoria, idproveedor, productoSeleccionado.nombre, precio, stock);
+                    gestorProd.GuardarProdconImpuesto(productoSeleccionado.id,categoria, idproveedor,nombre,precio,stock,idImpuesto);
                     gestorProd.ModificarProducto(productoSeleccionado.id,idUsuario, precio, stock);
                     MessageBox.Show("Producto existente actualizado correctamente.");
                 }
@@ -180,6 +195,34 @@ namespace Presentacion
             }
             return categoriaSeleccionada.IdCategoria = 0;
         }
+
+        public int IdImpuesto()
+        {
+            List<Impuesto> listaImpuesto = gestordeImpuesto.ObtenerImpuestos();
+            Impuesto impuestoSeleccionado = (Impuesto)comboBox4.SelectedItem;
+            if (impuestoSeleccionado != null)
+            {
+                // Buscar la categoría en la lista
+                Impuesto impuestoiEncontrado = listaImpuesto.FirstOrDefault(i => i.Id == impuestoSeleccionado.Id);
+                if (impuestoiEncontrado != null)
+                {
+                    return impuestoiEncontrado.Id;
+                }
+                else
+                {
+                    MessageBox.Show("Impuesto no encontrada.");
+                }
+
+            }
+            return impuestoSeleccionado.Id = 0;
+        }
+
+
+
+
+
+
+
 
 
         public List<Producto> DevuelveListaProductos(int categoria)

@@ -334,6 +334,31 @@ namespace Negocio
 
         }
 
+        public void GuardarProdconImpuesto(Guid id,int idcategoria, string idproveedor, string nombre, decimal precio, int stock,decimal impuesto)
+        {
+            //string idUsuario = Guid.NewGuid().ToString();
+            string idUsuario = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+
+            Producto altaProd = new Producto(id,idcategoria,nombre, idproveedor, nombre, precio, stock,impuesto);
+
+            try
+            {
+                ProductosDa.AgregarProd(altaProd);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error general: " + ex.Message);
+            }
+
+        }
+
+
+
+
+
         public void ModificarProducto(Guid id, Guid idUsuario, decimal precio, int stock)
         {
             ProductosDa.ModificarProducto(id, idUsuario, precio, stock);

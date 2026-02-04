@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GestordeClientes.cs" />
+    <Compile Include="GestordeImpuestos.cs" />
     <Compile Include="GestordeProductos.cs" />
     <Compile Include="GestordeProveedores.cs" />
     <Compile Include="GestordeUsuarios.cs" />
