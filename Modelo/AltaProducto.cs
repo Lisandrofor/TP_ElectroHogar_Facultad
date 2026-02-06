@@ -17,8 +17,11 @@ namespace Modelo
         string _nombre;
         decimal _precio;
         int _stock;
-    
-    public AltaProducto(int categoria, string idUsuario, string idProveedor, string nombre, decimal precio, int stock )
+        decimal _impuesto;
+        int _cantidad;
+        decimal _subtotal;
+
+        public AltaProducto(int categoria, string idUsuario, string idProveedor, string nombre, decimal precio, int stock )
         {
             _idCategoria = categoria;
             _idUsuario = idUsuario;
@@ -27,6 +30,21 @@ namespace Modelo
             _precio = precio;
             _stock = stock;
         }
+        public AltaProducto(int categoria, string idUsuario, string idProveedor, string nombre, decimal precio, int stock, decimal impuesto)
+        {
+            _idCategoria = categoria;
+            _idUsuario = idUsuario;
+            _idProveedor = idProveedor;
+            _nombre = nombre;
+            _precio = precio;
+            _stock = stock;
+            _impuesto = impuesto;
+        }
+        public AltaProducto() 
+        { 
+        }
+
+
 
         public int idCategoria { get => _idCategoria; set => _idCategoria = value; }
         public string idUsuario { get => _idUsuario; set => _idUsuario = value; }
@@ -37,5 +55,15 @@ namespace Modelo
         public decimal precio { get=>_precio; set=>_precio=value; }
 
         public int stock { get => _stock; set => _stock=value; }
+
+        public decimal impuesto { get => _impuesto; set => _impuesto = value; }
+
+        public int cantidad { get => _cantidad; set => _cantidad = value; }
+
+        public decimal Subtotal => precio * cantidad;
+
+        public decimal TotalImpuesto => (Subtotal * impuesto) / 100;
+
+
     }
 }

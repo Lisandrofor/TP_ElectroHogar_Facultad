@@ -25,7 +25,10 @@ namespace Modelo
 
 
 
+        public Producto()
+        {
 
+        }
 
 
 
@@ -44,10 +47,9 @@ namespace Modelo
 
         }
 
-        public Producto()
-        {
 
-        }
+        
+
 
 
 

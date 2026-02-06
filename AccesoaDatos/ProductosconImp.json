@@ -1,0 +1,50 @@
+[
+  {
+    "idCategoria": 15,
+    "idUsuario": "00000000-0000-0000-0000-000000000000",
+    "idProveedor": "77975d52-9f58-4cd1-bf34-0c8ca909cf21",
+    "nombre": "lavarropa",
+    "precio": 600000.0,
+    "stock": 20,
+    "impuesto": 1.0,
+    "cantidad": 0,
+    "Subtotal": 0.0,
+    "TotalImpuesto": 0.00
+  },
+  {
+    "idCategoria": 15,
+    "idUsuario": "00000000-0000-0000-0000-000000000000",
+    "idProveedor": "a210366b-577e-4d68-8ca0-075b9218fedf",
+    "nombre": "Iphone 17",
+    "precio": 1400.0,
+    "stock": 50,
+    "impuesto": 2.0,
+    "cantidad": 0,
+    "Subtotal": 0.0,
+    "TotalImpuesto": 0.00
+  },
+  {
+    "idCategoria": 15,
+    "idUsuario": "00000000-0000-0000-0000-000000000000",
+    "idProveedor": "8cd4afed-4170-499b-a440-0ff6195bb39f",
+    "nombre": "Lavarropa",
+    "precio": 600000.0,
+    "stock": 50,
+    "impuesto": 1.0,
+    "cantidad": 0,
+    "Subtotal": 0.0,
+    "TotalImpuesto": 0.00
+  },
+  {
+    "idCategoria": 15,
+    "idUsuario": "00000000-0000-0000-0000-000000000000",
+    "idProveedor": "ca63ffe9-5efa-42d0-83a6-0f410624b116",
+    "nombre": "TV",
+    "precio": 150000.0,
+    "stock": 10,
+    "impuesto": 1.0,
+    "cantidad": 0,
+    "Subtotal": 0.0,
+    "TotalImpuesto": 0.0
+  }
+]

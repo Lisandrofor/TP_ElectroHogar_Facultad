@@ -95,11 +95,14 @@ namespace Presentacion
                 MessageBox.Show("Stock inválido.");
                 return;
             }
-
+           
             string idproveedor = IdProveedor().ToString();
             int categoria = NumCategoria();
             string nombre = comboBox3.Text.Trim();
             int idImpuesto = IdImpuesto();
+
+            decimal porcentaje= gestordeImpuesto.ObtenerPorcentajePorId(idImpuesto);
+
             try
             {
                 Producto productoSeleccionado = comboBox3.SelectedItem as Producto;
@@ -110,7 +113,7 @@ namespace Presentacion
                     stock= stock + productoSeleccionado.stock;
                     // Actualiza stock/precio o lo que necesites
                     gestorProd.AgregarProd(categoria, idproveedor, productoSeleccionado.nombre, precio, stock);
-                    gestorProd.GuardarProdconImpuesto(productoSeleccionado.id,categoria, idproveedor,nombre,precio,stock,idImpuesto);
+                    gestorProd.GuardarProdconImpuesto(categoria,idUsuario.ToString(), idproveedor,nombre,precio,stock,idImpuesto);
                     gestorProd.ModificarProducto(productoSeleccionado.id,idUsuario, precio, stock);
                     MessageBox.Show("Producto existente actualizado correctamente.");
                 }
@@ -119,13 +122,15 @@ namespace Presentacion
                     // --- Usuario escribió un nombre nuevo ---
                     // 🔹 Guardar el nuevo producto directamente en la base
                     gestorProd.AgregarProd(categoria, idproveedor, nombre, precio, stock);
-
+                    gestorProd.GuardarProdconImpuesto(categoria, idUsuario.ToString(), idproveedor, nombre, precio, stock, );
                     // 🔹 Crear el objeto nuevo (solo para mostrarlo en la lista visualmente)
                     Producto nuevoProducto = new Producto
                     {
                         nombre = nombre,
                         precio = precio,
                         stock = stock
+                        
+                        
                         // Si AgregarProd devuelve el ID, podrías asignarlo aquí
                     };
 
@@ -253,6 +258,7 @@ namespace Presentacion
         }
 
         private BindingList<Producto> listaProdBinding;
+        
 
         public void MostrarProductos(int categoria)
         {

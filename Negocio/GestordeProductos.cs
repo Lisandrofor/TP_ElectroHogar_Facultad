@@ -334,25 +334,106 @@ namespace Negocio
 
         }
 
-        public void GuardarProdconImpuesto(Guid id,int idcategoria, string idproveedor, string nombre, decimal precio, int stock,decimal impuesto)
+        public void GuardarProdconImpuesto(int idcategoria, string idUsuario, string idproveedor, string nombre, decimal precio, int stock, decimal impuesto)
         {
             //string idUsuario = Guid.NewGuid().ToString();
-            string idUsuario = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+            //string idUsuario = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+            //DateTime fechaAlta = DateTime.Now;
 
-            Producto altaProd = new Producto(id,idcategoria,nombre, idproveedor, nombre, precio, stock,impuesto);
+
+            AltaProducto altaProd = new AltaProducto(idcategoria, idUsuario, idproveedor, nombre, precio, stock, impuesto);
+
+            List<AltaProducto> productos;
+
+            // Ruta flexible: guarda el JSON junto al ejecutable
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\ProductosconImp.json";
+
+            // Si existe el archivo, leerlo
+            if (File.Exists(rutaArchivo))
+            {
+                string jsonArchivo = File.ReadAllText(rutaArchivo);
+
+                // Si está vacío, crear lista vacía
+                if (string.IsNullOrWhiteSpace(jsonArchivo))
+                {
+                    productos = new List<AltaProducto>();
+                }
+                else if (jsonArchivo.Trim().StartsWith("["))
+                {
+                    productos = JsonConvert.DeserializeObject<List<AltaProducto>>(jsonArchivo);
+                }
+                else
+                {
+                    // Caso raro: archivo con una sola categoría guardada como objeto
+                    AltaProducto prod = JsonConvert.DeserializeObject<AltaProducto>(jsonArchivo);
+                    productos = new List<AltaProducto> { prod };
+                }
+            }
+            else
+            {
+                // Si no existe, lista vacía
+                productos = new List<AltaProducto>();
+            }
+
+            // Evitar duplicados: comprobar si ya existe una categoría con el mismo ID
+            bool existe = productos.Any(p => p.nombre == nombre);
+
+            if (existe)
+            {
+                Console.WriteLine($"El producto con nombre de {nombre} ya existe.");
+            }
+            else
+            {
+                productos.Add(altaProd);
+
+                string nuevoJson = JsonConvert.SerializeObject(productos, Formatting.Indented);
+                File.WriteAllText(rutaArchivo, nuevoJson);
+
+                Console.WriteLine("Producto guardado correctamente.");
+            }
+
+        }
+
+
+
+        public List<AltaProducto> ObtenerProductosconImp()
+        {
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\ProductosconImp.json";
 
             try
             {
-                ProductosDa.AgregarProd(altaProd);
+                if (!File.Exists(rutaArchivo))
+                {
+                    // Si no existe, devuelvo lista vacía
+                    return new List<AltaProducto>();
+                }
 
+                string jsonLeer = File.ReadAllText(rutaArchivo);
 
+                if (string.IsNullOrWhiteSpace(jsonLeer))
+                {
+                    return new List<AltaProducto>();
+                }
 
+                List<AltaProducto> listaProImp = JsonConvert.DeserializeObject<List<AltaProducto>>(jsonLeer);
+
+                if (listaProImp == null)
+                {
+                    return new List<AltaProducto>();
+                }
+
+                return listaProImp;
             }
-            catch (Exception ex)
+            catch (JsonException ex)
             {
-                Console.WriteLine("Error general: " + ex.Message);
+                Console.WriteLine($"Error al deserializar el archivo JSON: {ex.Message}");
+                return new List<AltaProducto>();
             }
-
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error al leer el archivo: {ex.Message}");
+                return new List<AltaProducto>();
+            }
         }
 
 

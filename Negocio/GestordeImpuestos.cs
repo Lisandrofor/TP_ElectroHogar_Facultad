@@ -20,5 +20,20 @@ namespace Negocio
         }
 
 
+        public decimal ObtenerPorcentajePorId(int idImpuesto)
+        {
+            Impuesto impuesto = ObtenerImpuestos()
+                .FirstOrDefault(i => i.Id == idImpuesto);
+
+            if (impuesto != null)
+            {
+                return impuesto.Porcentaje;
+            }
+
+            throw new Exception("Impuesto no encontrado");
+        }
+
+
+
     }
 }
