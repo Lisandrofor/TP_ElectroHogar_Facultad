@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class Venta
     {
-        Guid _id;
+        int _id;
         string _idUsuario;
         string _idCliente;
         string _idProducto;
@@ -16,12 +16,21 @@ namespace Modelo
         DateTime _fechaAlta;
         EstadoVenta _estado;
 
+public  enum EstadoVenta
+        {
+            Pendiente,
+            Pagada,
+            Cancelada
+        }
+
 
         public Venta()
         {
-
+          fechaAlta = DateTime.Now;
+          EstadoVenta =
+EstadoVenta.Pendiente;
         }
-        public Venta(Guid id, string idUsuario, string idCliente, string idProducto, int cantidad, DateTime fechaAlta, EstadoVenta estado)
+        public Venta(int id, string idUsuario, string idCliente, string idProducto, int cantidad, DateTime fechaAlta, EstadoVenta estado)
         {
             _id=id;
             _idUsuario=idUsuario;
@@ -34,13 +43,9 @@ namespace Modelo
 
         }
 
-        public  enum EstadoVenta
-        {
-            EnProceso,
-            Finalizada
-        }
+        
 
-        public Guid id { get=>_id; set=>_id=value; }
+        public int id { get=>_id; set=>_id=value; }
         public string idUsuario { get=>_idUsuario; set=>_idUsuario=value; }
         public string idCliente { get=>_idCliente; set=>_idCliente=value; }    
         public string idProducto { get=>_idProducto; set=>_idProducto=value; }
@@ -52,8 +57,40 @@ namespace Modelo
         public EstadoVenta estado { get => _estado; set => _estado = value; }
 
 
+private List<VentaItem> _items = new List<VentaItem>();
+
+public IReadOnlyCollection<VentaItem> Items => _items.AsReadOnly();
 
 
+public void AgregarItem(VentaItem item)
+    {
+        _items.Add(item);
+    }
+
+    public decimal Subtotal()
+    {
+        return _items.Sum(i => i.Subtotal());
+    }
+
+    public decimal TotalImpuestos()
+    {
+        return _items.Sum(i => i.CalcularImpuesto());
+    }
+
+    public decimal Total()
+    {
+        return Subtotal() + TotalImpuestos();
+    }
+
+    public void MarcarComoPagada()
+    {
+        Estado = EstadoVenta.Pagada;
+    }
+
+    public void Cancelar()
+    {
+        Estado = EstadoVenta.Cancelada;
+    }
 
 
     }
