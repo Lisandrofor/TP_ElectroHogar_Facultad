@@ -19,7 +19,7 @@ namespace Modelo
         int _stock;
         decimal _impuesto;
         int _cantidad;
-        decimal _subtotal;
+        
 
         public AltaProducto(int categoria, string idUsuario, string idProveedor, string nombre, decimal precio, int stock )
         {
@@ -60,9 +60,7 @@ namespace Modelo
 
         public int cantidad { get => _cantidad; set => _cantidad = value; }
 
-        public decimal Subtotal => precio * cantidad;
 
-        public decimal TotalImpuesto => (Subtotal * impuesto) / 100;
 
 
     }

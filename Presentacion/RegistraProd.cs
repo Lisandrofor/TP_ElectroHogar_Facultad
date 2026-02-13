@@ -113,7 +113,7 @@ namespace Presentacion
                     stock= stock + productoSeleccionado.stock;
                     // Actualiza stock/precio o lo que necesites
                     gestorProd.AgregarProd(categoria, idproveedor, productoSeleccionado.nombre, precio, stock);
-                    gestorProd.GuardarProdconImpuesto(categoria,idUsuario.ToString(), idproveedor,nombre,precio,stock,idImpuesto);
+                    gestorProd.GuardarProdconImpuesto(categoria,idUsuario.ToString(), idproveedor,nombre,precio,stock,porcentaje);
                     gestorProd.ModificarProducto(productoSeleccionado.id,idUsuario, precio, stock);
                     MessageBox.Show("Producto existente actualizado correctamente.");
                 }
@@ -122,7 +122,7 @@ namespace Presentacion
                     // --- Usuario escribió un nombre nuevo ---
                     // 🔹 Guardar el nuevo producto directamente en la base
                     gestorProd.AgregarProd(categoria, idproveedor, nombre, precio, stock);
-                    gestorProd.GuardarProdconImpuesto(categoria, idUsuario.ToString(), idproveedor, nombre, precio, stock, );
+                    gestorProd.GuardarProdconImpuesto(categoria, idUsuario.ToString(), idproveedor, nombre, precio, stock,porcentaje);
                     // 🔹 Crear el objeto nuevo (solo para mostrarlo en la lista visualmente)
                     Producto nuevoProducto = new Producto
                     {
