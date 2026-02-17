@@ -21,7 +21,7 @@ namespace Modelo
         string _nomCategoria;
         int _cantidad;
         float _descuento;
-        decimal _impuesto;
+        Impuesto _impuesto;
 
 
 
@@ -96,8 +96,9 @@ namespace Modelo
 
         public float descuento { get => _descuento; set => _descuento = value; }
 
-        public decimal impuesto;
-        public decimal ImporteImpuesto => SubTotal * impuesto;
+        public Impuesto impuesto{ get => _impuesto; set => _impuesto = value; }
+
+        
 
         [Browsable(false)]
        

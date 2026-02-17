@@ -30,7 +30,7 @@ public class VentaItems
 
     public decimal CalcularImpuesto()
     {
-        return Subtotal() * Producto.impuesto;
+        return Subtotal() * Producto.impuesto.Porcentaje;
     }
 
     public decimal Total()
