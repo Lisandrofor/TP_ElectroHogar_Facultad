@@ -12,6 +12,6 @@ namespace Modelo
         public string Nombre { get; set; }
         public decimal Porcentaje { get; set; }
 
-        
+      
     }
 }

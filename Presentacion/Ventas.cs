@@ -307,7 +307,7 @@ namespace Presentacion
 
 
 
-            textBox4.Text=CalcularSubTotal().ToString();
+            textBox4.Text=Ventas..ToString();
             textBox5.Text = CalcularImp().ToString();
             textBox6.Text = CalculaDescuento().ToString();
             

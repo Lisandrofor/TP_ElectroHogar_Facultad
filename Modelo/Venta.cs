@@ -27,8 +27,7 @@ public  enum EstadoVenta
         public Venta()
         {
           fechaAlta = DateTime.Now;
-          EstadoVenta =
-EstadoVenta.Pendiente;
+          estado = EstadoVenta.Pendiente;
         }
         public Venta(int id, string idUsuario, string idCliente, string idProducto, int cantidad, DateTime fechaAlta, EstadoVenta estado)
         {
@@ -57,12 +56,12 @@ EstadoVenta.Pendiente;
         public EstadoVenta estado { get => _estado; set => _estado = value; }
 
 
-private List<VentaItem> _items = new List<VentaItem>();
+private List<VentaItems> _items = new List<VentaItems>();
 
-public IReadOnlyCollection<VentaItem> Items => _items.AsReadOnly();
+public IReadOnlyCollection<VentaItems> Items => _items.AsReadOnly();
 
 
-public void AgregarItem(VentaItem item)
+public void AgregarItem(VentaItems item)
     {
         _items.Add(item);
     }
@@ -84,12 +83,12 @@ public void AgregarItem(VentaItem item)
 
     public void MarcarComoPagada()
     {
-        Estado = EstadoVenta.Pagada;
+        estado = EstadoVenta.Pagada;
     }
 
     public void Cancelar()
     {
-        Estado = EstadoVenta.Cancelada;
+        estado = EstadoVenta.Cancelada;
     }
 
 
