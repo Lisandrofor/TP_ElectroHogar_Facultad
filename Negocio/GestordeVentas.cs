@@ -15,6 +15,7 @@ namespace Negocio
     {
         private List<Venta> listaVentas = new List<Venta>();
         VentasDatos VentasDa = new VentasDatos();
+        public string _idCliente;
 
         public void AgregarVenta(string idCliente,string idUsuario,string idProducto,int cantidad,DateTime fechaAlta,Venta.EstadoVenta estado)
         {
@@ -46,6 +47,24 @@ namespace Negocio
         public bool ExisteVentaCliente(string idCliente)
         {
             return listaVentas.Any(v => v.idCliente == idCliente);
+        }
+
+        public void seleccionidCliente(string idCliente)
+        {
+            _idCliente = idCliente;
+        }
+
+
+
+        private decimal CalculaDescuento()
+        {
+            decimal total = productos.Sum(p => p.SubTotal);
+            bool primeraCompra = !ExisteVentaCliente(_idCliente);
+
+            if (total > 100000 || primeraCompra)
+                total *= 0.90m; // 10% descuento
+
+            return 0;
         }
 
 

@@ -42,6 +42,7 @@ namespace Presentacion
         GestordeProductos produ = new GestordeProductos();
         GestordeVentas venta = new GestordeVentas();
         GestorDeUsuarios user = new GestorDeUsuarios();
+        Venta ventaModel = new Venta();
 
         public void MostrarProductos()
         {
@@ -83,7 +84,8 @@ namespace Presentacion
                 {
                     // Si se encuentra la persona, mostrar el nombre y apellido
                     textBox2.Text = cliente.nombre + " " + cliente.apellido;
-
+                   
+                    venta.seleccionidCliente(idCliente);
 
 
                 }
@@ -126,15 +128,15 @@ namespace Presentacion
         }
 
 
-        public decimal CalcularSubTotal()
-        {
-            return productos.Sum(p => p.SubTotal);
-        }
+        //public decimal CalcularSubTotal()
+        //{
+        //    return productos.Sum(p => p.SubTotal);
+        //}
 
-        public decimal CalcularImp()
-        {
-            return productos.Sum(i => i.ImporteImpuesto);
-        }
+        //public decimal CalcularImp()
+        //{
+        //    return productos.Sum(i => i.ImporteImpuesto);
+        //}
 
         public void seleccionidCliente(string idCliente)
         {
@@ -275,7 +277,8 @@ namespace Presentacion
 
             int cantidad = ObtenerCantidad();
             Producto producto = ObtenerProductoSeleccionado();
-            EstadoVenta estado = ObtenerEstadoVenta();
+            EstadoVenta estado = ventaModel.estado = ObtenerEstadoVenta();
+             RegistrarVenta(producto.id.ToString(), cantidad, estado);
 
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
@@ -286,32 +289,23 @@ namespace Presentacion
 
         }
 
+        
 
 
 
 
 
-        private decimal CalculaDescuento()
-        {
-            decimal total = productos.Sum(p => p.SubTotal);
-            bool primeraCompra = !venta.ExisteVentaCliente(_idCliente);
-
-            if (total > 100000 || primeraCompra)
-                total *= 0.90m; // 10% descuento
-
-            return 0;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
 
 
-            textBox4.Text=Ventas..ToString();
-            textBox5.Text = CalcularImp().ToString();
+            textBox4.Text = ventaModel.Subtotal().ToString();
+            textBox5.Text = ventaModel.TotalImpuestos().ToString();
             textBox6.Text = CalculaDescuento().ToString();
-            
-            decimal totalFinal = CalcularSubTotal() + CalcularImp() - CalculaDescuento();
+
+            decimal totalFinal = ventaModel.Subtotal() + ventaModel.TotalImpuestos() - CalculaDescuento();
             textBox7.Text =totalFinal.ToString();
 
 

@@ -91,6 +91,8 @@ public void AgregarItem(VentaItems item)
         estado = EstadoVenta.Cancelada;
     }
 
+       
+
 
     }
 }
