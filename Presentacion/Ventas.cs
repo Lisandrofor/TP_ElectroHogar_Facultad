@@ -236,6 +236,7 @@ namespace Presentacion
             {
                 producto.cantidad = cantidad;
                 productos.Add(producto);
+               
             }
         }
 

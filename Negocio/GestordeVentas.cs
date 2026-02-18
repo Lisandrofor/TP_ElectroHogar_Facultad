@@ -53,10 +53,11 @@ namespace Negocio
         {
             _idCliente = idCliente;
         }
+        
 
 
 
-        private decimal CalculaDescuento()
+        private decimal CalculaDescuento((List<Producto> productos)
         {
             decimal total = productos.Sum(p => p.SubTotal);
             bool primeraCompra = !ExisteVentaCliente(_idCliente);
