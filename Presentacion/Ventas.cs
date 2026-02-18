@@ -321,9 +321,9 @@ _venta.AgregarItem(item);
 
             textBox4.Text = ventaModel.Subtotal().ToString();
             textBox5.Text = ventaModel.TotalImpuestos().ToString();
-            textBox6.Text = CalculaDescuento().ToString();
+            textBox6.Text =ventaModel.CalculaDescuento().ToString();
 
-            decimal totalFinal = ventaModel.Subtotal() + ventaModel.TotalImpuestos() - CalculaDescuento();
+            decimal totalFinal = ventaModel.Subtotal() + ventaModel.TotalImpuestos() -ventaModel.CalculaDescuento();
             textBox7.Text =totalFinal.ToString();
 
 
