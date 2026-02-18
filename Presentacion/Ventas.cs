@@ -21,6 +21,7 @@ namespace Presentacion
         private string _idCliente;
         private string _idProducto;
         private int _cantidad;
+        
 
 
         public Ventas(string idUsuario)
@@ -43,6 +44,7 @@ namespace Presentacion
         GestordeVentas venta = new GestordeVentas();
         GestorDeUsuarios user = new GestorDeUsuarios();
         Venta ventaModel = new Venta();
+VentaItems _ítems =new VentaItems();
 
         public void MostrarProductos()
         {
@@ -342,6 +344,7 @@ namespace Presentacion
                 DateTime.Now,
                 estado
             );
+ventaModel.agregaritems(VentaItems items)
         }
 
        
