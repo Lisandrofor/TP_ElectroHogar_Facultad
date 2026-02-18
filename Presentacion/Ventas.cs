@@ -289,6 +289,8 @@ VentaItem item = new VentaItem
         PrecioUnitario = productoSeleccionado.Precio
     };
 
+_venta.AgregarItem(item);
+
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
             PersistirStock(producto);
