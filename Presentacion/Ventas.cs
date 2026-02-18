@@ -44,7 +44,7 @@ namespace Presentacion
         GestordeVentas venta = new GestordeVentas();
         GestorDeUsuarios user = new GestorDeUsuarios();
         Venta ventaModel = new Venta();
-VentaItems _ítems =new VentaItems();
+
 
         public void MostrarProductos()
         {
@@ -281,6 +281,13 @@ VentaItems _ítems =new VentaItems();
             Producto producto = ObtenerProductoSeleccionado();
             EstadoVenta estado = ventaModel.estado = ObtenerEstadoVenta();
              RegistrarVenta(producto.id.ToString(), cantidad, estado);
+
+VentaItem item = new VentaItem
+    {
+        Producto = productoSeleccionado,
+        Cantidad = cantidad,
+        PrecioUnitario = productoSeleccionado.Precio
+    };
 
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
