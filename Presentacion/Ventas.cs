@@ -37,6 +37,13 @@ namespace Presentacion
 
         }
 
+private Venta _venta;
+
+private void FormVenta_Load(object sender, EventArgs e)
+{
+    _venta = new Venta();
+}
+
 
         Cliente cliente = new Cliente();
         GestordeClientes clie = new GestordeClientes();
