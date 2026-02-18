@@ -91,6 +91,17 @@ public void AgregarItem(VentaItems item)
         estado = EstadoVenta.Cancelada;
     }
 
+        private decimal CalculaDescuento()
+        {
+            decimal total =Subtotal();
+            bool primeraCompra = !ExisteVentaCliente(_idCliente);
+
+            if (total > 100000 || primeraCompra)
+                total *= 0.90m; // 10% descuento
+
+            return 0;
+        }
+
        
 
 

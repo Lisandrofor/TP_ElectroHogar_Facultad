@@ -21,6 +21,7 @@ namespace Presentacion
         private string _idCliente;
         private string _idProducto;
         private int _cantidad;
+        
 
 
         public Ventas(string idUsuario)
@@ -36,6 +37,13 @@ namespace Presentacion
 
         }
 
+private Venta _venta;
+
+private void FormVenta_Load(object sender, EventArgs e)
+{
+    _venta = new Venta();
+}
+
 
         Cliente cliente = new Cliente();
         GestordeClientes clie = new GestordeClientes();
@@ -43,6 +51,7 @@ namespace Presentacion
         GestordeVentas venta = new GestordeVentas();
         GestorDeUsuarios user = new GestorDeUsuarios();
         Venta ventaModel = new Venta();
+
 
         public void MostrarProductos()
         {
@@ -281,6 +290,15 @@ namespace Presentacion
             EstadoVenta estado = ventaModel.estado = ObtenerEstadoVenta();
              RegistrarVenta(producto.id.ToString(), cantidad, estado);
 
+VentaItem item = new VentaItem
+    {
+        Producto = productoSeleccionado,
+        Cantidad = cantidad,
+        PrecioUnitario = productoSeleccionado.Precio
+    };
+
+_venta.AgregarItem(item);
+
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
             PersistirStock(producto);
@@ -304,9 +322,9 @@ namespace Presentacion
 
             textBox4.Text = ventaModel.Subtotal().ToString();
             textBox5.Text = ventaModel.TotalImpuestos().ToString();
-            textBox6.Text = CalculaDescuento().ToString();
+            textBox6.Text =ventaModel.CalculaDescuento().ToString();
 
-            decimal totalFinal = ventaModel.Subtotal() + ventaModel.TotalImpuestos() - CalculaDescuento();
+            decimal totalFinal = ventaModel.Subtotal() + ventaModel.TotalImpuestos() -ventaModel.CalculaDescuento();
             textBox7.Text =totalFinal.ToString();
 
 
@@ -343,6 +361,7 @@ namespace Presentacion
                 DateTime.Now,
                 estado
             );
+ventaModel.agregaritems(VentaItems items)
         }
 
        
