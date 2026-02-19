@@ -71,7 +71,7 @@ namespace Modelo
             {
                 if (conteoIng.TryGetValue(claveBuscada, out valor))
                 {
-                    if (valor >= 1)
+                    if (valor > 1)
                     {
 
                         return true;
@@ -130,7 +130,125 @@ namespace Modelo
 
         }
 
+            Usuario usuarioencontrado = ObtenerUsuarioPorId(idUsuario);
 
+
+
+            //List<Usuario> listadoUsuarios = gestorUsuarios.listarUsuarios();
+
+            //Usuario usuarioencontrado = listadoUsuarios.FirstOrDefault(user =>user.id.ToString()==idUsuario);
+
+            if (usuarioencontrado != null)
+            {
+                if (contraseña != "Temp1234")
+                {
+                    if (!string.IsNullOrEmpty(idUsuario))
+                    {
+                        MessageBox.Show("¡Inicio de sesión exitoso!");
+
+
+
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Activo);
+
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+                            login1.Close();
+
+
+
+
+
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error en el inicio de sesión. Verifique sus credenciales.");
+                    }
+
+                }
+                else if (contraseña == "Temp1234")
+                {
+
+
+
+
+
+                    if (ingresos == true)
+                    {
+                        LoginCambioPass cambioPass = new LoginCambioPass();
+
+                        if (cambioPass.ShowDialog() == DialogResult.OK)
+                        {
+                            string contraseñaNueva = login.ContraseñaNueva;
+                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+
+                            login1.Close();
+                            cambioPass.ShowDialog();
+                            gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
+
+                        }
+
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
+
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+
+                        }
+
+
+
+                    }
+                    else if (ingresos == false)
+                    {
+                        MessageBox.Show("¡Inicio de sesión exitoso!");
+
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Inactivo);
+
+
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+
+
+
+                        }
+
+
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("El usuario no fue encontrado. Verifique el ID.");
+                }
+
+
+        public Usuario ObtenerUsuarioPorId(string idBuscado)
+        {
+            GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
+            Usuario usuarioEncontrado = new Usuario();
+            do
+            {
+
+                List<Usuario> listadoUsuarios = gestorUsuarios.listarUsuarios();
+            } while (usuarioEncontrado.id.ToString()==idBuscado);
+
+            if (usuarioEncontrado != null)
+            {
+                Console.WriteLine($"Usuario encontrado: {usuarioEncontrado.nombre}");
+            }
+            else
+            {
+                Console.WriteLine("Usuario no encontrado.");
+            }
+
+            return usuarioEncontrado;
+        }
 
         
 
