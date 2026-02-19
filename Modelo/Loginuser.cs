@@ -228,7 +228,27 @@ namespace Modelo
                 }
 
 
+        public Usuario ObtenerUsuarioPorId(string idBuscado)
+        {
+            GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
+            Usuario usuarioEncontrado = new Usuario();
+            do
+            {
 
+                List<Usuario> listadoUsuarios = gestorUsuarios.listarUsuarios();
+            } while (usuarioEncontrado.id.ToString()==idBuscado);
+
+            if (usuarioEncontrado != null)
+            {
+                Console.WriteLine($"Usuario encontrado: {usuarioEncontrado.nombre}");
+            }
+            else
+            {
+                Console.WriteLine("Usuario no encontrado.");
+            }
+
+            return usuarioEncontrado;
+        }
 
         
 
