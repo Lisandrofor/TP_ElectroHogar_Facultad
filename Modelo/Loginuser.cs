@@ -71,7 +71,7 @@ namespace Modelo
             {
                 if (conteoIng.TryGetValue(claveBuscada, out valor))
                 {
-                    if (valor >= 1)
+                    if (valor > 1)
                     {
 
                         return true;
