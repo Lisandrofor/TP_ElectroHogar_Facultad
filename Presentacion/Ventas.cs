@@ -290,14 +290,14 @@ private void FormVenta_Load(object sender, EventArgs e)
             EstadoVenta estado = ventaModel.estado = ObtenerEstadoVenta();
              RegistrarVenta(producto.id.ToString(), cantidad, estado);
 
-VentaItem item = new VentaItem
-    {
-        Producto = productoSeleccionado,
-        Cantidad = cantidad,
-        PrecioUnitario = productoSeleccionado.Precio
-    };
+            VentaItems item = new VentaItems
+            {
+                Producto=
+                Cantidad = cantidad,
+                PrecioUnitario = productoSeleccionado.Precio
+            };
 
-_venta.AgregarItem(item);
+            _venta.AgregarItem(item);
 
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
