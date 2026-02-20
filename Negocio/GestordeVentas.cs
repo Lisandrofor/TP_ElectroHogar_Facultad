@@ -15,16 +15,17 @@ namespace Negocio
     {
         private List<Venta> listaVentas = new List<Venta>();
         VentasDatos VentasDa = new VentasDatos();
+        Venta venta = new Venta();
         public string _idCliente;
 
         public void AgregarVenta(string idCliente,string idUsuario,string idProducto,int cantidad,DateTime fechaAlta,Venta.EstadoVenta estado)
         {
 
 
-            Guid idVenta = Guid.NewGuid();
+           Guid id= Guid.NewGuid();
 
 
-            Venta altaVenta = new Venta(idVenta,idCliente,idUsuario,idProducto,cantidad,fechaAlta,estado);
+            Venta altaVenta = new Venta(id,idCliente,idUsuario,idProducto,cantidad,fechaAlta,estado);
             
 
             try
@@ -53,11 +54,21 @@ namespace Negocio
         {
             _idCliente = idCliente;
         }
-        
+
+        public decimal CalculaDescuento()
+        {
+
+            decimal total = venta.Subtotal();
+            bool primeraCompra = !ExisteVentaCliente(_idCliente);
+
+            if (total > 100000 || primeraCompra)
+                total *= 0.90m; // 10% descuento
+
+            return 0;
+        }
 
 
 
-       
 
 
         public List<Venta> ObtenerVentasporCliente(string idCliente)

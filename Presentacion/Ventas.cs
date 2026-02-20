@@ -288,14 +288,14 @@ private void FormVenta_Load(object sender, EventArgs e)
             int cantidad = ObtenerCantidad();
             Producto producto = ObtenerProductoSeleccionado();
             EstadoVenta estado = ventaModel.estado = ObtenerEstadoVenta();
-             RegistrarVenta(producto.id.ToString(), cantidad, estado);
+            RegistrarVenta(producto.id.ToString(), cantidad, estado);
 
             VentaItems item = new VentaItems
-            {
-                Producto=
-                Cantidad = cantidad,
-                PrecioUnitario = productoSeleccionado.Precio
-            };
+            (
+                producto,
+                cantidad,
+                producto.precio
+            );
 
             _venta.AgregarItem(item);
 
@@ -322,9 +322,9 @@ private void FormVenta_Load(object sender, EventArgs e)
 
             textBox4.Text = ventaModel.Subtotal().ToString();
             textBox5.Text = ventaModel.TotalImpuestos().ToString();
-            textBox6.Text =ventaModel.CalculaDescuento().ToString();
+            textBox6.Text =venta.CalculaDescuento().ToString();
 
-            decimal totalFinal = ventaModel.Subtotal() + ventaModel.TotalImpuestos() -ventaModel.CalculaDescuento();
+            decimal totalFinal = ventaModel.Subtotal() + ventaModel.TotalImpuestos() -venta.CalculaDescuento();
             textBox7.Text =totalFinal.ToString();
 
 
@@ -361,7 +361,7 @@ private void FormVenta_Load(object sender, EventArgs e)
                 DateTime.Now,
                 estado
             );
-ventaModel.agregaritems(VentaItems items)
+
         }
 
        

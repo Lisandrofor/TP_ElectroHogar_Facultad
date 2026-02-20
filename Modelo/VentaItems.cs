@@ -11,10 +11,10 @@ namespace Modelo
 
 public class VentaItems
 {
-    public Producto Producto { get; private set; }
-    public int Cantidad { get; private set; }
-    public decimal PrecioUnitario { get; private set; }
-    public decimal Descuento { get; private set; } // descuento por item
+    public Producto Producto { get; set; }
+    public int Cantidad { get; set; }
+    public decimal PrecioUnitario { get; set; }
+    public decimal Descuento { get; set; } // descuento por item
 
     public VentaItems(Producto producto, int cantidad, decimal precioUnitario)
     {

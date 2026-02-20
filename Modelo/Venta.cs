@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class Venta
     {
-        int _id;
+        Guid _id;
         string _idUsuario;
         string _idCliente;
         string _idProducto;
@@ -29,7 +29,7 @@ public  enum EstadoVenta
           fechaAlta = DateTime.Now;
           estado = EstadoVenta.Pendiente;
         }
-        public Venta(int id, string idUsuario, string idCliente, string idProducto, int cantidad, DateTime fechaAlta, EstadoVenta estado)
+        public Venta(Guid id, string idUsuario, string idCliente, string idProducto, int cantidad, DateTime fechaAlta, EstadoVenta estado)
         {
             _id=id;
             _idUsuario=idUsuario;
@@ -44,7 +44,7 @@ public  enum EstadoVenta
 
         
 
-        public int id { get=>_id; set=>_id=value; }
+        public Guid id { get=>_id; set=>_id=value; }
         public string idUsuario { get=>_idUsuario; set=>_idUsuario=value; }
         public string idCliente { get=>_idCliente; set=>_idCliente=value; }    
         public string idProducto { get=>_idProducto; set=>_idProducto=value; }
@@ -91,16 +91,7 @@ public void AgregarItem(VentaItems item)
         estado = EstadoVenta.Cancelada;
     }
 
-        private decimal CalculaDescuento()
-        {
-            decimal total =Subtotal();
-            bool primeraCompra = !ExisteVentaCliente(_idCliente);
-
-            if (total > 100000 || primeraCompra)
-                total *= 0.90m; // 10% descuento
-
-            return 0;
-        }
+        
 
        
 
