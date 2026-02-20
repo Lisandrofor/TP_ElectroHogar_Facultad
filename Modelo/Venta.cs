@@ -56,9 +56,9 @@ public  enum EstadoVenta
         public EstadoVenta estado { get => _estado; set => _estado = value; }
 
 
-private List<VentaItems> _items = new List<VentaItems>();
+        private List<VentaItems> _items = new List<VentaItems>();
 
-public IReadOnlyCollection<VentaItems> Items => _items.AsReadOnly();
+        public IReadOnlyCollection<VentaItems> items => _items.AsReadOnly();
 
 
 public void AgregarItem(VentaItems item)
