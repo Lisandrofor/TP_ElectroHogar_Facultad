@@ -85,11 +85,11 @@ namespace Modelo
         public string nombre { get => _nombre; set => _nombre = value; }
         public DateTime fechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public DateTime? fechaBaja { get => _fechaBaja; set => _fechaBaja = value; }
-        public decimal precio { get => _precio; set => _precio = value; }
+        
         public int stock { get => _stock; set => _stock = value; }
 
 
-        public int cantidad { get => _cantidad; set => _cantidad = value; }
+        
 
 
 
@@ -97,7 +97,7 @@ namespace Modelo
 
         public float descuento { get => _descuento; set => _descuento = value; }
 
-        public Impuesto impuesto{ get => _impuesto; set => _impuesto = value; }
+    
 
         
 
@@ -117,7 +117,55 @@ namespace Modelo
                 OnPropertyChanged(nameof(Total));
             }
         }
+public decimal Precio
+    {
+        get => _precio;
+        set
+        {
+            _precio = value;
+            OnPropertyChanged(nameof(Precio));
+            OnPropertyChanged(nameof(Subtotal));
+            OnPropertyChanged(nameof(Total));
+        }
+    }
 
+    public int Cantidad
+    {
+        get => _cantidad;
+        set
+        {
+            _cantidad = value;
+            OnPropertyChanged(nameof(Cantidad));
+            OnPropertyChanged(nameof(Subtotal));
+            OnPropertyChanged(nameof(Total));
+        }
+    }
+
+    public Impuesto impuesto
+    {
+        get => _impuesto;
+        set
+        {
+            _impuesto = value;
+            OnPropertyChanged(nameof(impuesto));
+            OnPropertyChanged(nameof(IdImpuesto));
+            OnPropertyChanged(nameof(Total));
+        }
+    }
+
+ 
+
+    public decimal Subtotal => Precio * Cantidad;
+
+    public decimal Total =>
+        impuesto == null
+            ? Subtotal
+            : Subtotal + (Subtotal * impuesto.Porcentaje);
+
+    protected void OnPropertyChanged(string propiedad)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propiedad));
+    }
 
 
         public override string ToString()
