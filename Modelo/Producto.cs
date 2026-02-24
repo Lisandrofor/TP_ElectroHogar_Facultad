@@ -9,8 +9,10 @@ using System.ComponentModel;
 
 namespace Modelo
 {
-    public class Producto 
-    {
+    public class Producto: INotifyPropertyChanged
+{
+    public event PropertyChangedEventHandler PropertyChanged;
+    
         Guid _id;
         int _idcategoria;
         string _nombre;
