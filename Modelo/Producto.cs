@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace Modelo
 {
-    public class Producto
+    public class Producto 
     {
         Guid _id;
         int _idcategoria;
@@ -23,6 +23,7 @@ namespace Modelo
         float _descuento;
         Impuesto _impuesto;
 
+        
 
 
         public Producto()
@@ -106,6 +107,18 @@ namespace Modelo
         public string nomCategoria { get => _nomCategoria; set => _nomCategoria = value; }
 
 
+        public int IdImpuesto
+        {
+            get => impuesto?.Id ?? 0;
+            set
+            {
+                impuesto = new Impuesto { Id = value };
+                OnPropertyChanged(nameof(IdImpuesto));
+                OnPropertyChanged(nameof(Total));
+            }
+        }
+
+
 
         public override string ToString()
         {
@@ -117,9 +130,9 @@ namespace Modelo
 
         //    return cantidad*precio;
         //}
+       
 
-
-
+       
 
 
 

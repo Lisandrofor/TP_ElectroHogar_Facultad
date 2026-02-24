@@ -58,7 +58,7 @@ public  enum EstadoVenta
 
         private List<VentaItems> _items = new List<VentaItems>();
 
-        public IReadOnlyCollection<VentaItems> items => _items.AsReadOnly();
+        //public IReadOnlyCollection<VentaItems> items => _items.AsReadOnly();
 
 
 public void AgregarItem(VentaItems item)
@@ -68,7 +68,7 @@ public void AgregarItem(VentaItems item)
 
     public decimal Subtotal()
     {
-        return _items.Sum(i => i.Subtotal());
+        return _items.Sum(i => i.SubtotalItems());
     }
 
     public decimal TotalImpuestos()

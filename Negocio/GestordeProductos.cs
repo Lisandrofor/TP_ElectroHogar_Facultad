@@ -1,12 +1,14 @@
-﻿using Modelo;
-using AccesoaDatos;
+﻿using AccesoaDatos;
+using Modelo;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using Newtonsoft.Json;
 
 
 namespace Negocio
@@ -36,6 +38,25 @@ namespace Negocio
         {
             return ProductosDa.getProductos();
         }
+
+        public decimal ImpuestonoRegistrado(Producto producto)
+        { 
+            
+            if (producto.impuesto == null)
+            {
+                producto.impuesto = new Impuesto();
+                return producto.impuesto.Porcentaje = 0.21m;
+            }
+            else
+            {
+                return producto.impuesto.Porcentaje;
+            }
+
+
+
+        }
+
+       
 
         public List<Categorias> ObtenerCategorias()
         {

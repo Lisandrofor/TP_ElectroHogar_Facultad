@@ -23,19 +23,19 @@ public class VentaItems
         PrecioUnitario = precioUnitario;
     }
 
-    public decimal Subtotal()
+    public decimal SubtotalItems()
     {
         return (PrecioUnitario * Cantidad) - Descuento;
     }
 
     public decimal CalcularImpuesto()
     {
-        return Subtotal() * Producto.impuesto.Porcentaje;
+        return SubtotalItems() * Producto.impuesto.Porcentaje;
     }
 
     public decimal Total()
     {
-        return Subtotal() + CalcularImpuesto();
+        return SubtotalItems() + CalcularImpuesto();
     }
 
  }
