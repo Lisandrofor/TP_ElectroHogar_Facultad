@@ -21,7 +21,7 @@ namespace Presentacion
         private string _idCliente;
         private string _idProducto;
         private int _cantidad;
-        
+        private List<Impuesto> lista;
 
 
         public Ventas(string idUsuario)
@@ -47,6 +47,9 @@ private void FormVenta_Load(object sender, EventArgs e)
     _venta = new Venta();
             dataGridView2.CellValueChanged += dataGridView2_CellValueChanged;
             dataGridView2.CurrentCellDirtyStateChanged += dataGridView2_CurrentCellDirtyStateChanged;
+
+            GestordeImpuestos imp = new GestordeImpuestos();
+            lista = imp.ObtenerImpuestos();
         }
 
 
@@ -191,34 +194,7 @@ private void FormVenta_Load(object sender, EventArgs e)
 
        
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0) // Asegurar que no se seleccionen encabezados
-            {
-                Producto productoSeleccionado = (Producto)dataGridView2.Rows[e.RowIndex].DataBoundItem;
-
-                if (productoSeleccionado != null)
-                {
-                    RegistrarEvento(productoSeleccionado);
-                }
-            }
-        }
-
-        private void RegistrarEvento(Producto producto)
-        {
-
-            _cantidad = producto.cantidad;
-            _idProducto = producto.id.ToString();
-
-            //venta.AgregarVenta(_idUsuario, _idCliente, _idProducto, _cantidad);
-
-
-
-            //string mensaje = $"Producto seleccionado: {producto.nombre}, Fecha: {DateTime.Now}";
-            //MessageBox.Show(mensaje, "Evento Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Aquí puedes guardar el evento en una lista, archivo o base de datos
-        }
+       
 
 
         
@@ -282,12 +258,15 @@ private void FormVenta_Load(object sender, EventArgs e)
             Guid idUsuario = Guid.Parse("70b37dc1-8fde-4840-be47-9ababd0ee7e5");
             produ.ModificarProducto(producto.id, idUsuario, producto.precio, producto.stock);
         }
+
+
         
-       
 
 
 
-private void ActualizarGrilla()
+
+
+        private void ActualizarGrilla()
         {
             GestordeImpuestos imp = new GestordeImpuestos();
             List<Impuesto> lista = imp.ObtenerImpuestos();
@@ -347,7 +326,7 @@ private void ActualizarGrilla()
             comboImpuesto.HeaderText = "Impuesto";
             comboImpuesto.DataSource = lista;
             comboImpuesto.DisplayMember = "Nombre";
-            comboImpuesto.ValueMember = "Id";
+            comboImpuesto.ValueMember = null;
 
             dataGridView2.Columns.Add(comboImpuesto);
 
@@ -365,6 +344,46 @@ private void ActualizarGrilla()
 
 
 
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Asegurar que no se seleccionen encabezados
+            {
+                Producto productoSeleccionado = (Producto)dataGridView2.Rows[e.RowIndex].DataBoundItem;
+
+                if (productoSeleccionado != null)
+                {
+                    RegistrarEvento(productoSeleccionado);
+                }
+            }
+
+            if (dataGridView2.Columns[e.ColumnIndex].DataPropertyName == "IdImpuesto")
+            {
+                var producto = (Producto)dataGridView2.Rows[e.RowIndex].DataBoundItem;
+
+                var impuestoSeleccionado = lista
+                    .FirstOrDefault(i => i.Id == producto.IdImpuesto);
+
+                producto.impuesto = impuestoSeleccionado;
+            }
+        }
+
+        private void RegistrarEvento(Producto producto)
+        {
+
+            _cantidad = producto.cantidad;
+            _idProducto = producto.id.ToString();
+            Impuesto impuesto = producto.impuesto;
+
+            //venta.AgregarVenta(_idUsuario, _idCliente, _idProducto, _cantidad);
+
+
+
+            //string mensaje = $"Producto seleccionado: {producto.nombre}, Fecha: {DateTime.Now}";
+            //MessageBox.Show(mensaje, "Evento Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Aquí puedes guardar el evento en una lista, archivo o base de datos
         }
 
 

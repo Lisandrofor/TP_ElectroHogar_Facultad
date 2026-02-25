@@ -95,7 +95,7 @@ namespace Modelo
 
 
 
-        public decimal SubTotal => precio * cantidad;
+        
 
         public float descuento { get => _descuento; set => _descuento = value; }
 
@@ -109,37 +109,28 @@ namespace Modelo
         public string nomCategoria { get => _nomCategoria; set => _nomCategoria = value; }
 
 
-        public int IdImpuesto
-        {
-            get => impuesto?.Id ?? 0;
-            set
-            {
-                impuesto = new Impuesto { Id = value };
-                OnPropertyChanged(nameof(IdImpuesto));
-                OnPropertyChanged(nameof(Total));
-            }
-        }
-public decimal Precio
+        
+public decimal precio
     {
         get => _precio;
         set
         {
             _precio = value;
-            OnPropertyChanged(nameof(Precio));
-            OnPropertyChanged(nameof(Subtotal));
-            OnPropertyChanged(nameof(Total));
+            OnPropertyChanged(nameof(precio));
+            OnPropertyChanged(nameof(subtotal));
+            OnPropertyChanged(nameof(total));
         }
     }
 
-    public int Cantidad
+    public int cantidad
     {
         get => _cantidad;
         set
         {
             _cantidad = value;
-            OnPropertyChanged(nameof(Cantidad));
-            OnPropertyChanged(nameof(Subtotal));
-            OnPropertyChanged(nameof(Total));
+            OnPropertyChanged(nameof(cantidad));
+            OnPropertyChanged(nameof(subtotal));
+            OnPropertyChanged(nameof(total));
         }
     }
 
@@ -150,19 +141,28 @@ public decimal Precio
         {
             _impuesto = value;
             OnPropertyChanged(nameof(impuesto));
-            OnPropertyChanged(nameof(IdImpuesto));
-            OnPropertyChanged(nameof(Total));
+            OnPropertyChanged(nameof(id));
+            OnPropertyChanged(nameof(total));
         }
     }
 
- 
+        public int IdImpuesto
+        {
+            get => impuesto?.Id ?? 0;
+            set
+            {
+                OnPropertyChanged(nameof(IdImpuesto));
+            }
+        }
 
-    public decimal Subtotal => Precio * Cantidad;
 
-    public decimal Total =>
+
+        public decimal subtotal => precio * cantidad;
+
+    public decimal total =>
         impuesto == null
-            ? Subtotal
-            : Subtotal + (Subtotal * impuesto.Porcentaje);
+            ? subtotal
+            : subtotal + (subtotal * impuesto.Porcentaje);
 
     protected void OnPropertyChanged(string propiedad)
     {
