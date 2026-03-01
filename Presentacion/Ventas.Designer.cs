@@ -155,6 +155,8 @@
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.Size = new System.Drawing.Size(837, 231);
             this.dataGridView2.TabIndex = 40;
+            this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged_1);
+            this.dataGridView2.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridView2_CurrentCellDirtyStateChanged_1);
             // 
             // comboBox1
             // 
@@ -189,7 +191,6 @@
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.Load += new System.EventHandler(this.FormVenta_Load);
             // 
             // textBox7
             // 
@@ -401,6 +402,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Ventas";
             this.Text = "Venta";
+            this.Load += new System.EventHandler(this.FormVenta_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

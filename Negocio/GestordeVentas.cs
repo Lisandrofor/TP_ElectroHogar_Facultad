@@ -15,6 +15,7 @@ namespace Negocio
     {
         private List<Venta> listaVentas = new List<Venta>();
         VentasDatos VentasDa = new VentasDatos();
+        GestordeImpuestos gestor = new GestordeImpuestos();
         Venta venta = new Venta();
         public string _idCliente;
 
@@ -84,6 +85,10 @@ namespace Negocio
         {
             return VentasDa.GetVenta(idVenta);
         }
+       
+
+
+
 
         public List<Venta> ObtenerVentasPorCliente(Guid idVenta)
         {
@@ -152,6 +157,8 @@ namespace Negocio
         }
 
         
+
+
 
 
     }

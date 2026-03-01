@@ -24,6 +24,8 @@ namespace Modelo
         int _cantidad;
         float _descuento;
         Impuesto _impuesto;
+        
+        
 
         
 
@@ -91,11 +93,11 @@ namespace Modelo
         public int stock { get => _stock; set => _stock = value; }
 
 
-        
-
-
+        public int IdImpuesto { get; set; }
 
         
+
+
 
         public float descuento { get => _descuento; set => _descuento = value; }
 
@@ -134,37 +136,42 @@ public decimal precio
         }
     }
 
-    public Impuesto impuesto
-    {
-        get => _impuesto;
-        set
+        public Impuesto impuesto
         {
-            _impuesto = value;
-            OnPropertyChanged(nameof(impuesto));
-            OnPropertyChanged(nameof(id));
-            OnPropertyChanged(nameof(total));
-        }
-    }
-
-        public int IdImpuesto
-        {
-            get => impuesto?.Id ?? 0;
+            get { return _impuesto; }
             set
             {
-                OnPropertyChanged(nameof(IdImpuesto));
+                _impuesto = value;
+                OnPropertyChanged(nameof(impuesto));
+                OnPropertyChanged(nameof(total));      // 🔥 clave
+                OnPropertyChanged(nameof(subtotal));   // por seguridad
             }
         }
 
 
 
+
+
+
+
+
+
+
+
         public decimal subtotal => precio * cantidad;
 
-    public decimal total =>
-        impuesto == null
-            ? subtotal
-            : subtotal + (subtotal * impuesto.Porcentaje);
+        public decimal total
+        {
+            get
+            {
+                if (impuesto == null)
+                    return subtotal;
 
-    protected void OnPropertyChanged(string propiedad)
+                return subtotal + (subtotal * impuesto.Porcentaje);
+            }
+        }
+
+        protected void OnPropertyChanged(string propiedad)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propiedad));
     }

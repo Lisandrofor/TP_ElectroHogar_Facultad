@@ -45,11 +45,14 @@ private Venta _venta;
 private void FormVenta_Load(object sender, EventArgs e)
 {
     _venta = new Venta();
-            dataGridView2.CellValueChanged += dataGridView2_CellValueChanged;
-            dataGridView2.CurrentCellDirtyStateChanged += dataGridView2_CurrentCellDirtyStateChanged;
+            dataGridView2.CellValueChanged += dataGridView2_CellValueChanged_1;
+            dataGridView2.CurrentCellDirtyStateChanged += dataGridView2_CurrentCellDirtyStateChanged_1;
 
             GestordeImpuestos imp = new GestordeImpuestos();
             lista = imp.ObtenerImpuestos();
+
+            ConfigurarGrilla();
+            dataGridView2.DataSource = productos;
         }
 
 
@@ -58,7 +61,8 @@ private void FormVenta_Load(object sender, EventArgs e)
         GestordeProductos produ = new GestordeProductos();
         GestordeVentas venta = new GestordeVentas();
         GestorDeUsuarios user = new GestorDeUsuarios();
-        
+       
+
 
 
 
@@ -68,29 +72,22 @@ private void FormVenta_Load(object sender, EventArgs e)
             comboBox1.DataSource = listaproductos;
             comboBox1.DisplayMember = "nombre";
         }
+
+
+
+
+
+        private BindingList<Producto> productos = new BindingList<Producto>();
+
+
+
+
+
+
+
         
+
         
-
-
-
-        private List<Producto> productos = new List<Producto>();
-
-
-
-
-
-
-
-        private void dataGridView2_CurrentCellDirtyStateChanged(object sender, EventArgs e)
-        {
-            if (dataGridView2.IsCurrentCellDirty)
-                dataGridView2.CommitEdit(DataGridViewDataErrorContexts.Commit);
-        }
-
-        private void dataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            dataGridView2.Refresh();
-        }
 
 
 
@@ -235,9 +232,20 @@ private void FormVenta_Load(object sender, EventArgs e)
             }
             else
             {
-                producto.cantidad = cantidad;
-                productos.Add(producto);
-               
+                var imp = lista.First();
+
+                Producto nuevo = new Producto
+                {
+                    id = producto.id,
+                    idCategoria = producto.idCategoria,
+                    nombre = producto.nombre,
+                    precio = producto.precio,
+                    stock = producto.stock,
+                    cantidad = cantidad,
+                    impuesto = imp,
+                    IdImpuesto = imp.Id   // 🔥 ESTA LÍNEA FALTABA
+                };
+                productos.Add(nuevo);
             }
         }
 
@@ -266,22 +274,15 @@ private void FormVenta_Load(object sender, EventArgs e)
 
 
 
-        private void ActualizarGrilla()
+        private void ConfigurarGrilla()
         {
-            GestordeImpuestos imp = new GestordeImpuestos();
-            List<Impuesto> lista = imp.ObtenerImpuestos();
+            
 
-            foreach (var p in productos)
-            {
-                if (p.impuesto != null)
-                {
-                    p.impuesto = lista
-                        .FirstOrDefault(i => i.Id == p.impuesto.Id);
-                }
-            }
+        
 
-            dataGridView2.DataSource = null;
-            dataGridView2.Columns.Clear();
+            
+
+           
             dataGridView2.AutoGenerateColumns = false;
 
             // 🔹 Nombre
@@ -315,31 +316,31 @@ private void FormVenta_Load(object sender, EventArgs e)
             // 🔹 Subtotal (Precio * Cantidad)
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "Subtotal", // Debe existir como propiedad calculada
+                DataPropertyName = "subtotal", // Debe existir como propiedad calculada
                 HeaderText = "Subtotal",
                 ReadOnly = true
             });
 
-            // 🔥 Impuesto (ComboBox)
-            DataGridViewComboBoxColumn comboImpuesto = new DataGridViewComboBoxColumn();
-            comboImpuesto.DataPropertyName = "impuesto"; // EXACTO como en tu clase
-            comboImpuesto.HeaderText = "Impuesto";
-            comboImpuesto.DataSource = lista;
-            comboImpuesto.DisplayMember = "Nombre";
-            comboImpuesto.ValueMember = null;
+            DataGridViewComboBoxColumn colImpuesto = new DataGridViewComboBoxColumn();
+            colImpuesto.Name = "colImpuesto";   // 🔥 agregar esto
+            colImpuesto.HeaderText = "Impuesto";
+            colImpuesto.DataSource = lista;
+            colImpuesto.DisplayMember = "Nombre";
+            colImpuesto.ValueMember = "Id";
+            colImpuesto.DataPropertyName = "IdImpuesto";
 
-            dataGridView2.Columns.Add(comboImpuesto);
+            dataGridView2.Columns.Add(colImpuesto);
 
             // 🔹 Total (Subtotal + Impuesto)
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "Total", // Debe existir como propiedad calculada
+                DataPropertyName = "total", // Debe existir como propiedad calculada
                 HeaderText = "Total",
                 ReadOnly = true
             });
 
+            
             dataGridView2.DataSource = productos;
-
 
 
 
@@ -358,16 +359,11 @@ private void FormVenta_Load(object sender, EventArgs e)
                 }
             }
 
-            if (dataGridView2.Columns[e.ColumnIndex].DataPropertyName == "IdImpuesto")
-            {
-                var producto = (Producto)dataGridView2.Rows[e.RowIndex].DataBoundItem;
-
-                var impuestoSeleccionado = lista
-                    .FirstOrDefault(i => i.Id == producto.IdImpuesto);
-
-                producto.impuesto = impuestoSeleccionado;
-            }
+           
         }
+        
+
+       
 
         private void RegistrarEvento(Producto producto)
         {
@@ -412,7 +408,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
             PersistirStock(producto);
-            ActualizarGrilla();
+            
 
 
 
@@ -488,14 +484,30 @@ private void FormVenta_Load(object sender, EventArgs e)
             textBox10.Clear();
         }
 
+        private void dataGridView2_CurrentCellDirtyStateChanged_1(object sender, EventArgs e)
+        {
+            if (dataGridView2.IsCurrentCellDirty)
+            {
+                dataGridView2.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
 
+        }
 
+        private void dataGridView2_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView2.Columns[e.ColumnIndex].Name == "colImpuesto")
+            {
+                Producto producto = (Producto)dataGridView2.Rows[e.RowIndex].DataBoundItem;
 
+                if (producto != null)
+                {
 
+                    producto.impuesto = lista.FirstOrDefault(i => i.Id == producto.IdImpuesto);
 
+                    dataGridView2.Refresh();
+                }
+            }
 
-
-
-
+        }
     }
 }
