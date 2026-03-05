@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,12 +62,27 @@ public  enum EstadoVenta
         //public IReadOnlyCollection<VentaItems> items => _items.AsReadOnly();
 
 
-public void AgregarItem(VentaItems item)
+        private BindingList<VentaItems> items = new BindingList<VentaItems>();
+
+        public BindingList<VentaItems> Items
+        {
+            get { return items; }
+        }
+
+
+
+
+
+        public void AgregarItem(VentaItems item)
     {
         _items.Add(item);
     }
+    public void QuitarItem(VentaItems item)
+    {
+            _items.Remove(item);
+    }
 
-    public decimal Subtotal()
+        public decimal Subtotal()
     {
         return _items.Sum(i => i.Subtotal);
     }

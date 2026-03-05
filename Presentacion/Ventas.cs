@@ -137,7 +137,12 @@ private void FormVenta_Load(object sender, EventArgs e)
                 items.RemoveAt(indice);
                 Actualizardatagridview();
 
+                decimal total = items.Sum(i => i.Total);
+
+                textBox7.Text = total.ToString();
             }
+
+        
             else
             {
                 MessageBox.Show("Por favor, seleccione un item para eliminar");
@@ -235,6 +240,7 @@ private void FormVenta_Load(object sender, EventArgs e)
 
             VentaItems nuevo = new VentaItems(producto, cantidad, producto.precio, imp);
             items.Add(nuevo);
+            _venta.AgregarItem(nuevo);
         }
 
 
@@ -396,8 +402,14 @@ private void FormVenta_Load(object sender, EventArgs e)
             EstadoVenta estado = ObtenerEstadoVenta();
             _venta.estado = estado;
 
+            
+            
+
+
+
             RegistrarVenta(producto.id.ToString(), cantidad, estado);
-            MessageBox.Show(producto.impuesto?.Porcentaje.ToString() ?? "NULL");
+            
+            
 
            
 
