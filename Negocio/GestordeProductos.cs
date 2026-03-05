@@ -39,22 +39,7 @@ namespace Negocio
             return ProductosDa.getProductos();
         }
 
-        public decimal ImpuestonoRegistrado(Producto producto)
-        { 
-            
-            if (producto.impuesto == null)
-            {
-                producto.impuesto = new Impuesto();
-                return producto.impuesto.Porcentaje = 0.21m;
-            }
-            else
-            {
-                return producto.impuesto.Porcentaje;
-            }
-
-
-
-        }
+       
 
        
 

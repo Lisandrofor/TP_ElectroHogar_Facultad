@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.Permissions;
@@ -9,37 +10,72 @@ using System.Threading.Tasks;
 namespace Modelo
 {
 
-public class VentaItems
-{
-    public Producto Producto { get; set; }
-    public int Cantidad { get; set; }
-    public decimal PrecioUnitario { get; set; }
-    public decimal Descuento { get; set; } // descuento por item
-
-    public VentaItems(Producto producto, int cantidad, decimal precioUnitario)
+public class VentaItems : INotifyPropertyChanged
     {
-        Producto = producto;
-        Cantidad = cantidad;
-        PrecioUnitario = precioUnitario;
+        
+            public event PropertyChangedEventHandler PropertyChanged;
+
+            public Producto Producto { get; set; }
+
+            private int _cantidad;
+            public int Cantidad
+            {
+                get => _cantidad;
+                set
+                {
+                    _cantidad = value;
+                    OnPropertyChanged(nameof(Cantidad));
+                    OnPropertyChanged(nameof(Subtotal));
+                    OnPropertyChanged(nameof(ImpuestoCalculado));
+                    OnPropertyChanged(nameof(Total));
+                }
+            }
+
+        public string NombreProducto => Producto?.nombre;
+        public decimal PrecioProducto => Producto?.precio ?? 0;
+
+        public decimal PrecioUnitario { get; set; }
+            public decimal Descuento { get; set; }
+
+            public int IdImpuesto
+            {
+                get => Producto.IdImpuesto;
+                set => Producto.IdImpuesto = value;
+            }
+
+            public Impuesto Impue
+            {
+                get => Producto.impuesto;
+                set
+                {
+                    Producto.impuesto = value;
+                    OnPropertyChanged(nameof(Impue));
+                    OnPropertyChanged(nameof(ImpuestoCalculado));
+                    OnPropertyChanged(nameof(Total));
+                }
+            }
+
+
+        public VentaItems(Producto producto, int cantidad, decimal precioUnitario, Impuesto imp) { Producto = producto; Cantidad = cantidad; PrecioUnitario = precioUnitario; Impue = imp; }
+
+        public decimal Subtotal
+                => (PrecioUnitario * Cantidad) - Descuento;
+
+            public decimal ImpuestoCalculado
+                => Subtotal * (Impue?.Porcentaje ?? 0);
+
+            public decimal Total
+                => Subtotal + ImpuestoCalculado;
+
+            protected void OnPropertyChanged(string propiedad)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propiedad));
+            }
+        }
+
+
     }
 
-    public decimal SubtotalItems()
-    {
-        return (PrecioUnitario * Cantidad) - Descuento;
-    }
-
-    public decimal CalcularImpuesto()
-    {
-        return SubtotalItems() * Producto.impuesto.Porcentaje;
-    }
-
-    public decimal Total()
-    {
-        return SubtotalItems() + CalcularImpuesto();
-    }
-
- }
-}
 
 
 

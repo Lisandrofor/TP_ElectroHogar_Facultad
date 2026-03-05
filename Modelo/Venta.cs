@@ -68,12 +68,12 @@ public void AgregarItem(VentaItems item)
 
     public decimal Subtotal()
     {
-        return _items.Sum(i => i.SubtotalItems());
+        return _items.Sum(i => i.Subtotal);
     }
 
     public decimal TotalImpuestos()
     {
-        return _items.Sum(i => i.CalcularImpuesto());
+        return _items.Sum(i => i.ImpuestoCalculado);
     }
 
     public decimal Total()

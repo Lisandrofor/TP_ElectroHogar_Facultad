@@ -52,7 +52,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             lista = imp.ObtenerImpuestos();
 
             ConfigurarGrilla();
-            dataGridView2.DataSource = productos;
+            dataGridView2.DataSource = items;
         }
 
 
@@ -77,7 +77,7 @@ private void FormVenta_Load(object sender, EventArgs e)
 
 
 
-        private BindingList<Producto> productos = new BindingList<Producto>();
+        private BindingList<VentaItems> items = new BindingList<VentaItems>();
 
 
 
@@ -85,9 +85,9 @@ private void FormVenta_Load(object sender, EventArgs e)
 
 
 
-        
 
-        
+
+
 
 
 
@@ -134,7 +134,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             if (dataGridView2.SelectedRows.Count > 0)
             {
                 int indice = dataGridView2.SelectedRows[0].Index;
-                productos.RemoveAt(indice);
+                items.RemoveAt(indice);
                 Actualizardatagridview();
 
             }
@@ -146,22 +146,15 @@ private void FormVenta_Load(object sender, EventArgs e)
 
         private void Actualizardatagridview()
         {
-            var bindingList = new BindingList<Producto>(productos);
+            var bindingList = new BindingList<VentaItems>(items);
             var source = new BindingSource(bindingList, null);
             dataGridView2.DataSource = source;
 
         }
 
 
-        //public decimal CalcularSubTotal()
-        //{
-        //    return productos.Sum(p => p.SubTotal);
-        //}
-
-        //public decimal CalcularImp()
-        //{
-        //    return productos.Sum(i => i.ImporteImpuesto);
-        //}
+        
+        
 
         public void seleccionidCliente(string idCliente)
         {
@@ -224,29 +217,24 @@ private void FormVenta_Load(object sender, EventArgs e)
 
         private void ActualizarProductoEnLista(Producto producto, int cantidad)
         {
-            var existente = productos.FirstOrDefault(p => p.id == producto.id);
+            var existente = items.FirstOrDefault(p => p.Producto.id == producto.id);
 
             if (existente != null)
             {
-                existente.cantidad += cantidad;
+                existente.Cantidad += cantidad;
+                return; // 🔥 IMPORTANTE
             }
-            else
-            {
-                var imp = lista.First();
 
-                Producto nuevo = new Producto
-                {
-                    id = producto.id,
-                    idCategoria = producto.idCategoria,
-                    nombre = producto.nombre,
-                    precio = producto.precio,
-                    stock = producto.stock,
-                    cantidad = cantidad,
-                    impuesto = imp,
-                    IdImpuesto = imp.Id   // 🔥 ESTA LÍNEA FALTABA
-                };
-                productos.Add(nuevo);
+            var imp = lista.FirstOrDefault(i => i.Id == producto.IdImpuesto);
+
+            if (imp == null)
+            {
+                imp = lista.First();
+                producto.IdImpuesto = imp.Id;
             }
+
+            VentaItems nuevo = new VentaItems(producto, cantidad, producto.precio, imp);
+            items.Add(nuevo);
         }
 
 
@@ -288,14 +276,14 @@ private void FormVenta_Load(object sender, EventArgs e)
             // 🔹 Nombre
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "Nombre",
+                DataPropertyName = "NombreProducto",
                 HeaderText = "Nombre"
             });
 
             // 🔹 Precio
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "Precio",
+                DataPropertyName = "PrecioProducto",
                 HeaderText = "Precio"
             });
 
@@ -306,17 +294,13 @@ private void FormVenta_Load(object sender, EventArgs e)
                 HeaderText = "Cantidad"
             });
 
-            // 🔹 Stock
-            dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                DataPropertyName = "Stock",
-                HeaderText = "Stock"
-            });
+            
+            
 
             // 🔹 Subtotal (Precio * Cantidad)
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "subtotal", // Debe existir como propiedad calculada
+                DataPropertyName = "Subtotal", // Debe existir como propiedad calculada
                 HeaderText = "Subtotal",
                 ReadOnly = true
             });
@@ -334,13 +318,13 @@ private void FormVenta_Load(object sender, EventArgs e)
             // 🔹 Total (Subtotal + Impuesto)
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "total", // Debe existir como propiedad calculada
+                DataPropertyName = "Total", // Debe existir como propiedad calculada
                 HeaderText = "Total",
                 ReadOnly = true
             });
 
-            
-            dataGridView2.DataSource = productos;
+
+            dataGridView2.DataSource = items;
 
 
 
@@ -382,6 +366,24 @@ private void FormVenta_Load(object sender, EventArgs e)
             // Aquí puedes guardar el evento en una lista, archivo o base de datos
         }
 
+        private void dataGridView2_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView2.Columns[e.ColumnIndex].Name == "colImpuesto")
+            {
+                VentaItems ventanueva = (VentaItems)dataGridView2.Rows[e.RowIndex].DataBoundItem;
+
+                if (ventanueva != null)
+                {
+
+                    ventanueva.Impue = lista.FirstOrDefault(i => i.Id == ventanueva.IdImpuesto);
+
+                    items.ResetItem(e.RowIndex);
+                }
+            }
+
+        }
+
+
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -389,21 +391,15 @@ private void FormVenta_Load(object sender, EventArgs e)
 
             int cantidad = ObtenerCantidad();
             Producto producto = ObtenerProductoSeleccionado();
-            produ.ImpuestonoRegistrado(producto);
+            
 
             EstadoVenta estado = ObtenerEstadoVenta();
             _venta.estado = estado;
 
             RegistrarVenta(producto.id.ToString(), cantidad, estado);
+            MessageBox.Show(producto.impuesto?.Porcentaje.ToString() ?? "NULL");
 
-            VentaItems item = new VentaItems
-            (
-                producto,
-                cantidad,
-                producto.precio
-            );
-
-            _venta.AgregarItem(item);
+           
 
             ActualizarProductoEnLista(producto, cantidad);
             ActualizarStock(producto, cantidad);
@@ -426,19 +422,18 @@ private void FormVenta_Load(object sender, EventArgs e)
 
 
 
-            textBox4.Text = _venta.Subtotal().ToString();
-            textBox5.Text = _venta.TotalImpuestos().ToString();
-            textBox6.Text =venta.CalculaDescuento().ToString();
+            decimal subtotal = _venta.Subtotal();
+            decimal impuestos = _venta.TotalImpuestos();
+            decimal totalFinal = _venta.Total();
 
-            decimal totalFinal = _venta.Subtotal() + _venta.TotalImpuestos() -venta.CalculaDescuento();
-            textBox7.Text =totalFinal.ToString();
-
-
-
-
+            textBox4.Text = subtotal.ToString();
+            textBox5.Text = impuestos.ToString();
+            textBox7.Text = totalFinal.ToString();
 
             MostrarResumenVenta(totalFinal);
             LimpiarFormulario();
+
+
 
 
 
@@ -493,21 +488,6 @@ private void FormVenta_Load(object sender, EventArgs e)
 
         }
 
-        private void dataGridView2_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView2.Columns[e.ColumnIndex].Name == "colImpuesto")
-            {
-                Producto producto = (Producto)dataGridView2.Rows[e.RowIndex].DataBoundItem;
-
-                if (producto != null)
-                {
-
-                    producto.impuesto = lista.FirstOrDefault(i => i.Id == producto.IdImpuesto);
-
-                    dataGridView2.Refresh();
-                }
-            }
-
-        }
+       
     }
 }

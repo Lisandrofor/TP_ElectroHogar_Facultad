@@ -119,8 +119,7 @@ public decimal precio
         {
             _precio = value;
             OnPropertyChanged(nameof(precio));
-            OnPropertyChanged(nameof(subtotal));
-            OnPropertyChanged(nameof(total));
+            
         }
     }
 
@@ -131,8 +130,8 @@ public decimal precio
         {
             _cantidad = value;
             OnPropertyChanged(nameof(cantidad));
-            OnPropertyChanged(nameof(subtotal));
-            OnPropertyChanged(nameof(total));
+            
+            
         }
     }
 
@@ -143,8 +142,7 @@ public decimal precio
             {
                 _impuesto = value;
                 OnPropertyChanged(nameof(impuesto));
-                OnPropertyChanged(nameof(total));      // 🔥 clave
-                OnPropertyChanged(nameof(subtotal));   // por seguridad
+               
             }
         }
 
@@ -158,18 +156,10 @@ public decimal precio
 
 
 
-        public decimal subtotal => precio * cantidad;
+        
 
-        public decimal total
-        {
-            get
-            {
-                if (impuesto == null)
-                    return subtotal;
-
-                return subtotal + (subtotal * impuesto.Porcentaje);
-            }
-        }
+        
+        
 
         protected void OnPropertyChanged(string propiedad)
     {
