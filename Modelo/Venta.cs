@@ -43,6 +43,18 @@ public  enum EstadoVenta
 
         }
 
+
+public Venta(string idUsuario, string idCliente, BindingList<VentaItems> items)
+{
+    _id = Guid.NewGuid();
+    _idUsuario = idUsuario;
+    _idCliente = idCliente;
+    _fechaAlta = DateTime.Now;
+    _estado = EstadoVenta.Pendiente;
+
+    this.items = items ?? new BindingList<VentaItems>();
+}
+
         
 
         public Guid id { get=>_id; set=>_id=value; }
@@ -57,7 +69,7 @@ public  enum EstadoVenta
         public EstadoVenta estado { get => _estado; set => _estado = value; }
 
 
-        private List<VentaItems> _items = new List<VentaItems>();
+
 
         //public IReadOnlyCollection<VentaItems> items => _items.AsReadOnly();
 
