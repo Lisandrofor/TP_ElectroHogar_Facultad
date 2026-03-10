@@ -94,20 +94,20 @@ public Venta(string idUsuario, string idCliente, BindingList<VentaItems> items,E
             _items.Remove(item);
     }
 
-        public decimal Subtotal()
-    {
-        return _items.Sum(i => i.Subtotal);
-    }
+       public decimal Subtotal
+{
+    get { return _items.Sum(i => i.Subtotal); }
+}
 
-    public decimal TotalImpuestos()
-    {
-        return _items.Sum(i => i.ImpuestoCalculado);
-    }
+public decimal Impuestos
+{
+    get { return _items.Sum(i => i.ImpuestoCalculado); }
+}
 
-    public decimal Total()
-    {
-        return Subtotal() + TotalImpuestos();
-    }
+public decimal Total
+{
+    get { return Subtotal + Impuestos; }
+}
 
     public void MarcarComoPagada()
     {
