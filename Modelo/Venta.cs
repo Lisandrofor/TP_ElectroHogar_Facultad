@@ -44,13 +44,13 @@ public  enum EstadoVenta
         }
 
 
-public Venta(string idUsuario, string idCliente, BindingList<VentaItems> items)
+public Venta(string idUsuario, string idCliente, BindingList<VentaItems> items,EstadoVenta estado)
 {
     _id = Guid.NewGuid();
     _idUsuario = idUsuario;
     _idCliente = idCliente;
     _fechaAlta = DateTime.Now;
-    _estado = EstadoVenta.Pendiente;
+    _estado = estado;
 
     this.items = items ?? new BindingList<VentaItems>();
 }
