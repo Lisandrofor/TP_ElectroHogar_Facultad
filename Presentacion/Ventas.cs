@@ -434,9 +434,9 @@ private void FormVenta_Load(object sender, EventArgs e)
 
 
 
-            decimal subtotal = _venta.Subtotal();
-            decimal impuestos = _venta.TotalImpuestos();
-            decimal totalFinal = _venta.Total();
+            decimal subtotal = _venta.Subtotal;
+            decimal impuestos = _venta.TotalImpuestos;
+            decimal totalFinal = _venta.Total;
 
             textBox4.Text = subtotal.ToString();
             textBox5.Text = impuestos.ToString();
