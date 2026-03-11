@@ -19,20 +19,20 @@ namespace Negocio
         Venta venta = new Venta();
         public string _idCliente;
 
-        public void AgregarVenta(string idCliente,string idUsuario,string idProducto,int cantidad,DateTime fechaAlta,Venta.EstadoVenta estado)
+        public void AgregarVenta(string idCliente, string idUsuario, string idProducto, int cantidad, DateTime fechaAlta, Venta.EstadoVenta estado)
         {
 
 
-           Guid id= Guid.NewGuid();
+            Guid id = Guid.NewGuid();
 
 
-            Venta altaVenta = new Venta(id,idCliente,idUsuario,idProducto,cantidad,fechaAlta,estado);
-            
+            Venta altaVenta = new Venta(id, idCliente, idUsuario, idProducto, cantidad, fechaAlta, estado);
+
 
             try
             {
                 VentasDa.AgregarVenta(altaVenta);
-                GuardarVentas(altaVenta);
+                
 
 
 
@@ -59,7 +59,7 @@ namespace Negocio
         public decimal CalculaDescuento()
         {
 
-            decimal total = venta.Subtotal();
+            decimal total = venta.Subtotal;
             bool primeraCompra = !ExisteVentaCliente(_idCliente);
 
             if (total > 100000 || primeraCompra)
@@ -85,14 +85,14 @@ namespace Negocio
         {
             return VentasDa.GetVenta(idVenta);
         }
-       
+
 
 
 
 
         public List<Venta> ObtenerVentasPorCliente(Guid idVenta)
         {
-            string rutaArchivo = "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\Ventas.json";
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Ventas.json";
             try
             {
                 string jsonLeer = File.ReadAllText(rutaArchivo);
@@ -120,46 +120,41 @@ namespace Negocio
 
         public void GuardarVentas(Venta altaventa)
         {
-            //Venta categoria = new Venta(idcategoria, nomCategoria);
-            List<Venta> categorias;
+            List<Venta> ventas;
 
-            string rutaArchivo = "C:\\Users\\Usuario\\source\\repos\\TPCAI_Electro\\AccesoaDatos\\Ventas.json";
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Ventas.json";
 
             if (File.Exists(rutaArchivo))
             {
-                // Deserializamos el contenido del archivo en una lista de objetos Producto
                 string jsonArchivo = File.ReadAllText(rutaArchivo);
-                try
-                {
-                    categorias = JsonConvert.DeserializeObject<List<Venta>>(jsonArchivo);
-                }
-                catch (JsonSerializationException)
-                {
-                    // Si falla, intentar deserializar como un solo objeto y convertirlo en una lista
-                    //categoria = JsonConvert.DeserializeObject<Venta>(jsonArchivo);
-                    //categorias = new List<Venta> { categoria };
-                }
 
-
+                if (string.IsNullOrWhiteSpace(jsonArchivo))
+                {
+                    ventas = new List<Venta>();
+                }
+                else
+                {
+                    ventas = JsonConvert.DeserializeObject<List<Venta>>(jsonArchivo);
+                }
             }
             else
             {
-                // Si el archivo no existe, inicializamos una nueva lista
-                categorias = new List<Venta>();
+                ventas = new List<Venta>();
             }
 
-            // Agregamos la nueva categoría a la lista
-            //categorias.Add(categoria);
+            // 🔹 agregar la nueva venta
+            ventas.Add(altaventa);
 
-            // Serializamos la lista completa de categorías y escribimos en el archivo
-            //string nuevojson = JsonConvert.SerializeObject(categorias, Formatting.Indented);
-            //File.WriteAllText(rutaArchivo, nuevojson);
+            // 🔹 convertir a json
+            string nuevoJson = JsonConvert.SerializeObject(ventas, Formatting.Indented);
+
+            // 🔹 guardar archivo
+            File.WriteAllText(rutaArchivo, nuevoJson);
+
+
+
+
+
         }
-
-        
-
-
-
-
     }
 }

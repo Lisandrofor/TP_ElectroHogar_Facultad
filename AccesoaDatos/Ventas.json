@@ -1,0 +1,166 @@
+[
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "idUsuario": "0caf66e9-4ebb-4e5f-aa05-48bc4c255559",
+    "idCliente": "d2541fe1-681c-426d-bb87-05479efdf51f",
+    "idProducto": null,
+    "cantidad": 0,
+    "fechaAlta": "2026-03-10T17:37:10.1949114-03:00",
+    "estado": 0,
+    "Items": [
+      {
+        "Producto": {
+          "id": "3b41281a-652a-4e43-867a-3e385e7bfefa",
+          "idCategoria": 4,
+          "nombre": "Teclado Logitech K120 ",
+          "fechaAlta": "2024-05-28T06:20:24.8541102",
+          "fechaBaja": null,
+          "stock": -9,
+          "IdImpuesto": 1,
+          "descuento": 0.0,
+          "nomCategoria": null,
+          "precio": 12500.0,
+          "cantidad": 0,
+          "impuesto": {
+            "Id": 1,
+            "Nombre": "IVA 21%",
+            "Porcentaje": 0.21
+          }
+        },
+        "Cantidad": 4,
+        "NombreProducto": "Teclado Logitech K120 ",
+        "PrecioProducto": 12500.0,
+        "PrecioUnitario": 12500.0,
+        "Descuento": 0.0,
+        "IdImpuesto": 1,
+        "Impue": {
+          "Id": 1,
+          "Nombre": "IVA 21%",
+          "Porcentaje": 0.21
+        },
+        "Subtotal": 50000.0,
+        "ImpuestoCalculado": 10500.000,
+        "Total": 60500.000
+      },
+      {
+        "Producto": {
+          "id": "8ee75597-1243-45d9-bae3-ddf5b47af534",
+          "idCategoria": 4,
+          "nombre": "OLLA",
+          "fechaAlta": "2025-10-12T19:02:42.6462784",
+          "fechaBaja": null,
+          "stock": 143,
+          "IdImpuesto": 1,
+          "descuento": 0.0,
+          "nomCategoria": null,
+          "precio": 400000.0,
+          "cantidad": 0,
+          "impuesto": {
+            "Id": 1,
+            "Nombre": "IVA 21%",
+            "Porcentaje": 0.21
+          }
+        },
+        "Cantidad": 7,
+        "NombreProducto": "OLLA",
+        "PrecioProducto": 400000.0,
+        "PrecioUnitario": 400000.0,
+        "Descuento": 0.0,
+        "IdImpuesto": 1,
+        "Impue": {
+          "Id": 1,
+          "Nombre": "IVA 21%",
+          "Porcentaje": 0.21
+        },
+        "Subtotal": 2800000.0,
+        "ImpuestoCalculado": 588000.000,
+        "Total": 3388000.000
+      }
+    ],
+    "Subtotal": 2850000.0,
+    "Impuestos": 598500.000,
+    "Total": 3448500.000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "idUsuario": "0caf66e9-4ebb-4e5f-aa05-48bc4c255559",
+    "idCliente": "d2541fe1-681c-426d-bb87-05479efdf51f",
+    "idProducto": null,
+    "cantidad": 0,
+    "fechaAlta": "2026-03-10T22:46:48.9528329-03:00",
+    "estado": 0,
+    "Items": [
+      {
+        "Producto": {
+          "id": "770ae87c-3256-4747-b2c8-47d21ee606a9",
+          "idCategoria": 2,
+          "nombre": "ElTelefono",
+          "fechaAlta": "2024-06-13T17:09:34.7721457",
+          "fechaBaja": null,
+          "stock": 31293,
+          "IdImpuesto": 1,
+          "descuento": 0.0,
+          "nomCategoria": null,
+          "precio": 2500000.0,
+          "cantidad": 0,
+          "impuesto": {
+            "Id": 1,
+            "Nombre": "IVA 21%",
+            "Porcentaje": 0.21
+          }
+        },
+        "Cantidad": 5,
+        "NombreProducto": "ElTelefono",
+        "PrecioProducto": 2500000.0,
+        "PrecioUnitario": 2500000.0,
+        "Descuento": 0.0,
+        "IdImpuesto": 1,
+        "Impue": {
+          "Id": 1,
+          "Nombre": "IVA 21%",
+          "Porcentaje": 0.21
+        },
+        "Subtotal": 12500000.0,
+        "ImpuestoCalculado": 2625000.00,
+        "Total": 15125000.00
+      },
+      {
+        "Producto": {
+          "id": "b64502ff-c314-46b1-8acf-6a3f5d686021",
+          "idCategoria": 2,
+          "nombre": "HOLAPEDRII",
+          "fechaAlta": "2024-11-08T03:30:37.3808008",
+          "fechaBaja": null,
+          "stock": 132,
+          "IdImpuesto": 1,
+          "descuento": 0.0,
+          "nomCategoria": null,
+          "precio": 30.0,
+          "cantidad": 0,
+          "impuesto": {
+            "Id": 1,
+            "Nombre": "IVA 21%",
+            "Porcentaje": 0.21
+          }
+        },
+        "Cantidad": 5,
+        "NombreProducto": "HOLAPEDRII",
+        "PrecioProducto": 30.0,
+        "PrecioUnitario": 30.0,
+        "Descuento": 0.0,
+        "IdImpuesto": 1,
+        "Impue": {
+          "Id": 1,
+          "Nombre": "IVA 21%",
+          "Porcentaje": 0.21
+        },
+        "Subtotal": 150.0,
+        "ImpuestoCalculado": 31.50,
+        "Total": 181.50
+      }
+    ],
+    "Subtotal": 12500150.0,
+    "Impuestos": 2625031.50,
+    "Total": 15125181.50
+  }
+]

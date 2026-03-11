@@ -241,6 +241,14 @@ private void FormVenta_Load(object sender, EventArgs e)
             VentaItems nuevo = new VentaItems(producto, cantidad, producto.precio, imp);
             items.Add(nuevo);
             _venta.AgregarItem(nuevo);
+            venta.AgregarVenta(
+                _idUsuario,
+                _idCliente,
+                producto.id.ToString(),
+                cantidad,
+                DateTime.Now,
+                ObtenerEstadoVenta()
+            );
         }
 
 
@@ -351,9 +359,9 @@ private void FormVenta_Load(object sender, EventArgs e)
 
            
         }
-        
 
-       
+
+
 
         private void RegistrarEvento(Producto producto)
         {
@@ -362,14 +370,6 @@ private void FormVenta_Load(object sender, EventArgs e)
             _idProducto = producto.id.ToString();
             Impuesto impuesto = producto.impuesto;
 
-            //venta.AgregarVenta(_idUsuario, _idCliente, _idProducto, _cantidad);
-
-
-
-            //string mensaje = $"Producto seleccionado: {producto.nombre}, Fecha: {DateTime.Now}";
-            //MessageBox.Show(mensaje, "Evento Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Aquí puedes guardar el evento en una lista, archivo o base de datos
         }
 
         private void dataGridView2_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
@@ -407,7 +407,7 @@ private void FormVenta_Load(object sender, EventArgs e)
 
 
 
-            RegistrarVenta(producto.id.ToString(), cantidad, estado);
+          
             
             
 
@@ -431,12 +431,17 @@ private void FormVenta_Load(object sender, EventArgs e)
 
         private void button1_Click(object sender, EventArgs e)
         {
+            _venta.idUsuario = _idUsuario;
+            _venta.idCliente = _idCliente;
+            _venta.fechaAlta = DateTime.Now;
 
 
 
             decimal subtotal = _venta.Subtotal;
-            decimal impuestos = _venta.TotalImpuestos;
+            decimal impuestos = _venta.Impuestos;
             decimal totalFinal = _venta.Total;
+
+            venta.GuardarVentas(_venta);
 
             textBox4.Text = subtotal.ToString();
             textBox5.Text = impuestos.ToString();

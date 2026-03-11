@@ -35,9 +35,9 @@ public  enum EstadoVenta
             _id=id;
             _idUsuario=idUsuario;
             _idCliente=idCliente;
-            _idProducto=idProducto;
-            _cantidad=cantidad;
-            _fechaAlta=fechaAlta;
+            _idProducto = idProducto;
+            _cantidad = cantidad;
+            _fechaAlta =fechaAlta;
             _estado=estado;
 
 
@@ -59,10 +59,11 @@ public Venta(string idUsuario, string idCliente, BindingList<VentaItems> items,E
 
         public Guid id { get=>_id; set=>_id=value; }
         public string idUsuario { get=>_idUsuario; set=>_idUsuario=value; }
-        public string idCliente { get=>_idCliente; set=>_idCliente=value; }    
-        public string idProducto { get=>_idProducto; set=>_idProducto=value; }
-        public int cantidad { get=>_cantidad; set=>_cantidad=value; }
-        
+        public string idCliente { get=>_idCliente; set=>_idCliente=value; }
+        public string idProducto { get => _idProducto; set => _idProducto = value; }
+        public int cantidad { get => _cantidad; set => _cantidad = value; }
+
+
         public DateTime fechaAlta { get=>_fechaAlta; set=>_fechaAlta=value; }
         
 
@@ -87,21 +88,21 @@ public Venta(string idUsuario, string idCliente, BindingList<VentaItems> items,E
 
         public void AgregarItem(VentaItems item)
     {
-        _items.Add(item);
+        items.Add(item);
     }
     public void QuitarItem(VentaItems item)
     {
-            _items.Remove(item);
+            items.Remove(item);
     }
 
        public decimal Subtotal
 {
-    get { return _items.Sum(i => i.Subtotal); }
+    get { return items.Sum(i => i.Subtotal); }
 }
 
 public decimal Impuestos
 {
-    get { return _items.Sum(i => i.ImpuestoCalculado); }
+    get { return items.Sum(i => i.ImpuestoCalculado); }
 }
 
 public decimal Total
