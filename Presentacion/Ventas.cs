@@ -31,20 +31,22 @@ namespace Presentacion
 
             _idUsuario = idUsuario;
 
-            
+
 
 
         }
 
 
 
-        
+
 
 private Venta _venta;
+private VentaDTO _ventaDTO;
 
 private void FormVenta_Load(object sender, EventArgs e)
 {
     _venta = new Venta();
+      _ventaDTO = new VentaDTO();
             dataGridView2.CellValueChanged += dataGridView2_CellValueChanged_1;
             dataGridView2.CurrentCellDirtyStateChanged += dataGridView2_CurrentCellDirtyStateChanged_1;
 
@@ -249,6 +251,13 @@ private void FormVenta_Load(object sender, EventArgs e)
                 DateTime.Now,
                 ObtenerEstadoVenta()
             );
+            var ventaDTO = new VentaDTO
+            {
+                idUsuario = _venta.idUsuario,
+                idCliente = _venta.idCliente,
+                estado = _venta.estado,
+                items = _venta.Items
+            };
         }
 
 
@@ -297,7 +306,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             // 🔹 Precio
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "PrecioProducto",
+                DataPropertyName = "precio",
                 HeaderText = "Precio"
             });
 
@@ -441,7 +450,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             decimal impuestos = _venta.Impuestos;
             decimal totalFinal = _venta.Total;
 
-            venta.GuardarVentas(_venta);
+            venta.GuardarVentas(_ventaDTO);
 
             textBox4.Text = subtotal.ToString();
             textBox5.Text = impuestos.ToString();

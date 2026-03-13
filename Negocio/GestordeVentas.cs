@@ -118,9 +118,9 @@ namespace Negocio
         }
 
 
-        public void GuardarVentas(Venta altaventa)
+        public void GuardarVentas(VentaDTO altaventa)
         {
-            List<Venta> ventas;
+            List<VentaDTO> ventas;
 
             string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Ventas.json";
 
@@ -130,16 +130,16 @@ namespace Negocio
 
                 if (string.IsNullOrWhiteSpace(jsonArchivo))
                 {
-                    ventas = new List<Venta>();
+                    ventas = new List<VentaDTO>();
                 }
                 else
                 {
-                    ventas = JsonConvert.DeserializeObject<List<Venta>>(jsonArchivo);
+                    ventas = JsonConvert.DeserializeObject<List<VentaDTO>>(jsonArchivo);
                 }
             }
             else
             {
-                ventas = new List<Venta>();
+                ventas = new List<VentaDTO>();
             }
 
             // 🔹 agregar la nueva venta

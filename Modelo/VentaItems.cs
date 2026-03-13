@@ -31,10 +31,10 @@ public class VentaItems : INotifyPropertyChanged
                 }
             }
 
-        public string NombreProducto => Producto?.nombre;
-        public decimal PrecioProducto => Producto?.precio ?? 0;
+        
+       
 
-        public decimal PrecioUnitario { get; set; }
+        public decimal Precio { get; set; }
             public decimal Descuento { get; set; }
 
             public int IdImpuesto
@@ -56,10 +56,11 @@ public class VentaItems : INotifyPropertyChanged
             }
 
 
-        public VentaItems(Producto producto, int cantidad, decimal precioUnitario, Impuesto imp) { Producto = producto; Cantidad = cantidad; PrecioUnitario = precioUnitario; Impue = imp; }
-
+        public VentaItems(Producto producto, int cantidad, decimal precio, Impuesto imp) 
+        { Producto = producto; Cantidad = cantidad; Precio = precio; Impue = imp; }
+        public string NombreProducto => Producto.nombre;
         public decimal Subtotal
-                => (PrecioUnitario * Cantidad) - Descuento;
+                => (Precio * Cantidad) - Descuento;
 
             public decimal ImpuestoCalculado
                 => Subtotal * (Impue?.Porcentaje ?? 0);
