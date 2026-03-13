@@ -15,7 +15,9 @@ public class VentaItems : INotifyPropertyChanged
         
             public event PropertyChangedEventHandler PropertyChanged;
 
-            public Producto Producto { get; set; }
+
+            public Guid IdProducto { get; set; }
+            public string Nombre { get; set; }
 
             private int _cantidad;
             public int Cantidad
@@ -39,16 +41,16 @@ public class VentaItems : INotifyPropertyChanged
 
             public int IdImpuesto
             {
-                get => Producto.IdImpuesto;
-                set => Producto.IdImpuesto = value;
+                get => IdImpuesto;
+                set => IdImpuesto = value;
             }
 
             public Impuesto Impue
             {
-                get => Producto.impuesto;
+                get => Impue;
                 set
                 {
-                    Producto.impuesto = value;
+                    Impue = value;
                     OnPropertyChanged(nameof(Impue));
                     OnPropertyChanged(nameof(ImpuestoCalculado));
                     OnPropertyChanged(nameof(Total));
@@ -56,7 +58,7 @@ public class VentaItems : INotifyPropertyChanged
             }
 
 
-        public VentaItems(Producto producto, int cantidad, decimal precioUnitario, Impuesto imp) { Producto = producto; Cantidad = cantidad; PrecioUnitario = precioUnitario; Impue = imp; }
+        public VentaItems(Guid idProducto, string nombre, int cantidad, decimal precioUnitario, Impuesto imp) { IdProducto = idProducto; Nombre = nombre; Cantidad = cantidad; Precio = precioUnitario; Impue = imp; }
 
         public decimal Subtotal
                 => (Precio * Cantidad) - Descuento;

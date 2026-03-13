@@ -224,7 +224,7 @@ private void FormVenta_Load(object sender, EventArgs e)
 
         private void ActualizarProductoEnLista(Producto producto, int cantidad)
         {
-            var existente = items.FirstOrDefault(p => p.Producto.id == producto.id);
+            var existente = items.FirstOrDefault(p => p.IdProducto == producto.id);
 
             if (existente != null)
             {
@@ -240,7 +240,7 @@ private void FormVenta_Load(object sender, EventArgs e)
                 producto.IdImpuesto = imp.Id;
             }
 
-            VentaItems nuevo = new VentaItems(producto, cantidad, producto.precio, imp);
+            VentaItems nuevo = new VentaItems(producto.id,producto.nombre, cantidad, producto.precio, imp);
             items.Add(nuevo);
             _venta.AgregarItem(nuevo);
             venta.AgregarVenta(
