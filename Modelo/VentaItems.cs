@@ -56,9 +56,8 @@ public class VentaItems : INotifyPropertyChanged
             }
 
 
-        public VentaItems(Producto producto, int cantidad, decimal precio, Impuesto imp) 
-        { Producto = producto; Cantidad = cantidad; Precio = precio; Impue = imp; }
-        public string NombreProducto => Producto.nombre;
+        public VentaItems(Producto producto, int cantidad, decimal precioUnitario, Impuesto imp) { Producto = producto; Cantidad = cantidad; PrecioUnitario = precioUnitario; Impue = imp; }
+
         public decimal Subtotal
                 => (Precio * Cantidad) - Descuento;
 
