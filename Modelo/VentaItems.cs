@@ -39,7 +39,20 @@ public class VentaItems : INotifyPropertyChanged
         public decimal Precio { get; set; }
             public decimal Descuento { get; set; }
 
-            public int IdImpuesto => Impue?.Id ?? 0;
+private int _idImpuesto;
+public int IdImpuesto
+{
+    get => _idImpuesto;
+    set
+    {
+        _idImpuesto = value;
+
+        // 🔥 sincronizar el objeto Impuesto
+        Impue = listaImpuestos.FirstOrDefault(i => i.Id == value);
+
+        OnPropertyChanged(nameof(IdImpuesto));
+    }
+}
 
             public Impuesto Impue
             {
