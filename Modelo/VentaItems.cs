@@ -39,11 +39,7 @@ public class VentaItems : INotifyPropertyChanged
         public decimal Precio { get; set; }
             public decimal Descuento { get; set; }
 
-            public int IdImpuesto
-            {
-                get => IdImpuesto;
-                set => IdImpuesto = value;
-            }
+            public int IdImpuesto => Impue?.Id ?? 0;
 
             public Impuesto Impue
             {
