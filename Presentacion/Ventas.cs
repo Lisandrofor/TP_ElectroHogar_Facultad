@@ -241,6 +241,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             }
 
             VentaItems nuevo = new VentaItems(producto.id,producto.nombre, cantidad, producto.precio, imp);
+            nuevo.Impue.Id = producto.IdImpuesto;
             items.Add(nuevo);
             _venta.AgregarItem(nuevo);
             venta.AgregarVenta(
@@ -299,7 +300,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             // 🔹 Nombre
             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "NombreProducto",
+                DataPropertyName = "Nombre",
                 HeaderText = "Nombre"
             });
 
@@ -334,7 +335,7 @@ private void FormVenta_Load(object sender, EventArgs e)
             colImpuesto.DataSource = lista;
             colImpuesto.DisplayMember = "Nombre";
             colImpuesto.ValueMember = "Id";
-            colImpuesto.DataPropertyName = "IdImpuesto";
+            colImpuesto.DataPropertyName = "Impuesto";
 
             dataGridView2.Columns.Add(colImpuesto);
 
@@ -390,7 +391,7 @@ private void FormVenta_Load(object sender, EventArgs e)
                 if (ventanueva != null)
                 {
 
-                    ventanueva.Impue = lista.FirstOrDefault(i => i.Id == ventanueva.IdImpuesto);
+                    ventanueva.Impue = lista.FirstOrDefault(i => i.Id == ventanueva.Impue.Id);
 
                     items.ResetItem(e.RowIndex);
                 }

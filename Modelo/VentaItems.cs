@@ -20,7 +20,10 @@ public class VentaItems : INotifyPropertyChanged
             public string Nombre { get; set; }
 
             private int _cantidad;
-            public int Cantidad
+
+            private Impuesto _impue;
+            
+        public int Cantidad
             {
                 get => _cantidad;
                 set
@@ -39,18 +42,14 @@ public class VentaItems : INotifyPropertyChanged
         public decimal Precio { get; set; }
             public decimal Descuento { get; set; }
 
-            public int IdImpuesto
-            {
-                get => IdImpuesto;
-                set => IdImpuesto = value;
-            }
+           
 
             public Impuesto Impue
             {
-                get => Impue;
+                get => _impue;
                 set
                 {
-                    Impue = value;
+                    _impue = value;
                     OnPropertyChanged(nameof(Impue));
                     OnPropertyChanged(nameof(ImpuestoCalculado));
                     OnPropertyChanged(nameof(Total));
