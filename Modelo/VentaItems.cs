@@ -42,7 +42,10 @@ public class VentaItems : INotifyPropertyChanged
         public decimal Precio { get; set; }
             public decimal Descuento { get; set; }
 
-           
+
+
+        
+
 
             public Impuesto Impue
             {

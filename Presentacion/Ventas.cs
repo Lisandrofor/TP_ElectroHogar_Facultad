@@ -334,8 +334,8 @@ private void FormVenta_Load(object sender, EventArgs e)
             colImpuesto.HeaderText = "Impuesto";
             colImpuesto.DataSource = lista;
             colImpuesto.DisplayMember = "Nombre";
-            colImpuesto.ValueMember = "Id";
-            colImpuesto.DataPropertyName = "Impuesto";
+            colImpuesto.ValueMember = null;
+            colImpuesto.DataPropertyName = "Impue";
 
             dataGridView2.Columns.Add(colImpuesto);
 
