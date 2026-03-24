@@ -94,7 +94,7 @@ namespace Presentacion
                      if (estadocontraseña==false){
                         MessageBox.Show("¡Inicio de sesión exitoso!");
                         
-                       gestorUsuarios.ControlContraseña(idUsuario,contraseña)
+                       
                         
                         Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Activo);
 
@@ -106,7 +106,26 @@ namespace Presentacion
 } else
 {
 
-// abrir login cambiapass
+LoginCambioPass cambioPass = new LoginCambioPass();
+
+                        if (cambioPass.ShowDialog() == DialogResult.OK)
+                        {
+                            string contraseñaNueva = login.ContraseñaNueva;
+                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva,fechaAlta);
+
+                            login1.Close();
+                            cambioPass.ShowDialog();
+                            gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
+                            
+                        }
+
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
+
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+                            
+                        }
 
 }
 
