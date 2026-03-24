@@ -110,6 +110,27 @@ public void RegistrarExpiracion(string idUsuario)
             }
 
 
+
+public bool EstaExpirada(string idUsuario)
+{
+    if (_expira.ContainsKey(idUsuario))
+    {
+        DateTime fechaExpiracion = _expira[idUsuario];
+
+        if (DateTime.Now > fechaExpiracion)
+        {
+            return true; // ❌ vencida
+        }
+        else
+        {
+            return false; // ✅ vigente
+        }
+    }
+
+    return true; // si no existe, la consideramos vencida
+}
+
+
             //public bool ContraseñaExpira(string contrasña, DateTime FechaAlta )
             //{
             //    string contraseñabuscada = contraseña;
