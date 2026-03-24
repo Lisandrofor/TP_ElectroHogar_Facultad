@@ -88,9 +88,10 @@ namespace Presentacion
             if (usuarioencontrado != null)
             {
                 if (contraseña != "Temp1234")
-                {
+                {bool estadocontraseña=login.estaexpirada(idUsuario)
                     if (!string.IsNullOrEmpty(idUsuario))
                     {
+                     if (estadocontraseña==false){
                         MessageBox.Show("¡Inicio de sesión exitoso!");
                         
                        gestorUsuarios.ControlContraseña(idUsuario,contraseña)
@@ -102,7 +103,12 @@ namespace Presentacion
                             formulario.Show();
                             login1.Close();
                             
+} else
+{
 
+// abrir login cambiapass
+
+}
 
 
 
