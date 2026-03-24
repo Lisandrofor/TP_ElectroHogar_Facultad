@@ -57,6 +57,21 @@ namespace Modelo
         }
 
 
+public void RegistrarExpiracion(string idUsuario)
+{
+    DateTime fechaExpiracion = FechaAlta.AddDays(30);
+
+    if (!_expira.ContainsKey(idUsuario))
+    {
+        _expira.Add(idUsuario, fechaExpiracion);
+    }
+    else
+    {
+        _expira[idUsuario] = fechaExpiracion;
+    }
+}
+
+
 
         public bool IngresosUsuario(string idUsuario, string nombreUsuario, string contraseña)
         {
