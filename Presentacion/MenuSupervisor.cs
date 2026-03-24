@@ -17,10 +17,12 @@ namespace Presentacion
     {
 
         LoginNuevo Cambiar = new LoginNuevo();
-        public MenuSupervisor(Usuario.EstadoUsuario estado)
+       
+        public MenuSupervisor(Usuario.EstadoUsuario estado,string apellido)
         {
             InitializeComponent();
-            MenuSupervisor_Load(estado);
+            MenuSupervisor_Load(estado,apellido);
+            
         }
 
        
@@ -28,10 +30,10 @@ namespace Presentacion
 
 
 
-        private void MenuSupervisor_Load(Usuario.EstadoUsuario estado)
+        private void MenuSupervisor_Load(Usuario.EstadoUsuario estado, string apellido)
         {
             string mensaje = Cambiar.CambiarEstado(estado);
-            label1.Text = "SUPERVISOR - " + mensaje;
+            label1.Text = "SUPERVISOR - " +apellido+ mensaje;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

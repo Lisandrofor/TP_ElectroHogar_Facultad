@@ -388,6 +388,9 @@ private void FormVenta_Load(object sender, EventArgs e)
             {
                 VentaItems ventanueva = (VentaItems)dataGridView2.Rows[e.RowIndex].DataBoundItem;
 
+
+
+
                 if (ventanueva != null)
                 {
 

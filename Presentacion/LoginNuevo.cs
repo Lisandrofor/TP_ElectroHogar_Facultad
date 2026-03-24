@@ -130,7 +130,8 @@ namespace Presentacion
                         if (cambioPass.ShowDialog() == DialogResult.OK)
                         {
                             string contraseñaNueva = login.ContraseñaNueva;
-                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+                            DateTime fechaAlta = DateTime.Now;
+                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva,fechaAlta);
 
                             login1.Close();
                             cambioPass.ShowDialog();
@@ -250,7 +251,7 @@ namespace Presentacion
                             formulario = new MenuAdministrador(estado,usr.id,usr.apellido);
                             break;
                         case 2:
-                            formulario = new MenuSupervisor(estado);
+                            formulario = new MenuSupervisor(estado,usr.apellido);
                             break;
                         case 1:
                             formulario = new MenuVendedor(estado,usr.apellido,(usr.id).ToString());

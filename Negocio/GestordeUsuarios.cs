@@ -3,6 +3,7 @@ using Modelo;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -80,7 +81,7 @@ namespace Negocio
 
         }
 
-        public void CambiarContraseña(string nombreUsuario, string contraseña, string contraseñaNueva)
+        public void CambiarContraseña(string nombreUsuario, string contraseña, string contraseñaNueva, DateTime fechaAlta)
         {
             Loginuser loginpass = new Loginuser(nombreUsuario, contraseña);
             loginpass.NombreUsuario = nombreUsuario;
@@ -146,7 +147,52 @@ namespace Negocio
             UsuarioService.BorrarUsuario(idUsuario);
         }
 
+        public void GuardarContraseñas(string nombreUsuario, string contraseñaNueva,DateTime fechaAlta)
+        {
+            List<Loginuser> listaContraseñas = new List<Loginuser>();
+
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Contraseñas.json";
+            if (File.Exists(rutaArchivo))
+            {
+                string jsonArchivo = File.ReadAllText(rutaArchivo);
+
+                if (string.IsNullOrWhiteSpace(jsonArchivo))
+                {
+                    listaContraseñas = new List<Loginuser>();
+                }
+                else
+                {
+                    listaContraseñas = JsonConvert.DeserializeObject<List<>>(jsonArchivo);
+                }
+            }
+            else
+            {
+                ventas = new List<VentaDTO>();
+            }
+
+            // 🔹 agregar la nueva venta
+            ventas.Add(altaventa);
+
+            // 🔹 convertir a json
+            string nuevoJson = JsonConvert.SerializeObject(ventas, Formatting.Indented);
+
+            // 🔹 guardar archivo
+            File.WriteAllText(rutaArchivo, nuevoJson);
+
+
+
+
+
         
+
+
+
+
+
+
+    }
+        
+
 
 
 
