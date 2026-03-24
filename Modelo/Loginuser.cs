@@ -14,10 +14,10 @@ namespace Modelo
         private string _contraseña;
         private string _contraseñaNueva;
         private int _host;
+        private DateTime _fechaAlta;
         private int _valor;
         private static Dictionary<string, int> _conteoIng = new Dictionary<string, int>();
         private static Dictionary<string, DateTime> _expira = new Dictionary<string, DateTime>();
-
 
 
         public string NombreUsuario { get => _nombreUsuario; set => _nombreUsuario = value; }
@@ -29,11 +29,12 @@ namespace Modelo
 
         public int valor { get => _valor; set => _valor = value; }
 
+
         public Dictionary<string,int> conteoIng { get => _conteoIng; set => _conteoIng = value; }
 
         public Dictionary<string, DateTime> expira { get => _expira; set => _expira = value; }
 
-
+       public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public Loginuser(string nombreUsuario, string contraseña)
         {
 
@@ -45,14 +46,30 @@ namespace Modelo
 
         }
 
-        public Loginuser(string nombreUsuario, string contraseña, string contraseñanueva)
+        public Loginuser(string nombreUsuario, string contraseña, string contraseñanueva,DateTime fechaAlta)
         {
             this.NombreUsuario = nombreUsuario;
             this.Contraseña = contraseña;
             this.ContraseñaNueva = contraseñanueva;
+            this.fechaAlta=fechaAlta; 
             
             
         }
+
+
+public void RegistrarExpiracion(string idUsuario)
+{
+    DateTime fechaExpiracion = FechaAlta.AddDays(30);
+
+    if (!_expira.ContainsKey(idUsuario))
+    {
+        _expira.Add(idUsuario, fechaExpiracion);
+    }
+    else
+    {
+        _expira[idUsuario] = fechaExpiracion;
+    }
+}
 
 
 
@@ -91,6 +108,27 @@ namespace Modelo
 
                 return false;
             }
+
+
+
+public bool EstaExpirada(string idUsuario)
+{
+    if (_expira.ContainsKey(idUsuario))
+    {
+        DateTime fechaExpiracion = _expira[idUsuario];
+
+        if (DateTime.Now > fechaExpiracion)
+        {
+            return true; // ❌ vencida
+        }
+        else
+        {
+            return false; // ✅ vigente
+        }
+    }
+
+    return true; // si no existe, la consideramos vencida
+}
 
 
             //public bool ContraseñaExpira(string contrasña, DateTime FechaAlta )

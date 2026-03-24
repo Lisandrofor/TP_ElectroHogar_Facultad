@@ -88,12 +88,13 @@ namespace Presentacion
             if (usuarioencontrado != null)
             {
                 if (contraseña != "Temp1234")
-                {
+                {bool estadocontraseña=login.estaexpirada(idUsuario)
                     if (!string.IsNullOrEmpty(idUsuario))
                     {
+                     if (estadocontraseña==false){
                         MessageBox.Show("¡Inicio de sesión exitoso!");
                         
-                        
+                       
                         
                         Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Activo);
 
@@ -102,7 +103,31 @@ namespace Presentacion
                             formulario.Show();
                             login1.Close();
                             
+} else
+{
 
+LoginCambioPass cambioPass = new LoginCambioPass();
+
+                        if (cambioPass.ShowDialog() == DialogResult.OK)
+                        {
+                            string contraseñaNueva = login.ContraseñaNueva;
+                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva,fechaAlta);
+
+                            login1.Close();
+                            cambioPass.ShowDialog();
+                         
+                            
+                        }
+
+                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
+
+                        if (formulario != null)
+                        {
+                            formulario.Show();
+                            
+                        }
+
+}
 
 
 
