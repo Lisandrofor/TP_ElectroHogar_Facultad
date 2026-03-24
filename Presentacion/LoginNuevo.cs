@@ -130,7 +130,7 @@ namespace Presentacion
                         if (cambioPass.ShowDialog() == DialogResult.OK)
                         {
                             string contraseñaNueva = login.ContraseñaNueva;
-                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva,fechaAlta);
 
                             login1.Close();
                             cambioPass.ShowDialog();
