@@ -93,7 +93,7 @@ namespace Presentacion
                     {
                         MessageBox.Show("¡Inicio de sesión exitoso!");
                         
-                        
+                       gestorUsuarios.ControlContraseña(idUsuario,contraseña)
                         
                         Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Activo);
 
