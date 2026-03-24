@@ -29,11 +29,12 @@ namespace Modelo
 
         public int valor { get => _valor; set => _valor = value; }
 
+
         public Dictionary<string,int> conteoIng { get => _conteoIng; set => _conteoIng = value; }
 
         public Dictionary<string, DateTime> expira { get => _expira; set => _expira = value; }
 
-
+       public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
         public Loginuser(string nombreUsuario, string contraseña)
         {
 
