@@ -115,7 +115,7 @@ LoginCambioPass cambioPass = new LoginCambioPass();
 
                             login1.Close();
                             cambioPass.ShowDialog();
-                            gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
+                         
                             
                         }
 
