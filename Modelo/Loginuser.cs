@@ -14,10 +14,10 @@ namespace Modelo
         private string _contraseña;
         private string _contraseñaNueva;
         private int _host;
+        prívate Date Time _fechaAlta;
         private int _valor;
         private static Dictionary<string, int> _conteoIng = new Dictionary<string, int>();
         private static Dictionary<string, DateTime> _expira = new Dictionary<string, DateTime>();
-
 
 
         public string NombreUsuario { get => _nombreUsuario; set => _nombreUsuario = value; }
@@ -45,11 +45,12 @@ namespace Modelo
 
         }
 
-        public Loginuser(string nombreUsuario, string contraseña, string contraseñanueva)
+        public Loginuser(string nombreUsuario, string contraseña, string contraseñanueva,DateTime fechaAlta)
         {
             this.NombreUsuario = nombreUsuario;
             this.Contraseña = contraseña;
             this.ContraseñaNueva = contraseñanueva;
+            this.fechaAlta=fechaAlta; 
             
             
         }
