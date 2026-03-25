@@ -51,7 +51,7 @@ namespace Presentacion
             GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
             string nombreUsuario = txtNombreUsuario.Text;
             string contraseña = txtPassword.Text;
-
+            DateTime fechaAlta = DateTime.Now;
 
 
             if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
@@ -90,7 +90,7 @@ namespace Presentacion
                 if (contraseña != "Temp1234")
                 {
 
-gestorUsuario.ObtenerContraseñas(usuarioencontrado)
+                    gestorUsuarios.ObtenerContraseñas(login);
 
                     bool estadocontraseña = login.EstaExpirada(idUsuario);
                     if (!string.IsNullOrEmpty(idUsuario))
@@ -117,8 +117,8 @@ gestorUsuario.ObtenerContraseñas(usuarioencontrado)
                                 {
                                     string contraseñaNueva = login.ContraseñaNueva;
                                     gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
-var usuariologueado= new Loginuser{idUsuario=Login.idUsusrio, contraseña=login.contraseña, Nuevacontraseña=login.nuevaContraseña, fechaAlta=login.fechaAlta);
-gestorUsuarios.GuardarContraseñas(loginuser)
+                                    var usuariologueado = new Loginuser ( idUsuario=login.idUsuario, contraseña = login.Contraseña, contraseñaNueva = login.ContraseñaNueva, fechaAlta = login.FechaAlta );
+                                    gestorUsuarios.GuardarContraseñas(login);
 
                                     login1.Close();
                                     cambioPass.ShowDialog();
