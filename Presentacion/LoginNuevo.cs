@@ -117,6 +117,8 @@ gestorUsuario.ObtenerContraseñas(usuarioencontrado)
                                 {
                                     string contraseñaNueva = login.ContraseñaNueva;
                                     gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+var usuariologueado= new Loginuser{idUsuario=Login.idUsusrio, contraseña=login.contraseña, Nuevacontraseña=login.nuevaContraseña, fechaAlta=login.fechaAlta);
+gestorUsuarios.GuardarContraseñas(loginuser)
 
                                     login1.Close();
                                     cambioPass.ShowDialog();
