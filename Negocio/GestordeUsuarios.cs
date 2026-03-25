@@ -148,9 +148,9 @@ namespace Negocio
             UsuarioService.BorrarUsuario(idUsuario);
         }
 
-        public void GuardarContraseñas(Usuario loginUsuario)
+        public void GuardarContraseñas(Loginuser loginUsuario)
         {
-            List<Usuario> listaContraseñas = new List<Usuario>();
+            List<Loginuser> listaContraseñas = new List<Loginuser>();
 
             string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Contraseñas.json";
             if (File.Exists(rutaArchivo))
@@ -159,16 +159,16 @@ namespace Negocio
 
                 if (string.IsNullOrWhiteSpace(jsonArchivo))
                 {
-                    listaContraseñas = new List<Usuario>();
+                    listaContraseñas = new List<Loginuser>();
                 }
                 else
                 {
-                    listaContraseñas = JsonConvert.DeserializeObject<List<Usuario>>(jsonArchivo);
+                    listaContraseñas = JsonConvert.DeserializeObject<List<Loginuser>>(jsonArchivo);
                 }
             }
             else
             {
-                listaContraseñas = new List<Usuario>();
+                listaContraseñas = new List<Loginuser>();
             }
 
             // 🔹 agregar la nueva venta
@@ -194,17 +194,17 @@ namespace Negocio
     }
 
 
-        public List<Usuario> ObtenerContraseñas(Usuario LoginUsuario)
+        public List<Loginuser> ObtenerContraseñas(Loginuser LoginUsuario)
         {
             string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Contraseñas.json";
             try
             {
                 string jsonLeer = File.ReadAllText(rutaArchivo);
-                List<Usuario> listaContraseñas = JsonConvert.DeserializeObject<List<Usuario>>(jsonLeer);
+                List<Loginuser> listaContraseñas = JsonConvert.DeserializeObject<List<Loginuser>>(jsonLeer);
 
                 if (listaContraseñas == null)
                 {
-                    listaContraseñas = new List<Usuario>(); // Retorna una lista vacía si el archivo estaba vacío o no se pudo deserializar
+                    listaContraseñas = new List<Loginuser>(); // Retorna una lista vacía si el archivo estaba vacío o no se pudo deserializar
                 }
 
                 return listaContraseñas;
@@ -212,12 +212,12 @@ namespace Negocio
             catch (JsonException ex)
             {
                 Console.WriteLine($"Error al deserializar el archivo JSON: {ex.Message}");
-                return new List<Usuario>(); // Retorna una lista vacía en caso de error
+                return new List<Loginuser>(); // Retorna una lista vacía en caso de error
             }
             catch (IOException ex)
             {
                 Console.WriteLine($"Error al leer el archivo: {ex.Message}");
-                return new List<Usuario>(); // Retorna una lista vacía en caso de error
+                return new List<Loginuser>(); // Retorna una lista vacía en caso de error
             }
         }
 
