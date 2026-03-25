@@ -51,7 +51,7 @@ namespace Modelo
             this.NombreUsuario = nombreUsuario;
             this.Contraseña = contraseña;
             this.ContraseñaNueva = contraseñanueva;
-            this.fechaAlta=fechaAlta; 
+            this.FechaAlta=fechaAlta; 
             
             
         }
@@ -81,10 +81,10 @@ public void RegistrarExpiracion(string idUsuario)
             if (!conteoIng.ContainsKey(idUsuario))
             {
                 valor = 0;
-                conteoIng.Add(idUsuario,valor); // El primer intento cuenta como 1, no 0
+                conteoIng.Add(idUsuario, valor); // El primer intento cuenta como 1, no 0
                 return false; // Primer ingreso, no ha alcanzado el conteo límite
             }
-            else 
+            else
             {
                 if (conteoIng.TryGetValue(claveBuscada, out valor))
                 {
@@ -108,6 +108,7 @@ public void RegistrarExpiracion(string idUsuario)
 
                 return false;
             }
+        }
 
 
 
@@ -176,7 +177,7 @@ public bool EstaExpirada(string idUsuario)
     }
 
 
-}
+
   
 
    

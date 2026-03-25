@@ -81,14 +81,14 @@ namespace Negocio
 
         }
 
-        public void CambiarContraseña(string nombreUsuario, string contraseña, string contraseñaNueva,Date Time fechaAlta)
+        public void CambiarContraseña(string nombreUsuario, string contraseña, string contraseñaNueva)
         {
             Loginuser loginpass = new Loginuser(nombreUsuario, contraseña);
             loginpass.NombreUsuario = nombreUsuario;
             loginpass.Contraseña = contraseña;
             loginpass.ContraseñaNueva = contraseñaNueva;
+            loginpass.FechaAlta = DateTime.Now;
 
-loginpass.fechaAlta=fechaAlta;
             UsuarioService.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
 
 

@@ -39,15 +39,15 @@ namespace Presentacion
 
 
 
-        
+
 
 
 
 
         private void button1_Click(object sender, EventArgs e)
-        {   
+        {
 
-           
+
             GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
             string nombreUsuario = txtNombreUsuario.Text;
             string contraseña = txtPassword.Text;
@@ -64,7 +64,7 @@ namespace Presentacion
             Loginuser login = new Loginuser(nombreUsuario, contraseña);
             LoginNuevo login1 = new LoginNuevo();
             string idUsuario = gestorUsuarios.Login(login);
-            
+
 
 
             bool ingresos = login.IngresosUsuario(idUsuario, nombreUsuario, contraseña);
@@ -88,138 +88,143 @@ namespace Presentacion
             if (usuarioencontrado != null)
             {
                 if (contraseña != "Temp1234")
-                {bool estadocontraseña=login.estaexpirada(idUsuario)
+                {
+                    bool estadocontraseña = login.EstaExpirada(idUsuario);
                     if (!string.IsNullOrEmpty(idUsuario))
                     {
-                     if (estadocontraseña==false){
-                        MessageBox.Show("¡Inicio de sesión exitoso!");
-                        
-                       
-                        
-                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Activo);
-
-                        if (formulario != null)
+                        if (estadocontraseña == false)
                         {
-                            formulario.Show();
-                            login1.Close();
-                            
-} else
-{
+                            MessageBox.Show("¡Inicio de sesión exitoso!");
 
-LoginCambioPass cambioPass = new LoginCambioPass();
 
-                        if (cambioPass.ShowDialog() == DialogResult.OK)
+
+                            Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
+
+                            if (formulario != null)
+                            {
+                                formulario.Show();
+                                login1.Close();
+
+                            }
+                            else
+                            {
+                                LoginCambioPass cambioPass = new LoginCambioPass();
+
+                                if (cambioPass.ShowDialog() == DialogResult.OK)
+                                {
+                                    string contraseñaNueva = login.ContraseñaNueva;
+                                    gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+
+                                    login1.Close();
+                                    cambioPass.ShowDialog();
+
+
+                                }
+
+                                formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
+
+                                if (formulario != null)
+                                {
+                                    formulario.Show();
+
+                                }
+
+
+
+
+
+
+
+
+
+                            }
+                        }
+                        else
                         {
-                            string contraseñaNueva = login.ContraseñaNueva;
-                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva,fechaAlta);
-
-                            login1.Close();
-                            cambioPass.ShowDialog();
-                         
-                            
+                            MessageBox.Show("Error en el inicio de sesión. Verifique sus credenciales.");
                         }
 
-                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
-
-                        if (formulario != null)
-                        {
-                            formulario.Show();
-                            
-                        }
-
-}
-
-
-
-
-                        }
-                        
                     }
+                    else if (contraseña == "Temp1234")
+                    {
+
+
+
+
+
+                        if (ingresos == true)
+                        {
+                            LoginCambioPass cambioPass = new LoginCambioPass();
+
+                            if (cambioPass.ShowDialog() == DialogResult.OK)
+                            {
+                                string contraseñaNueva = login.ContraseñaNueva;
+
+                                gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva);
+
+                                login1.Close();
+                                cambioPass.ShowDialog();
+                                gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
+
+                            }
+
+                            Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
+
+                            if (formulario != null)
+                            {
+                                formulario.Show();
+
+                            }
+
+
+
+                        }
+                        else if (ingresos == false)
+                        {
+                            MessageBox.Show("¡Inicio de sesión exitoso!");
+
+                            Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Inactivo);
+
+
+                            if (formulario != null)
+                            {
+                                formulario.Show();
+
+
+
+                            }
+
+
+                        }
+
+                    }
+
                     else
                     {
-                        MessageBox.Show("Error en el inicio de sesión. Verifique sus credenciales.");
+                        MessageBox.Show("El usuario no fue encontrado. Verifique el ID.");
                     }
-                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 }
-                else if (contraseña == "Temp1234")
-                {
-
-
-
-
-
-                    if (ingresos == true)
-                    {
-                        LoginCambioPass cambioPass = new LoginCambioPass();
-
-                        if (cambioPass.ShowDialog() == DialogResult.OK)
-                        {
-                            string contraseñaNueva = login.ContraseñaNueva;
-                            DateTime fechaAlta = DateTime.Now;
-                            gestorUsuarios.CambiarContraseña(nombreUsuario, contraseña, contraseñaNueva,fechaAlta);
-
-                            login1.Close();
-                            cambioPass.ShowDialog();
-                            gestorUsuarios.CambiarContraseña(login.NombreUsuario, login.Contraseña, login.ContraseñaNueva);
-                            
-                        }
-
-                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host, Usuario.EstadoUsuario.Activo);
-
-                        if (formulario != null)
-                        {
-                            formulario.Show();
-                            
-                        }
-                        
-                        
-                        
-                    }
-                    else if (ingresos == false)
-                    {
-                        MessageBox.Show("¡Inicio de sesión exitoso!");
-
-                        Form formulario = IniciaForm(nombreUsuario, usuarioencontrado.host,Usuario.EstadoUsuario.Inactivo);
-                        
-
-                        if (formulario != null)
-                        {
-                            formulario.Show();
-                            
-                            
-                            
-                        }
-
-                        
-                    }
-                    
-                }
-
-                else
-                {
-                    MessageBox.Show("El usuario no fue encontrado. Verifique el ID.");
-                }
-
-
-
-
-
-
-
-
-
-               
-
-
-
-
 
 
 
             }
-
-            
-            
         }
        
         
