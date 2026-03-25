@@ -10,6 +10,7 @@ namespace Modelo
 {
     public class Loginuser
     {
+        private string _idUsuario;
         private string _nombreUsuario;
         private string _contraseña;
         private string _contraseñaNueva;
@@ -19,7 +20,7 @@ namespace Modelo
         private static Dictionary<string, int> _conteoIng = new Dictionary<string, int>();
         private static Dictionary<string, DateTime> _expira = new Dictionary<string, DateTime>();
 
-
+        public string idUsuario {get=>_idUsuario; set=>_idUsuario= value;}
         public string NombreUsuario { get => _nombreUsuario; set => _nombreUsuario = value; }
         public string Contraseña { get => _contraseña; set => _contraseña = value; }
 
