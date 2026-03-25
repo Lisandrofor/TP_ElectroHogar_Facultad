@@ -148,9 +148,9 @@ namespace Negocio
             UsuarioService.BorrarUsuario(idUsuario);
         }
 
-        public void GuardarContraseñas(string nombreUsuario, string contraseñaNueva,DateTime fechaAlta)
+        public void GuardarContraseñas(Usuario loginUsuario)
         {
-            List<Loginuser> listaContraseñas = new List<Loginuser>();
+            List<Usuario> listaContraseñas = new List<Usuario>();
 
             string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Contraseñas.json";
             if (File.Exists(rutaArchivo))
@@ -159,23 +159,23 @@ namespace Negocio
 
                 if (string.IsNullOrWhiteSpace(jsonArchivo))
                 {
-                    listaContraseñas = new List<Loginuser>();
+                    listaContraseñas = new List<Usuario>();
                 }
                 else
                 {
-                    listaContraseñas = JsonConvert.DeserializeObject<List<>>(jsonArchivo);
+                    listaContraseñas = JsonConvert.DeserializeObject<List<Usuario>>(jsonArchivo);
                 }
             }
             else
             {
-                ventas = new List<VentaDTO>();
+                listaContraseñas = new List<Usuario>();
             }
 
             // 🔹 agregar la nueva venta
-            ventas.Add(altaventa);
+            listaContraseñas.Add(loginUsuario);
 
             // 🔹 convertir a json
-            string nuevoJson = JsonConvert.SerializeObject(ventas, Formatting.Indented);
+            string nuevoJson = JsonConvert.SerializeObject(listaContraseñas, Formatting.Indented);
 
             // 🔹 guardar archivo
             File.WriteAllText(rutaArchivo, nuevoJson);
@@ -192,7 +192,35 @@ namespace Negocio
 
 
     }
-        
+
+
+        public List<Usuario> ObtenerContraseñas(Usuario LoginUsuario)
+        {
+            string rutaArchivo = "C:\\Users\\vlisa\\source\\repos\\TP_ElectroHogar_Facultad\\AccesoaDatos\\Contraseñas.json";
+            try
+            {
+                string jsonLeer = File.ReadAllText(rutaArchivo);
+                List<Usuario> listaContraseñas = JsonConvert.DeserializeObject<List<Usuario>>(jsonLeer);
+
+                if (listaContraseñas == null)
+                {
+                    listaContraseñas = new List<Usuario>(); // Retorna una lista vacía si el archivo estaba vacío o no se pudo deserializar
+                }
+
+                return listaContraseñas;
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Error al deserializar el archivo JSON: {ex.Message}");
+                return new List<Usuario>(); // Retorna una lista vacía en caso de error
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error al leer el archivo: {ex.Message}");
+                return new List<Usuario>(); // Retorna una lista vacía en caso de error
+            }
+        }
+
 
 
 

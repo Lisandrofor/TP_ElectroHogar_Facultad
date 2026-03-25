@@ -132,26 +132,6 @@ public bool EstaExpirada(string idUsuario)
 }
 
 
-            //public bool ContraseñaExpira(string contrasña, DateTime FechaAlta )
-            //{
-            //    string contraseñabuscada = contraseña;
-            //    TimeSpan dias;
-                
-
-            //    if (!expira.ContainsKey(contraseñabuscada))
-            //    {
-            //        FechaAlta = DateTime.Now;
-            //        expira.Add(contraseña, FechaAlta);
-            //    }else
-            //    {
-            //        if (expira[FechaAlta])<= )
-
-            //    }
-
-
-
-
-            //}
 
 
 
@@ -167,14 +147,20 @@ public bool EstaExpirada(string idUsuario)
 
 
 
-        }
-
-           
-
-        
 
 
-    }
+
+
+
+
+}
+
+
+
+
+
+
+}
 
 
 
