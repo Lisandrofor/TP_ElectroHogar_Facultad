@@ -64,7 +64,7 @@ namespace Presentacion
             Loginuser login = new Loginuser(nombreUsuario, contraseña);
             LoginNuevo login1 = new LoginNuevo();
             string idUsuario = gestorUsuarios.Login(login);
-
+            gestorUsuarios.GuardarContraseñas(login);
 
 
             bool ingresos = login.IngresosUsuario(idUsuario, nombreUsuario, contraseña);
