@@ -15,14 +15,13 @@ public List<Usuario> ObtenerUsuariosMock()
     return usuarios ?? new List<Usuario>();
 }
 
-using System.IO;
-using System.Text.Json;
 
-public void GuardarProductosMock(List<Producto> productos)
+
+public void GuardarUsuariosMock(List<Usuario> Usuarios)
 {
-    string path = "productos.json";
+    string path = "Usuario.json";
 
-    var json = JsonSerializer.Serialize(productos, new JsonSerializerOptions
+    var json = JsonSerializer.Serialize(Usuarios, new JsonSerializerOptions
     {
         WriteIndented = true // para que el JSON quede legible
     });
