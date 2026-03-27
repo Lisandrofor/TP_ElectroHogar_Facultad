@@ -26,3 +26,20 @@ public void GuardarUsuariosMock(List<Usuario> Usuarios)
 
     File.WriteAllText(path, json);
 }
+
+
+
+
+public List<Loginuser> ObtenerUsuariosLogueadosMock()
+{
+    string path = "usuarios.json";
+
+    if (!File.Exists(path))
+        return new List<Loginuser>();
+
+    string json = File.ReadAllText(path);
+
+    var usuarios = JsonSerializer.Deserialize<List<Loginuser>>(json);
+
+    return usuarios ?? new List<Loginuser>();
+}
