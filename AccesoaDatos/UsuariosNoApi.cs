@@ -30,16 +30,11 @@ public void GuardarUsuariosMock(List<Usuario> Usuarios)
 
 
 
-public List<Loginuser> ObtenerUsuariosLogueadosMock()
+public Usuario ValidarLogin(string usuario, string contraseña)
 {
-    string path = "usuarios.json";
+    var usuarios = ObtenerUsuariosMock();
 
-    if (!File.Exists(path))
-        return new List<Loginuser>();
-
-    string json = File.ReadAllText(path);
-
-    var usuarios = JsonSerializer.Deserialize<List<Loginuser>>(json);
-
-    return usuarios ?? new List<Loginuser>();
+    return usuarios.FirstOrDefault(u =>
+        u.NombreUsuario == usuario &&
+        u.Contraseña == contraseña);
 }
