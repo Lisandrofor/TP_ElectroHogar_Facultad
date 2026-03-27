@@ -15,8 +15,6 @@ public List<Usuario> ObtenerUsuariosMock()
     return usuarios ?? new List<Usuario>();
 }
 
-
-
 public void GuardarUsuariosMock(List<Usuario> Usuarios)
 {
     string path = "Usuario.json";
