@@ -38,3 +38,32 @@ public Usuario ValidarLogin(string usuario, string contraseña)
         u.NombreUsuario == usuario &&
         u.Contraseña == contraseña);
 }
+
+
+
+public void AgregarUsuarioMock(Usuario nuevoUsuario)
+{
+    string path = "Usuario.json";
+
+    List<Usuario> usuarios = new List<Usuario>();
+
+    // 1. Leer si existe
+    if (File.Exists(path))
+    {
+        string jsonExistente = File.ReadAllText(path);
+        usuarios = JsonSerializer.Deserialize<List<Usuario>>(jsonExistente)
+                   ?? new List<Usuario>();
+    }
+
+    // 2. Agregar el nuevo
+    usuarios.Add(nuevoUsuario);
+
+    // 3. Guardar todo
+    var json = JsonSerializer.Serialize(usuarios, new JsonSerializerOptions
+    {
+        WriteIndented = true
+    });
+
+    File.WriteAllText(path, json);
+}
+
