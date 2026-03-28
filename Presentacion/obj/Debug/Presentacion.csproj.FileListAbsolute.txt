@@ -95,7 +95,6 @@ C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\bin\Debug\Acce
 C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\obj\Debug\Presentacion.exe.config
 C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\obj\Debug\Presentacion.BajaProducto.resources
-C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\obj\Debug\Presentacion.Login.resources
 C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\obj\Debug\Presentacion.LoginCambioPass.resources
 C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\obj\Debug\Presentacion.LoginNuevo.resources
 C:\Users\vlisa\Source\Repos\TP_ElectroHogar_Facultad\Presentacion\obj\Debug\Presentacion.MenuAdministrador.resources
