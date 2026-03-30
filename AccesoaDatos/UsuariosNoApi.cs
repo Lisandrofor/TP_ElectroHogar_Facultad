@@ -67,3 +67,24 @@ public void AgregarUsuarioMock(Usuario nuevoUsuario)
     File.WriteAllText(path, json);
 }
 
+public void BorrarUsuario(Guid idUsuario)
+{
+    string path = "Usuarios.json";
+
+    // 1. Leer archivo
+    string json = File.ReadAllText(path);
+    List<Usuario> lista = JsonConvert.DeserializeObject<List<Usuario>>(json);
+
+    // 2. Buscar usuario
+    Usuario usuarioAEliminar = lista.Find(u => u.Id == idUsuario);
+
+    if (usuarioAEliminar != null)
+    {
+        // 3. Eliminar
+        lista.Remove(usuarioAEliminar);
+
+        // 4. Guardar nuevamente
+        string nuevoJson = JsonConvert.SerializeObject(lista, Formatting.Indented);
+        File.WriteAllText(path, nuevoJson);
+    }
+}
