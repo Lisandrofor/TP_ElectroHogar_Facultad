@@ -70,6 +70,39 @@ namespace AccesoaDatos
             File.WriteAllText(path, json);
         }
 
+using System.Text.Json;
+
+public void BorrarCliente(Guid idCliente)
+{
+    string path = "Clientes.json";
+
+    // 1. Leer archivo
+    if (!File.Exists(path))
+        return;
+
+    string json = File.ReadAllText(path);
+
+    // 2. Deserializar
+    List<Cliente> clientes = JsonSerializer.Deserialize<List<Cliente>>(json) 
+                             ?? new List<Cliente>();
+
+    // 3. Buscar cliente
+    Cliente clienteAEliminar = clientes.FirstOrDefault(c => c.Id == idCliente);
+
+    if (clienteAEliminar != null)
+    {
+        // 4. Eliminar
+        clientes.Remove(clienteAEliminar);
+
+        // 5. Guardar nuevamente
+        string jsonNuevo = JsonSerializer.Serialize(clientes, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+
+        File.WriteAllText(path, jsonNuevo);
+    }
+}
 
     }
 }
