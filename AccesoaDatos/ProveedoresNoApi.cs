@@ -16,18 +16,18 @@ namespace AccesoaDatos
             string path = "Proveedores.json";
 
             if (!File.Exists(path)
-                return new List<Cliente>();
+                return new List<Proveedor>();
 
             string json = File.ReadAllText(path);
 
-            var clientes = JsonSerializer.Deserialize<List<Cliente>>(json);
+            var proveedores = JsonSerializer.Deserialize<List<Proveedor>>(json);
 
-            return clientes ?? new List<Cliente>();
+            return proveedores ?? new List<Proveedor>();
         }
 
-        public void GuardarClientesMock(List<Cliente> clientes)
+        public void GuardarClientesMock(List<Proveedor> proveedores)
         {
-            string path = "Clientes.json";
+            string path = "Proveedores.json";
 
             var json = JsonSerializer.Serialize(clientes, new JsonSerializerOptions
             {
