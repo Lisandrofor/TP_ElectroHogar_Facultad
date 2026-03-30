@@ -35,3 +35,22 @@ public void GuardarProductosMock(List<Producto> productos)
         throw new Exception("Error al guardar productos: " + ex.Message);
     }
 }
+
+
+public void BorrarProducto(Guid idProducto)
+{
+    string path = "Productos.json";
+
+    string json = File.ReadAllText(path);
+    List<Producto> lista = JsonConvert.DeserializeObject<List<Producto>>(json);
+
+    Producto productoAEliminar = lista.Find(p => p.Id == idProducto);
+
+    if (productoAEliminar != null)
+    {
+        lista.Remove(productoAEliminar);
+
+        string nuevoJson = JsonConvert.SerializeObject(lista, Formatting.Indented);
+        File.WriteAllText(path, nuevoJson);
+    }
+}
