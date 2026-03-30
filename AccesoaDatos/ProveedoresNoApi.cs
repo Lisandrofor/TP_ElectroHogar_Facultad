@@ -11,11 +11,11 @@ namespace AccesoaDatos
 {
     internal class ProveedoresNoApi
     {
-        public List<proveedores> ObtenerClientesMock()
+        public List<Proveedor> ObtenerClientesMock()
         {
-            string path = "Clientes.json";
+            string path = "Proveedores.json";
 
-            if (!File.Exists(path))
+            if (!File.Exists(path)
                 return new List<Cliente>();
 
             string json = File.ReadAllText(path);
