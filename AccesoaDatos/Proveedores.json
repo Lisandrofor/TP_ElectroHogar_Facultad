@@ -1,0 +1,92 @@
+[
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0001",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "email": "juan.perez@gmail.com",
+    "CUIT": "20-12345678-3",
+    "fechaAlta": "2025-01-10T10:30:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0002",
+    "nombre": "María",
+    "apellido": "Gómez",
+    "email": "maria.gomez@gmail.com",
+    "CUIT": "27-23456789-1",
+    "fechaAlta": "2025-02-15T14:00:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0003",
+    "nombre": "Carlos",
+    "apellido": "Rodríguez",
+    "email": "carlos.rodriguez@gmail.com",
+    "CUIT": "20-34567890-5",
+    "fechaAlta": "2025-03-01T09:15:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0004",
+    "nombre": "Lucía",
+    "apellido": "Fernández",
+    "email": "lucia.fernandez@gmail.com",
+    "CUIT": "27-45678901-2",
+    "fechaAlta": "2025-03-20T11:45:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0005",
+    "nombre": "Pedro",
+    "apellido": "López",
+    "email": "pedro.lopez@gmail.com",
+    "CUIT": "20-56789012-6",
+    "fechaAlta": "2025-04-05T16:20:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0006",
+    "nombre": "Ana",
+    "apellido": "Martínez",
+    "email": "ana.martinez@gmail.com",
+    "CUIT": "27-67890123-4",
+    "fechaAlta": "2025-04-18T08:10:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0007",
+    "nombre": "Diego",
+    "apellido": "Sánchez",
+    "email": "diego.sanchez@gmail.com",
+    "CUIT": "20-78901234-7",
+    "fechaAlta": "2025-05-02T13:25:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0008",
+    "nombre": "Sofía",
+    "apellido": "Ramírez",
+    "email": "sofia.ramirez@gmail.com",
+    "CUIT": "27-89012345-9",
+    "fechaAlta": "2025-05-10T17:40:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0009",
+    "nombre": "Fernando",
+    "apellido": "Torres",
+    "email": "fernando.torres@gmail.com",
+    "CUIT": "20-90123456-8",
+    "fechaAlta": "2025-06-01T12:00:00",
+    "fechaBaja": null
+  },
+  {
+    "id": "b1f3c6c2-7c8a-4c1e-9a1a-1c2f9d8e0010",
+    "nombre": "Valeria",
+    "apellido": "Díaz",
+    "email": "valeria.diaz@gmail.com",
+    "CUIT": "27-01234567-3",
+    "fechaAlta": "2025-06-15T10:50:00",
+    "fechaBaja": null
+  }
+]
