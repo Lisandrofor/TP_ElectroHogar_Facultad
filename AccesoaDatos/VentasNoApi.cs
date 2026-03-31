@@ -15,40 +15,40 @@ public List<Venta> ObteneVentasMock ()
     return Ventas ?? new List<Venta>();
 }
 
-public void GuardarVentasMock(List<Producto> productos)
+public void GuardarVentasMock(List<Venta> ventas)
 {
     try
     {
-        string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "productos.json");
+        string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Ventas.json");
 
         var options = new JsonSerializerOptions
         {
             WriteIndented = true
         };
 
-        string json = JsonSerializer.Serialize(productos, options);
+        string json = JsonSerializer.Serialize(ventas, options);
 
         File.WriteAllText(path, json);
     }
     catch (Exception ex)
     {
-        throw new Exception("Error al guardar productos: " + ex.Message);
+        throw new Exception("Error al guardar ventas: " + ex.Message);
     }
 }
 
 
-public void BorrarProducto(Guid idProducto)
+public void BorrarVenta(Guid idVenta)
 {
-    string path = "Productos.json";
+    string path = "Ventas.json";
 
     string json = File.ReadAllText(path);
-    List<Producto> lista = JsonConvert.DeserializeObject<List<Producto>>(json);
+    List<Venta> lista = JsonConvert.DeserializeObject<List<Venta>>(json);
 
-    Producto productoAEliminar = lista.Find(p => p.Id == idProducto);
+    Venta ventaAEliminar = lista.Find(p => p.Id == idVenta);
 
-    if (productoAEliminar != null)
+    if (ventaAEliminar != null)
     {
-        lista.Remove(productoAEliminar);
+        lista.Remove(ventaAEliminar);
 
         string nuevoJson = JsonConvert.SerializeObject(lista, Formatting.Indented);
         File.WriteAllText(path, nuevoJson);
